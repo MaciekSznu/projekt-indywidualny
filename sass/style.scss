@@ -2,3 +2,33 @@
 @import "mixins";
 @import "normalize";
 @import "layout";
+
+h1 {
+    font-size: $page-header-font-size;
+    font-family: $base-font;
+    color: $header-color;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: $section-header-font-size;
+    font-family: $base-font;
+    color: $header-color;
+        ::first-letter {
+        text-transform: uppercase;
+    }
+}
+p {
+    font-size: $paragraph-font-size;
+    font-family: $base-font;
+    color: $paragraph-color;
+        ::first-letter {
+        text-transform: uppercase;
+    }
+}
+a {
+    color: $link-color;
+        &:hover {
+        color: $hovered-link-color;
+    }
+}
