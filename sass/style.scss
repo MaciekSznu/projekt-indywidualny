@@ -114,11 +114,17 @@ nav {
             &:hover a {
                 color: $nav-text-color-hover;
             }
+            img {
+                padding-left: 18px;
+                width: 14px;
+                height: auto;
+                line-height: 40px;
+            }
             a {
             color: $nav-text-color;
             text-decoration: none;
             line-height: 40px;
-            padding-left: 48px;
+            padding-left: 16px;
             font-size: $paragraph-font-size;
             }
         }
