@@ -83,7 +83,6 @@ table.base-table {
         width: 100%;
         td {
             height: 56px;
-            line-height: 56px;
             padding: 0 16px;
             border-top: 1px solid $table-border-color;
             border-bottom: 1px solid $table-border-color;
@@ -98,15 +97,32 @@ table.base-table {
             }
 }
 
+nav {
+    font-family: $base-font;
+    ul {
+	width: 188px;
+	list-style: none;
+	padding: 0;
+	position: relative;
+        li {
+            height: 40px;
+            background-color: $nav-bg-color;
+            cursor: pointer;
+            &:hover {
+                opacity: .8;
+            }
+            &:hover a {
+                color: $nav-text-color-hover;
+            }
+            a {
+            color: $nav-text-color;
+            text-decoration: none;
+            line-height: 40px;
+            padding-left: 48px;
+            font-size: $paragraph-font-size;
+            }
+        }
 
-    //     tr, td {
-    //     height: 56px;
-    //     line-height: 56px;
-    //     border-top: 1px solid $table-border-color;
-    //     border-bottom: 1px solid $table-border-color;
-    //     td a {
-    //     font-size: $section-header-font-size;
-    //     font-family: $base-font;
-    //     }
-    // }
+    }
+}
 
