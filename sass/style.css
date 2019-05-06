@@ -370,9 +370,84 @@ p ::first-letter {
 
 a {
   color: #56819F;
+  text-decoration: none;
 }
 
 a:hover {
   color: #FFA200;
+}
+
+.base-button, .standard-button, .warning-button, .disabled-button, .tab-button {
+  min-height: 40px;
+  max-height: 80px;
+  min-width: 120px;
+  max-width: 240px;
+  font-family: "Open Sans", Helvetica, Arial;
+  color: #ffffff;
+  border-style: none;
+  border-radius: 3px;
+  padding: 0 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.base-button:focus, .standard-button:focus, .warning-button:focus, .disabled-button:focus, .tab-button:focus {
+  outline: 0;
+}
+
+.standard-button {
+  background-color: #777777;
+}
+
+.standard-button:hover {
+  background-color: #979797;
+}
+
+.warning-button {
+  background-color: #f58220;
+}
+
+.warning-button:hover {
+  background-color: #ffa200;
+}
+
+.disabled-button {
+  background-color: #e3e3e3;
+}
+
+.tab-button {
+  color: #979797;
+  background-color: #ffffff;
+}
+
+.tab-button:hover {
+  background-color: #f5f5f2;
+}
+
+.tab-button:active {
+  background-color: #f5f5f2;
+}
+
+table.base-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.base-table td {
+  height: 56px;
+  line-height: 56px;
+  padding: 0 16px;
+  border-top: 1px solid #979797;
+  border-bottom: 1px solid #979797;
+}
+
+table.base-table tr:hover {
+  background-color: #e3e3e3;
+  cursor: pointer;
+}
+
+table.base-table td a {
+  font-size: 15px;
+  font-family: "Open Sans", Helvetica, Arial;
 }
 /*# sourceMappingURL=style.css.map */

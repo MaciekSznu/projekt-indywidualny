@@ -28,7 +28,85 @@ p {
 }
 a {
     color: $link-color;
+    text-decoration: none;
         &:hover {
         color: $hovered-link-color;
     }
 }
+.base-button {
+    min-height: 40px;
+    max-height: 80px;
+    min-width: 120px;
+    max-width: 240px;
+    font-family: $base-font;
+    color: $button-text-color;
+    border-style: none;
+    border-radius: 3px;
+    padding: 0 20px;
+    overflow: hidden;
+    cursor: pointer;
+    &:focus {
+        outline: 0;
+    }
+}
+.standard-button {
+    @extend .base-button;
+    background-color: $standard-button-bg-color;
+    &:hover {
+        background-color: $standard-button-bg-color-hover;
+    }
+}
+.warning-button {
+    @extend .base-button;
+    background-color: $warning-button-bg-color;
+    &:hover {
+        background-color: $warning-button-bg-color-hover;
+    }
+}
+.disabled-button {
+    @extend .base-button;
+    background-color: $disabled-button-bg-color;
+}
+.tab-button {
+    @extend .base-button;
+    color: $tab-button-text-color;
+    background-color: $tab-button-bg-color;
+    &:hover {
+        background-color: $tab-button-bg-color-hover;
+    }
+    &:active {//nie działa...
+        background-color: $tab-button-bg-color-hover;
+    }
+}
+table.base-table {
+        border-collapse: collapse;
+        width: 100%;
+        td {
+            height: 56px;
+            line-height: 56px;
+            padding: 0 16px;
+            border-top: 1px solid $table-border-color;
+            border-bottom: 1px solid $table-border-color;
+        }
+        tr:hover {
+                background-color: $table-row-bg-color-hover;
+                cursor: pointer;
+            }
+        td a {
+            font-size: $section-header-font-size;
+            font-family: $base-font;
+            }
+}
+
+
+    //     tr, td {
+    //     height: 56px;
+    //     line-height: 56px;
+    //     border-top: 1px solid $table-border-color;
+    //     border-bottom: 1px solid $table-border-color;
+    //     td a {
+    //     font-size: $section-header-font-size;
+    //     font-family: $base-font;
+    //     }
+    // }
+
