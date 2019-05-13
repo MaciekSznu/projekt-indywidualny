@@ -489,4 +489,60 @@ nav ul li a {
   padding-left: 16px;
   font-size: 14px;
 }
+
+.form, .form-text-input {
+  font-family: "Open Sans", Helvetica, Arial;
+  font-size: 14px;
+}
+
+.form input, .form-text-input input {
+  width: 154px;
+  margin: 15px;
+  padding: 20px;
+  border: 1px solid #979797;
+  border-radius: 3px;
+}
+
+.form input:hover, .form-text-input input:hover {
+  color: #333333;
+  cursor: pointer;
+  border-color: #333333;
+}
+
+.form input:hover::-webkit-input-placeholder, .form-text-input input:hover::-webkit-input-placeholder {
+  color: #333333;
+}
+
+.form input:hover:-ms-input-placeholder, .form-text-input input:hover:-ms-input-placeholder {
+  color: #333333;
+}
+
+.form input:hover::-ms-input-placeholder, .form-text-input input:hover::-ms-input-placeholder {
+  color: #333333;
+}
+
+.form input:hover::placeholder, .form-text-input input:hover::placeholder {
+  color: #333333;
+}
+
+.form-text-input input {
+  height: 124px;
+  line-height: 20px;
+}
+
+.form-text-input input::-webkit-input-placeholder {
+  text-align: left;
+}
+
+.form-text-input input:-ms-input-placeholder {
+  text-align: left;
+}
+
+.form-text-input input::-ms-input-placeholder {
+  text-align: left;
+}
+
+.form-text-input input::placeholder {
+  text-align: left;
+}
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@
 @import "normalize";
 @import "layout";
 
+
 h1 {
     font-size: $page-header-font-size;
     font-family: $base-font;
@@ -131,4 +132,38 @@ nav {
 
     }
 }
+
+.form {
+    font-family: $base-font;
+    font-size: $paragraph-font-size;
+    input{
+        width: 154px;
+        margin: 15px;
+        padding: 20px;
+        border: 1px solid $form-border-color;
+        border-radius: 3px; 
+        &:hover {
+            color: $paragraph-color;
+            cursor: pointer;
+            border-color: $form-border-color-hover;
+            &::placeholder {
+                color: $paragraph-color;
+            }
+        }
+        
+    }
+}
+
+.form-text-input {
+    @extend .form;
+    input{
+        height: 124px;
+        line-height: 20px;
+        &::placeholder {
+            
+            text-align: left;
+        }
+    }
+}
+
 
