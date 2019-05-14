@@ -545,4 +545,120 @@ nav ul li a {
 .form-text-input input::placeholder {
   text-align: left;
 }
+
+label.checkbox {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 46px;
+}
+
+label.checkbox:hover {
+  background-color: #F5F5F2;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Open Sans", Helvetica, Arial;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.checkbox .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: #04ae00;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  margin-top: 11px;
+  margin-left: 12px;
+  border: 1px solid #979797;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.notification, .notification-positive, .notification-negative {
+  height: 40px;
+  line-height: 40px;
+  width: 260px;
+  border-style: none;
+  padding: 0 15px 0 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.notification span, .notification-positive span, .notification-negative span {
+  font-family: "Open Sans", Helvetica, Arial;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.notification img.positive, .notification-positive img.positive, .notification-negative img.positive {
+  float: left;
+  margin-top: 11px;
+  height: 18px;
+  padding-right: 14px;
+}
+
+.notification img.close, .notification-positive img.close, .notification-negative img.close {
+  float: right;
+  margin-top: 13px;
+  height: 14px;
+  padding-right: 10px;
+}
+
+.notification-positive {
+  background-color: #96cc9b;
+}
+
+.notification-positive:hover {
+  background-color: #74b67a;
+}
+
+.notification-negative {
+  background-color: #ec7171;
+}
+
+.notification-negative:hover {
+  background-color: #de5252;
+}
 /*# sourceMappingURL=style.css.map */

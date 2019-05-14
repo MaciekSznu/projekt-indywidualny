@@ -3,7 +3,7 @@
 @import "normalize";
 @import "layout";
 
-
+//BASE ELEMENTS
 h1 {
     font-size: $page-header-font-size;
     font-family: $base-font;
@@ -34,6 +34,8 @@ a {
         color: $hovered-link-color;
     }
 }
+
+//BUTTONS
 .base-button {
     min-height: 40px;
     max-height: 80px;
@@ -79,6 +81,8 @@ a {
         background-color: $tab-button-bg-color-hover;
     }
 }
+
+//TABLE
 table.base-table {
         border-collapse: collapse;
         width: 100%;
@@ -98,6 +102,7 @@ table.base-table {
             }
 }
 
+//NAVIGATION
 nav {
     font-family: $base-font;
     ul {
@@ -133,6 +138,7 @@ nav {
     }
 }
 
+//FORM
 .form {
     font-family: $base-font;
     font-size: $paragraph-font-size;
@@ -146,7 +152,7 @@ nav {
             color: $paragraph-color;
             cursor: pointer;
             border-color: $form-border-color-hover;
-            &::placeholder {
+            &::placeholder {//add opacity dla mozilli
                 color: $paragraph-color;
             }
         }
@@ -159,11 +165,111 @@ nav {
     input{
         height: 124px;
         line-height: 20px;
-        &::placeholder {
-            
+        &::placeholder {//jak wrzucić tekst na górę?   
             text-align: left;
         }
     }
 }
 
+//CHECKBOXES
+label.checkbox{//ostylowac do końca
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 46px;
+    &:hover{
+        background-color: $label-checkbox-hover;
+    }
+}
 
+.checkbox {//ostylowac kolory
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: $paragraph-font-size;
+    font-family: $base-font;
+    user-select: none;
+    .checkmark:after {
+        left: 5px;
+        top: 2px;
+        width: 4px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+    
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkmark {
+            background-color: $marked-checkbox-box;
+            &:after {//niekoniecznie zadziała
+                display: block;
+            }
+        }
+    }
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    margin-top: 11px;
+    margin-left: 12px;
+    border: 1px solid $form-border-color;
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}
+
+//NOTIFICATIONS
+.notification {
+    height: 40px;
+    line-height: 40px;
+    width: 260px;
+    border-style: none;
+    padding: 0 15px 0 20px;
+    overflow: hidden;
+    cursor: pointer;
+    span {
+        font-family: $base-font;
+        font-size: $paragraph-font-size;
+        color: $notification-text-color;
+    }
+    img.positive{
+        float: left;
+        margin-top: 11px;
+        height: 18px;
+        padding-right: 14px;
+    }
+    img.close{
+        float: right;
+        margin-top: 13px;
+        height: 14px;
+        padding-right: 10px;
+    }
+}
+.notification-positive {
+    @extend .notification;
+    background-color: $notification-positive-bg-color;
+    &:hover {
+        background-color: $notification-positive-bg-color-hover;
+    }
+}
+.notification-negative {
+    @extend .notification;
+    background-color: $notification-negative-bg-color;
+    &:hover {
+        background-color: $notification-negative-bg-color-hover;
+    }
+}
