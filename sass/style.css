@@ -486,6 +486,22 @@ nav ul li:hover a {
   color: #ffffff;
 }
 
+nav ul li:hover div.stripe {
+  margin-left: 0px;
+}
+
+nav ul li:hover img {
+  padding-left: 14px;
+}
+
+nav ul li div.stripe {
+  width: 4px;
+  height: 100%;
+  background-color: #f58220;
+  margin-left: -4px;
+  float: left;
+}
+
 nav ul li img {
   padding-left: 18px;
   width: 14px;

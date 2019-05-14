@@ -75,7 +75,6 @@ a {
     color: $tab-button-text-color;
     background-color: $tab-button-bg-color;
     div {
-        //display: inline-block;
         float: left;
         margin-top: 3px;
         margin-right: 10px;
@@ -84,7 +83,6 @@ a {
         border: 0px;
         border-radius: 50%;
         background-color: $tab-circle-color;
-        //z-index: 10;
     }
     &:hover {
         background-color: $tab-button-bg-color-hover;
@@ -131,6 +129,19 @@ nav {
             }
             &:hover a {
                 color: $nav-text-color-hover;
+            }
+            &:hover div.stripe {
+                margin-left: 0px;
+            }
+            &:hover img {
+                padding-left: 14px;
+            }
+            div.stripe {
+                width: 4px;
+                height: 100%;
+                background-color: $nav-stripe-bg-color;
+                margin-left: -4px;
+                float: left;
             }
             img {
                 padding-left: 18px;
