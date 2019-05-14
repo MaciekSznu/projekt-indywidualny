@@ -346,11 +346,47 @@ body {
 }
 
 .col-1 {
-  width: 188px;
+  width: 14.69%;
 }
 
-.col-1 {
-  width: 188px;
+.col-2 {
+  width: 15.94%;
+}
+
+.col-3 {
+  width: 26.72%;
+}
+
+.col-4 {
+  width: 26.72%;
+}
+
+.col-5 {
+  width: 15.94%;
+}
+
+.col-2-5 {
+  width: 85.31%;
+}
+
+.col-2-3, .col-4-5 {
+  width: 42.66%;
+}
+
+.col-3-4 {
+  width: 53.44%;
+}
+
+.col-2-5-offset, .col-2-3-offset {
+  margin-left: 14.69%;
+}
+
+.col-3-4-offset {
+  margin-left: 30.63%;
+}
+
+.col-4-5-offset {
+  margin-left: 57.34%;
 }
 
 * {
