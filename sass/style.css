@@ -341,6 +341,23 @@ template {
   display: none;
 }
 
+body {
+  margin: 0 auto;
+}
+
+.col-1 {
+  width: 188px;
+}
+
+.col-1 {
+  width: 188px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 h1 {
   font-size: 16px;
   font-family: "Open Sans", Helvetica, Arial;
@@ -491,7 +508,7 @@ nav ul li:hover div.stripe {
 }
 
 nav ul li:hover img {
-  padding-left: 14px;
+  margin-left: 14px;
 }
 
 nav ul li div.stripe {
@@ -503,7 +520,7 @@ nav ul li div.stripe {
 }
 
 nav ul li img {
-  padding-left: 18px;
+  margin-left: 18px;
   width: 14px;
   height: auto;
   line-height: 40px;
@@ -600,8 +617,8 @@ label.checkbox:hover {
 }
 
 .checkbox .checkmark:after {
-  left: 5px;
-  top: 2px;
+  left: 4px;
+  top: 1px;
   width: 4px;
   height: 8px;
   border: solid white;
