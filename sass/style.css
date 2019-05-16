@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -410,7 +411,7 @@ body {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: left-menu;
-  background-color: #333333;
+  position: fixed;
   margin-top: -16px;
 }
 
@@ -448,45 +449,59 @@ body {
 /* TOP */
 div.top-content-title {
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
   height: 50px;
+  line-height: 50px;
+  padding-left: 16px;
+  border-bottom: 1px solid #979797;
 }
 
 div.top-content-calendar {
   width: 100%;
-  background-color: grey;
+  background-color: #ffffff;
   height: 110px;
+  line-height: 110px;
+  text-align: center;
+  margin-top: 0px;
+  border-bottom: 1px solid #979797;
 }
 
 div.top-content-data {
   width: 100%;
-  background-color: pink;
+  background-color: #ffffff;
   height: 640px;
 }
 
 /* BOTTOM */
 div.bottom-content-title {
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
   height: 50px;
+  line-height: 50px;
+  padding-left: 16px;
+  border-bottom: 1px solid #979797;
 }
 
 div.bottom-content-button-top {
   width: 100%;
-  background-color: grey;
+  background-color: #ffffff;
   height: 90px;
+  line-height: 90px;
+  text-align: center;
 }
 
 div.bottom-content-links {
   width: 100%;
-  background-color: pink;
+  background-color: #ffffff;
   height: 570px;
 }
 
 div.bottom-content-button-bottom {
   width: 100%;
-  background-color: grey;
+  background-color: #ffffff;
   height: 90px;
+  line-height: 90px;
+  text-align: center;
 }
 
 * {
@@ -497,17 +512,21 @@ div.bottom-content-button-bottom {
 h1 {
   font-size: 16px;
   font-family: "Open Sans", Helvetica, Arial;
+  font-weight: 400;
   color: #979797;
   text-transform: uppercase;
+  margin: 0;
 }
 
 h2 {
   font-size: 15px;
   font-family: "Open Sans", Helvetica, Arial;
+  font-weight: 400;
   color: #979797;
+  margin: 0;
 }
 
-h2 ::first-letter {
+h2::first-letter {
   text-transform: uppercase;
 }
 
@@ -515,14 +534,16 @@ p {
   font-size: 14px;
   font-family: "Open Sans", Helvetica, Arial;
   color: #333333;
+  margin: 0;
 }
 
-p ::first-letter {
+p::first-letter {
   text-transform: uppercase;
 }
 
 a {
   color: #56819F;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -536,6 +557,7 @@ a:hover {
   min-width: 120px;
   max-width: 240px;
   font-family: "Open Sans", Helvetica, Arial;
+  font-weight: 300;
   color: #ffffff;
   border-style: none;
   border-radius: 3px;
@@ -595,6 +617,8 @@ a:hover {
 table.base-table {
   border-collapse: collapse;
   width: 100%;
+  max-width: 684px;
+  margin: auto;
 }
 
 table.base-table td {
@@ -604,14 +628,28 @@ table.base-table td {
   border-bottom: 1px solid #979797;
 }
 
-table.base-table tr:hover {
-  background-color: #e3e3e3;
-  cursor: pointer;
-}
-
 table.base-table td a {
   font-size: 15px;
   font-family: "Open Sans", Helvetica, Arial;
+}
+
+table.base-table td img {
+  width: 16px;
+  height: auto;
+  line-height: 56px;
+}
+
+table.base-table td.table-row-title {
+  width: 45%;
+}
+
+table.base-table td.table-ico {
+  width: 56px;
+}
+
+table.base-table tr:hover {
+  background-color: #e3e3e3;
+  cursor: pointer;
 }
 
 nav {
@@ -670,6 +708,14 @@ nav ul li a {
   line-height: 40px;
   padding-left: 16px;
   font-size: 14px;
+}
+
+div.fill {
+  position: relative;
+  background-color: #333333;
+  width: 100%;
+  height: 100vh;
+  margin-top: -16px;
 }
 
 .form, .form-text-input {

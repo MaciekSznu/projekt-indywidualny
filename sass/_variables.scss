@@ -2,6 +2,7 @@
 $paragraph-color: #333333;
 $header-color: #979797;
 $link-color: #56819F;
+$content-bg-color: #ffffff;
 $hovered-link-color: #FFA200;
 $button-text-color: #ffffff;
 $tab-button-text-color: #979797;
@@ -37,4 +38,6 @@ $section-header-font-size: 15px;
 $paragraph-font-size: 14px;
 
 // Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 $base-font: "Open Sans", Helvetica, Arial;
+

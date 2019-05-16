@@ -11,15 +11,19 @@
 h1 {
     font-size: $page-header-font-size;
     font-family: $base-font;
+    font-weight: 400;
     color: $header-color;
     text-transform: uppercase;
+    margin: 0;
 }
 
 h2 {
     font-size: $section-header-font-size;
     font-family: $base-font;
+    font-weight: 400;
     color: $header-color;
-        ::first-letter {
+    margin: 0;
+        &::first-letter {
         text-transform: uppercase;
     }
 }
@@ -27,12 +31,14 @@ p {
     font-size: $paragraph-font-size;
     font-family: $base-font;
     color: $paragraph-color;
-        ::first-letter {
+    margin: 0;
+        &::first-letter {
         text-transform: uppercase;
     }
 }
 a {
     color: $link-color;
+    font-weight: 400;
     text-decoration: none;
         &:hover {
         color: $hovered-link-color;
@@ -46,6 +52,7 @@ a {
     min-width: 120px;
     max-width: 240px;
     font-family: $base-font;
+    font-weight: 300;
     color: $button-text-color;
     border-style: none;
     border-radius: 3px;
@@ -100,19 +107,32 @@ a {
 table.base-table {
         border-collapse: collapse;
         width: 100%;
+        max-width: 684px;
+        margin: auto;
         td {
             height: 56px;
             padding: 0 16px;
             border-top: 1px solid $table-border-color;
             border-bottom: 1px solid $table-border-color;
+            a {
+                font-size: $section-header-font-size;
+                font-family: $base-font;
+                }
+            img {
+                width: 16px;
+                height: auto;
+                line-height: 56px;
+            } 
+        }
+        td.table-row-title {
+            width: 45%;
+        }
+        td.table-ico {
+            width: 56px;
         }
         tr:hover {
                 background-color: $table-row-bg-color-hover;
                 cursor: pointer;
-            }
-        td a {
-            font-size: $section-header-font-size;
-            font-family: $base-font;
             }
 }
 
@@ -165,6 +185,13 @@ nav {
         }
 
     }
+}
+div.fill {
+    position: relative;
+    background-color: $nav-bg-color;
+    width: 100%;
+    height: 100vh;
+    margin-top: -16px;
 }
 
 //FORM

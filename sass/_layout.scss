@@ -47,7 +47,8 @@ body {
 /* MAIN GRID */
 .left-menu {
     grid-area: left-menu;
-    background-color: $nav-bg-color;
+    position: fixed;
+    //background-color: $nav-bg-color;
     margin-top: -16px;
 }
 .top-content {
@@ -71,42 +72,57 @@ body {
         "left-menu top-content top-content top-content top-content"
         "left-menu bottom-content bottom-content bottom-content bottom-content"; 
 }
+
 /* MAIN GRID PROPERTIES */
 /* TOP */
 div.top-content-title {
     width: 100%;
-    background-color: white;
+    background-color: $content-bg-color;
     height: 50px;
+    line-height: 50px;
+    padding-left: 16px;
+    border-bottom: 1px solid $table-border-color;
 }
 div.top-content-calendar {
     width: 100%;
-    background-color: grey;
+    background-color: $content-bg-color;
     height: 110px;
+    line-height: 110px;
+    text-align: center;
+    margin-top: 0px;
+    border-bottom: 1px solid $table-border-color
 }
 div.top-content-data {
     width: 100%;
-    background-color: pink;
+    background-color: $content-bg-color;
     height: 640px;
 }
 
 /* BOTTOM */
 div.bottom-content-title {
     width: 100%;
-    background-color: white;
+    background-color: $content-bg-color;
     height: 50px;
+    line-height: 50px;
+    padding-left: 16px;
+    border-bottom: 1px solid $table-border-color
 }
 div.bottom-content-button-top {
     width: 100%;
-    background-color: grey;
+    background-color: $content-bg-color;
     height: 90px;
+    line-height: 90px;
+    text-align: center;
 }
 div.bottom-content-links {
     width: 100%;
-    background-color: pink;
+    background-color: $content-bg-color;
     height: 570px;
 }
 div.bottom-content-button-bottom {
     width: 100%;
-    background-color: grey;
+    background-color: $content-bg-color;
     height: 90px;
+    line-height: 90px;
+    text-align: center;
 }
