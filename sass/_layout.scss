@@ -1,37 +1,112 @@
 body {
+    width: 1280px;
     margin: 0 auto;
 }
 
-.col-1 {
-    width: 14.69%;
+/* TOP MENU GRID*/
+.top-menu-left {
+    grid-area: top-menu-left;
+    background-color: pink;
 }
-.col-2 {
-    width: 15.94%;
+.top-menu-space {
+    grid-area: top-menu-space;
+    background-color: white;
 }
-.col-3 {
-    width: 26.72%;
+.top-menu-money {
+    grid-area: top-menu-money;
+    background-color: grey;
 }
-.col-4 {
-    width: 26.72%;
+.top-menu-bell {
+    grid-area: top-menu-bell;
+    background-color: pink;
 }
-.col-5 {
-    width: 15.94%;
+.top-menu-user-name {
+    grid-area: top-menu-user-name;
+    background-color: purple;
 }
-.col-2-5 {
-    width: 85.31%;
+.top-menu-exit {
+    grid-area: top-menu-exit;
+    background-color: pink;
 }
-.col-2-3, .col-4-5 {
-    width: 42.66%;
+
+
+.top-menu-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1280px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 188px auto 188px 60px 174px 60px;
+    grid-template-rows: 60px;
+    grid-template-areas: 
+        "top-menu-left top-menu-space top-menu-money top-menu-bell top-menu-user-name top-menu-exit";
 }
-.col-3-4 {
-    width: 53.44%;
+
+
+/* MAIN GRID */
+.left-menu {
+    grid-area: left-menu;
+    background-color: $nav-bg-color;
+    margin-top: -16px;
 }
-.col-2-5-offset, .col-2-3-offset {
-    margin-left: 14.69%;
+.top-content {
+    grid-area: top-content;
+    background-color: #f5f5f2;
+    padding: 16px;
 }
-.col-3-4-offset {
-    margin-left: 30.63%;
+.bottom-content {
+    grid-area: bottom-content;
+    background-color: #f5f5f2;
+    padding: 16px;
 }
-.col-4-5-offset {
-    margin-left: 57.34%;
+
+.container {
+    top: 60px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 188px 204px 342px 342px 204px;
+    grid-template-rows: 832px 832px;
+    grid-template-areas: 
+        "left-menu top-content top-content top-content top-content"
+        "left-menu bottom-content bottom-content bottom-content bottom-content"; 
+}
+/* MAIN GRID PROPERTIES */
+/* TOP */
+div.top-content-title {
+    width: 100%;
+    background-color: white;
+    height: 50px;
+}
+div.top-content-calendar {
+    width: 100%;
+    background-color: grey;
+    height: 110px;
+}
+div.top-content-data {
+    width: 100%;
+    background-color: pink;
+    height: 640px;
+}
+
+/* BOTTOM */
+div.bottom-content-title {
+    width: 100%;
+    background-color: white;
+    height: 50px;
+}
+div.bottom-content-button-top {
+    width: 100%;
+    background-color: grey;
+    height: 90px;
+}
+div.bottom-content-links {
+    width: 100%;
+    background-color: pink;
+    height: 570px;
+}
+div.bottom-content-button-bottom {
+    width: 100%;
+    background-color: grey;
+    height: 90px;
 }

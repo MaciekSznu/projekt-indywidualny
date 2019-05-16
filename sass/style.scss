@@ -136,6 +136,7 @@ nav {
             }
             &:hover div.stripe {
                 margin-left: 0px;
+                display: inline;
             }
             &:hover img {
                 margin-left: 14px;
@@ -146,6 +147,7 @@ nav {
                 background-color: $nav-stripe-bg-color;
                 margin-left: -4px;
                 float: left;
+                display: none;
             }
             img {
                 margin-left: 18px;
