@@ -490,6 +490,15 @@ div.top-content-data-chart-tabs {
   text-align: center;
 }
 
+div.top-content-data-chart {
+  padding: 20px 170px 20px 170px;
+  text-align: center;
+}
+
+.top-content-data-chart img {
+  height: 300px;
+}
+
 /* BOTTOM */
 div.bottom-content-title {
   width: 100%;
