@@ -93,13 +93,31 @@ a {
         width: 14px;
         border: 0px;
         border-radius: 50%;
-        background-color: $tab-circle-color;
     }
     &:hover {
         background-color: $tab-button-bg-color-hover;
     }
     &:active {//nie działa...
         background-color: $tab-button-bg-color-hover;
+    }
+}
+
+.tab-button-blue {
+    @extend .tab-button;
+    div {
+    background-color: $tab-circle-color-blue;
+    }
+}
+.tab-button-orange {
+    @extend .tab-button;
+    div {
+    background-color: $tab-circle-color-orange;
+    }
+}
+.tab-button-green {
+    @extend .tab-button;
+    div {
+    background-color: $tab-circle-color-green;
     }
 }
 
@@ -134,6 +152,33 @@ table.base-table {
                 background-color: $table-row-bg-color-hover;
                 cursor: pointer;
             }
+}
+
+table.chart-table {
+    @extend table.base-table;
+        position: relative;
+        width: 50%;
+        max-width: 300px;
+        float: left;
+        margin: 0 30px;        
+        td {
+            height: 44px;
+            border-top: none;
+            padding: 0; 
+        }
+        td.table-row-title {
+            width: 80%;
+        }
+        td.table-row-data {
+            text-align: right;
+    }   
+}
+
+.top-content-data-chart-title h2 {
+    margin: 0 30px;
+}
+.top-content-data-chart-tabs button {
+    margin: 0 20px;
 }
 
 //NAVIGATION
@@ -198,10 +243,10 @@ div.fill {
 .form {
     font-family: $base-font;
     font-size: $paragraph-font-size;
-    input{
+    input, textarea{
         width: 154px;
         margin: 15px;
-        padding: 20px;
+        padding: 10px;
         border: 1px solid $form-border-color;
         border-radius: 3px; 
         &:hover {
@@ -215,13 +260,30 @@ div.fill {
         
     }
 }
+//do poprawy pozycja tła obrazka
+.form-password {
+    @extend .form;
+    input {
+        background:  url("..\images\icons\password.svg");
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        text-indent: 20px; 
+            &::placeholder {
+                background:  url("..\images\icons\password.svg");
+                background-repeat: no-repeat;
+                background-size: 20px 20px;   
+                text-align: left;
+                text-indent: 20px;
+            }
+    }
+}
 
 .form-text-input {
     @extend .form;
-    input{
+    textarea{
         height: 124px;
-        line-height: 20px;
-        &::placeholder {//jak wrzucić tekst na górę?   
+        resize: none;//czyści pole rozszerzaniaq w narożniku
+        &::placeholder {   
             text-align: left;
         }
     }

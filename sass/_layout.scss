@@ -97,6 +97,23 @@ div.top-content-data {
     background-color: $content-bg-color;
     height: 640px;
 }
+/* TOP SECTIONS PROPERTIES */ 
+div.top-content-data-table {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 20%;
+    vertical-align: center;
+    padding: 20px 170px 20px 170px;
+}
+
+div.top-content-data-chart-title {
+    padding: 60px 170px 20px 170px;
+}
+div.top-content-data-chart-tabs {
+    padding: 20px 170px 20px 170px;
+    text-align: center;
+}
+
 
 /* BOTTOM */
 div.bottom-content-title {
