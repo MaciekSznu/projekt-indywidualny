@@ -92,13 +92,14 @@ div.top-content-calendar {
     margin-top: 0px;
     border-bottom: 1px solid $table-border-color
 }
-div.top-content-data {
+div.top-content-general, div.top-content-payout, div.top-content-details{
     width: 100%;
     background-color: $content-bg-color;
     height: 640px;
 }
-/* TOP SECTIONS PROPERTIES */ 
-div.top-content-data-table {
+/* TOP SECTIONS PROPERTIES */
+/*GENERAL*/ 
+div.top-content-general-table {
     width: 100%;
     background-color: $content-bg-color;
     height: 20%;
@@ -106,19 +107,36 @@ div.top-content-data-table {
     padding: 20px 170px 20px 170px;
 }
 
-div.top-content-data-chart-title {
+div.top-content-general-chart-title {
     padding: 60px 170px 20px 170px;
 }
-div.top-content-data-chart-tabs {
+div.top-content-general-chart-tabs {
     padding: 20px 170px 20px 170px;
     text-align: center;
 }
-div.top-content-data-chart {
+div.top-content-general-chart {
     padding: 20px 170px 20px 170px;
     text-align: center;
 }
-.top-content-data-chart img {
+.top-content-general-chart img {
     height: 300px;
+}
+
+/*PAYOUT*/ 
+div.top-content-payout-table {
+    width: 100%;
+    background-color: $content-bg-color;
+    //height: 20%;
+    vertical-align: center;
+    padding: 20px;
+}
+/* DETAILS*/
+div.top-content-details-table {
+    width: 100%;
+    background-color: $content-bg-color;
+    //height: 20%;
+    vertical-align: center;
+    padding: 20px;
 }
 
 /* BOTTOM */

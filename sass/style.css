@@ -466,14 +466,15 @@ div.top-content-calendar {
   border-bottom: 1px solid #979797;
 }
 
-div.top-content-data {
+div.top-content-general, div.top-content-payout, div.top-content-details {
   width: 100%;
   background-color: #ffffff;
   height: 640px;
 }
 
 /* TOP SECTIONS PROPERTIES */
-div.top-content-data-table {
+/*GENERAL*/
+div.top-content-general-table {
   width: 100%;
   background-color: #ffffff;
   height: 20%;
@@ -481,22 +482,38 @@ div.top-content-data-table {
   padding: 20px 170px 20px 170px;
 }
 
-div.top-content-data-chart-title {
+div.top-content-general-chart-title {
   padding: 60px 170px 20px 170px;
 }
 
-div.top-content-data-chart-tabs {
+div.top-content-general-chart-tabs {
   padding: 20px 170px 20px 170px;
   text-align: center;
 }
 
-div.top-content-data-chart {
+div.top-content-general-chart {
   padding: 20px 170px 20px 170px;
   text-align: center;
 }
 
-.top-content-data-chart img {
+.top-content-general-chart img {
   height: 300px;
+}
+
+/*PAYOUT*/
+div.top-content-payout-table {
+  width: 100%;
+  background-color: #ffffff;
+  vertical-align: center;
+  padding: 20px;
+}
+
+/* DETAILS*/
+div.top-content-details-table {
+  width: 100%;
+  background-color: #ffffff;
+  vertical-align: center;
+  padding: 20px;
 }
 
 /* BOTTOM */
@@ -652,40 +669,40 @@ a:hover {
   background-color: #04ae00;
 }
 
-table.base-table, table.chart-table {
+table.base-table, table.chart-table, table.payout-table, table.details-table {
   border-collapse: collapse;
   width: 100%;
   max-width: 684px;
   margin: auto;
 }
 
-table.base-table td, table.chart-table td {
+table.base-table td, table.chart-table td, table.payout-table td, table.details-table td, table.base-table th, table.chart-table th, table.payout-table th, table.details-table th {
   height: 56px;
   padding: 0 16px;
   border-top: 1px solid #979797;
   border-bottom: 1px solid #979797;
 }
 
-table.base-table td a, table.chart-table td a {
+table.base-table td a, table.chart-table td a, table.payout-table td a, table.details-table td a, table.base-table th a, table.chart-table th a, table.payout-table th a, table.details-table th a {
   font-size: 15px;
   font-family: "Open Sans", Helvetica, Arial;
 }
 
-table.base-table td img, table.chart-table td img {
+table.base-table td img, table.chart-table td img, table.payout-table td img, table.details-table td img, table.base-table th img, table.chart-table th img, table.payout-table th img, table.details-table th img {
   width: 16px;
   height: auto;
   line-height: 56px;
 }
 
-table.base-table td.table-row-title, table.chart-table td.table-row-title {
+table.base-table td.table-row-title, table.chart-table td.table-row-title, table.payout-table td.table-row-title, table.details-table td.table-row-title {
   width: 45%;
 }
 
-table.base-table td.table-ico, table.chart-table td.table-ico {
+table.base-table td.table-ico, table.chart-table td.table-ico, table.payout-table td.table-ico, table.details-table td.table-ico {
   width: 56px;
 }
 
-table.base-table tr:hover, table.chart-table tr:hover {
+table.base-table tr:hover, table.chart-table tr:hover, table.payout-table tr:hover, table.details-table tr:hover {
   background-color: #e3e3e3;
   cursor: pointer;
 }
@@ -710,6 +727,98 @@ table.chart-table td.table-row-title {
 
 table.chart-table td.table-row-data {
   text-align: right;
+}
+
+table.payout-table {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+table.payout-table td, table.payout-table th {
+  border-top: none;
+  text-align: left;
+  padding: 10px;
+}
+
+table.payout-table td p, table.payout-table th p {
+  font-size: 12px;
+}
+
+table.payout-table td.table-row-date, table.payout-table th.table-row-date {
+  width: 32%;
+}
+
+table.payout-table td.table-row-amount, table.payout-table th.table-row-amount {
+  width: 32%;
+}
+
+table.payout-table td.table-row-deal, table.payout-table th.table-row-deal {
+  width: 25%;
+}
+
+table.payout-table td.table-row-account, table.payout-table th.table-row-account {
+  width: 11%;
+}
+
+table.details-table {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+table.details-table td, table.details-table th {
+  border-top: none;
+  text-align: left;
+  padding: 10px;
+}
+
+table.details-table td p, table.details-table th p {
+  font-size: 12px;
+}
+
+table.details-table td.table-row-tracker-name, table.details-table th.table-row-tracker-name {
+  width: 11%;
+}
+
+table.details-table td.table-row-initiated-date, table.details-table th.table-row-initiated-date {
+  width: 14%;
+}
+
+table.details-table td.table-row-visits, table.details-table th.table-row-visits {
+  width: 7%;
+}
+
+table.details-table td.table-row-unique, table.details-table th.table-row-unique {
+  width: 7%;
+}
+
+table.details-table td.table-row-signups, table.details-table th.table-row-signups {
+  width: 8%;
+}
+
+table.details-table td.table-row-ftd, table.details-table th.table-row-ftd {
+  width: 6%;
+}
+
+table.details-table td.table-row-depositors, table.details-table th.table-row-depositors {
+  width: 9%;
+}
+
+table.details-table td.table-row-deposits, table.details-table th.table-row-deposits {
+  width: 12%;
+}
+
+table.details-table td.table-row-payout, table.details-table th.table-row-payout {
+  width: 9%;
+}
+
+table.details-table td.table-row-turnover, table.details-table th.table-row-turnover {
+  width: 10%;
+}
+
+table.details-table td.table-row-deal, table.details-table th.table-row-deal {
+  width: 7%;
 }
 
 .top-content-data-chart-title h2 {
