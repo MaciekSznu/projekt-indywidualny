@@ -152,6 +152,11 @@ table.base-table {
                 background-color: $table-row-bg-color-hover;
                 cursor: pointer;
             }
+        tr.table-head:hover {
+                background-color: $table-head-bg-color-hover;
+                cursor: pointer;
+            }
+
 }
 
 table.chart-table {
@@ -469,3 +474,79 @@ label.checkbox{//ostylowac do końca
         background-color: $notification-negative-bg-color-hover;
     }
 }
+
+//COLUMN NAME
+.column-name {
+    height: 26px;
+    line-height: 26px;
+    width: 120px;
+    border-style: none;
+    border-radius: 3px;
+    padding: 0 10px;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover  {
+        background-color: $column-name-hover-bg-color;
+    }
+    span {
+        font-family: $base-font;
+        font-size: $table-paragraph-font-size;
+        color: $tab-button-text-color;
+    }
+    &:hover span {
+        color: $paragraph-color;
+        font-weight: 600;
+    }
+    img.column-name-ico {
+        float: right;
+        margin-top: 9px;
+        height: 7px;
+        display: none;
+    }
+    &:hover img {
+        display: inline;
+    }
+
+}
+
+.pagination {
+    font-family: $base-font;
+    ul {
+    height: 40px;
+	list-style: none;
+	padding: 0;
+	position: relative;
+        li {
+            display: inline-block;
+            width: 40px;
+            cursor: pointer;
+            text-align: center;
+            }
+            img {
+                height: 18px;
+                padding-top: 5px;
+            }
+            div {
+                line-height: 40px;
+                height: 40px;
+                &:active, &:hover { //do poprawy stan active i hover
+                    background-color: $pagination-number-active-bg-color;
+                    border-radius: 3px;
+                    p {
+                        color: $pagination-number-active-color;
+    
+                    }
+                }
+            }
+            
+
+            p {
+            color: $nav-text-color;
+            height: 40px;
+            line-height: 40px;
+            font-size: $page-header-font-size;
+            }
+        }
+
+    }
+
