@@ -1007,6 +1007,18 @@ label.checkbox:hover {
   background-color: #F5F5F2;
 }
 
+label.checkbox:hover img.checkbox-ico {
+  display: inline-block;
+}
+
+label.checkbox img.checkbox-ico {
+  display: none;
+  float: right;
+  margin-right: 12px;
+  margin-top: 12px;
+  height: 15px;
+}
+
 .checkbox {
   display: block;
   position: relative;

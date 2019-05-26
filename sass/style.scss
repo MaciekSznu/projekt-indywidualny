@@ -379,6 +379,16 @@ label.checkbox{//ostylowac do końca
     &:hover{
         background-color: $label-checkbox-hover;
     }
+    &:hover img.checkbox-ico {
+        display: inline-block;
+    }
+    img.checkbox-ico {
+        display: none;
+        float: right;
+        margin-right: 12px;
+        margin-top: 12px;
+        height: 15px;
+    }
 }
 
 .checkbox {//ostylowac kolory
@@ -545,6 +555,7 @@ label.checkbox{//ostylowac do końca
         }
 }
 
+//DATE PERIOD
 .date-period {
     width: 320px;
     height: 40px;
