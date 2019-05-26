@@ -213,37 +213,38 @@ table.details-table {
         td, th {
             border-top: none;
             text-align: left;
-            padding: 10px;
-            p {
+            padding: 2px;
+            span, p {
                 font-size: $table-paragraph-font-size;
+                padding: 0 5px;
             }
         }
         td.table-row-tracker-name, th.table-row-tracker-name {
             width: 11%;
         }
         td.table-row-initiated-date, th.table-row-initiated-date {
-            width: 14%;
+            width: 11%;
         }
         td.table-row-visits, th.table-row-visits{
             width: 7%;
         }
         td.table-row-unique, th.table-row-unique {
-            width: 7%;
+            width: 8%;
         }
         td.table-row-signups, th.table-row-signups {
-            width: 8%;
+            width: 9%;
         }
         td.table-row-ftd, th.table-row-ftd {
             width: 6%;
         }
         td.table-row-depositors, th.table-row-depositors {
-            width: 9%;
+            width: 10%;
         }
         td.table-row-deposits, th.table-row-deposits{
-            width: 12%;
+            width: 11%;
         }
         td.table-row-payout, th.table-row-payout {
-            width: 9%;
+            width: 10%;
         }
         td.table-row-turnover, th.table-row-turnover{
             width: 10%;
@@ -252,9 +253,6 @@ table.details-table {
             width: 7%;
         }
 }
-
-
-
 
 
 .top-content-data-chart-title h2 {
@@ -479,26 +477,26 @@ label.checkbox{//ostylowac do końca
 .column-name {
     height: 26px;
     line-height: 26px;
-    width: 120px;
     border-style: none;
     border-radius: 3px;
-    padding: 0 10px;
     overflow: hidden;
     cursor: pointer;
     &:hover  {
         background-color: $column-name-hover-bg-color;
     }
     span {
+        padding: 0 5px;
         font-family: $base-font;
         font-size: $table-paragraph-font-size;
         color: $tab-button-text-color;
+        font-weight: 600;
     }
     &:hover span {
         color: $paragraph-color;
-        font-weight: 600;
     }
     img.column-name-ico {
         float: right;
+        padding-right: 7px;
         margin-top: 9px;
         height: 7px;
         display: none;
@@ -509,18 +507,19 @@ label.checkbox{//ostylowac do końca
 
 }
 
+//PAGINATION
 .pagination {
+    text-align: center;
     font-family: $base-font;
     ul {
     height: 40px;
-	list-style: none;
+    list-style: none;
 	padding: 0;
 	position: relative;
         li {
             display: inline-block;
             width: 40px;
             cursor: pointer;
-            text-align: center;
             }
             img {
                 height: 18px;
@@ -529,17 +528,14 @@ label.checkbox{//ostylowac do końca
             div {
                 line-height: 40px;
                 height: 40px;
-                &:active, &:hover { //do poprawy stan active i hover
+                border-radius: 3px;
+                &:active, &:visited { //do poprawy stan visited
                     background-color: $pagination-number-active-bg-color;
-                    border-radius: 3px;
                     p {
                         color: $pagination-number-active-color;
-    
                     }
                 }
             }
-            
-
             p {
             color: $nav-text-color;
             height: 40px;
@@ -547,6 +543,40 @@ label.checkbox{//ostylowac do końca
             font-size: $page-header-font-size;
             }
         }
+}
 
+.date-period {
+    width: 320px;
+    height: 40px;
+    border: 1px solid $form-border-color;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+        border-color: $form-border-color-hover;
     }
+    div {
+        display: inline-block;
+        input {
+            height: 38px;
+            line-height: 38px;
+            width: 140px;
+            border: none;
+            font-family: $base-font;
+            font-size: $table-paragraph-font-size;
+            padding-left: 15px;
+            cursor: pointer;
+        }
+        }
+        img {
+            height: 18px;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+}    
+.date-period-separator {
+    width: 1px;
+    height: 32px;
+    line-height: 32px;
+    background-color: $form-border-color;
+}
 

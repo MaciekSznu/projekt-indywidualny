@@ -775,11 +775,12 @@ table.details-table {
 table.details-table td, table.details-table th {
   border-top: none;
   text-align: left;
-  padding: 10px;
+  padding: 2px;
 }
 
-table.details-table td p, table.details-table th p {
+table.details-table td span, table.details-table td p, table.details-table th span, table.details-table th p {
   font-size: 12px;
+  padding: 0 5px;
 }
 
 table.details-table td.table-row-tracker-name, table.details-table th.table-row-tracker-name {
@@ -787,7 +788,7 @@ table.details-table td.table-row-tracker-name, table.details-table th.table-row-
 }
 
 table.details-table td.table-row-initiated-date, table.details-table th.table-row-initiated-date {
-  width: 14%;
+  width: 11%;
 }
 
 table.details-table td.table-row-visits, table.details-table th.table-row-visits {
@@ -795,11 +796,11 @@ table.details-table td.table-row-visits, table.details-table th.table-row-visits
 }
 
 table.details-table td.table-row-unique, table.details-table th.table-row-unique {
-  width: 7%;
+  width: 8%;
 }
 
 table.details-table td.table-row-signups, table.details-table th.table-row-signups {
-  width: 8%;
+  width: 9%;
 }
 
 table.details-table td.table-row-ftd, table.details-table th.table-row-ftd {
@@ -807,15 +808,15 @@ table.details-table td.table-row-ftd, table.details-table th.table-row-ftd {
 }
 
 table.details-table td.table-row-depositors, table.details-table th.table-row-depositors {
-  width: 9%;
+  width: 10%;
 }
 
 table.details-table td.table-row-deposits, table.details-table th.table-row-deposits {
-  width: 12%;
+  width: 11%;
 }
 
 table.details-table td.table-row-payout, table.details-table th.table-row-payout {
-  width: 9%;
+  width: 10%;
 }
 
 table.details-table td.table-row-turnover, table.details-table th.table-row-turnover {
@@ -1114,10 +1115,8 @@ label.checkbox:hover {
 .column-name {
   height: 26px;
   line-height: 26px;
-  width: 120px;
   border-style: none;
   border-radius: 3px;
-  padding: 0 10px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -1127,18 +1126,20 @@ label.checkbox:hover {
 }
 
 .column-name span {
+  padding: 0 5px;
   font-family: "Open Sans", Helvetica, Arial;
   font-size: 12px;
   color: #979797;
+  font-weight: 600;
 }
 
 .column-name:hover span {
   color: #333333;
-  font-weight: 600;
 }
 
 .column-name img.column-name-ico {
   float: right;
+  padding-right: 7px;
   margin-top: 9px;
   height: 7px;
   display: none;
@@ -1149,6 +1150,7 @@ label.checkbox:hover {
 }
 
 .pagination {
+  text-align: center;
   font-family: "Open Sans", Helvetica, Arial;
 }
 
@@ -1163,7 +1165,6 @@ label.checkbox:hover {
   display: inline-block;
   width: 40px;
   cursor: pointer;
-  text-align: center;
 }
 
 .pagination ul img {
@@ -1174,14 +1175,14 @@ label.checkbox:hover {
 .pagination ul div {
   line-height: 40px;
   height: 40px;
-}
-
-.pagination ul div:active, .pagination ul div:hover {
-  background-color: #e3e3e3;
   border-radius: 3px;
 }
 
-.pagination ul div:active p, .pagination ul div:hover p {
+.pagination ul div:active, .pagination ul div:visited {
+  background-color: #e3e3e3;
+}
+
+.pagination ul div:active p, .pagination ul div:visited p {
   color: #777777;
 }
 
@@ -1190,5 +1191,45 @@ label.checkbox:hover {
   height: 40px;
   line-height: 40px;
   font-size: 16px;
+}
+
+.date-period {
+  width: 320px;
+  height: 40px;
+  border: 1px solid #979797;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.date-period:hover {
+  border-color: #333333;
+}
+
+.date-period div {
+  display: inline-block;
+}
+
+.date-period div input {
+  height: 38px;
+  line-height: 38px;
+  width: 140px;
+  border: none;
+  font-family: "Open Sans", Helvetica, Arial;
+  font-size: 12px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.date-period img {
+  height: 18px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.date-period-separator {
+  width: 1px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #979797;
 }
 /*# sourceMappingURL=style.css.map */
