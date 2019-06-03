@@ -553,6 +553,10 @@ div.bottom-content-button-bottom {
           box-sizing: border-box;
 }
 
+.display-none {
+  display: none;
+}
+
 h1 {
   font-size: 16px;
   font-family: "Open Sans", Helvetica, Arial;
