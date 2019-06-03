@@ -4,6 +4,8 @@
 @import "layout";
 @import "../sass/components/leftmenu";
 @import "../sass/components/tables";
+@import "../sass/components/buttons";
+@import "../sass/components/forms";
 
 * {
     box-sizing: border-box;
@@ -50,82 +52,6 @@ a {
     }
 }
 
-//BUTTONS
-.base-button {
-    height: 40px;
-    max-height: 40px;
-    min-width: 120px;
-    max-width: 240px;
-    font-family: $base-font;
-    font-weight: 300;
-    color: $button-text-color;
-    border-style: none;
-    border-radius: 3px;
-    padding: 0 20px;
-    overflow: hidden;
-    cursor: pointer;
-    &:focus {
-        outline: 0;
-    }
-}
-.standard-button {
-    @extend .base-button;
-    background-color: $standard-button-bg-color;
-    &:hover {
-        background-color: $standard-button-bg-color-hover;
-    }
-}
-.warning-button {
-    @extend .base-button;
-    background-color: $warning-button-bg-color;
-    &:hover {
-        background-color: $warning-button-bg-color-hover;
-    }
-}
-.disabled-button {
-    @extend .base-button;
-    background-color: $disabled-button-bg-color;
-}
-.tab-button {
-    @extend .base-button;
-    color: $tab-button-text-color;
-    background-color: $tab-button-bg-color;
-    div {
-        float: left;
-        margin-top: 3px;
-        margin-right: 10px;
-        height: 14px;
-        width: 14px;
-        border: 0px;
-        border-radius: 50%;
-    }
-    &:hover {
-        background-color: $tab-button-bg-color-hover;
-    }
-    &:active {//nie działa...
-        background-color: $tab-button-bg-color-hover;
-    }
-}
-
-.tab-button-blue {
-    @extend .tab-button;
-    div {
-    background-color: $tab-circle-color-blue;
-    }
-}
-.tab-button-orange {
-    @extend .tab-button;
-    div {
-    background-color: $tab-circle-color-orange;
-    }
-}
-.tab-button-green {
-    @extend .tab-button;
-    div {
-    background-color: $tab-circle-color-green;
-    }
-}
-
 .top-content-data-chart-title h2 {
     margin: 0 30px;
 }
@@ -133,55 +59,6 @@ a {
     margin: 0 20px;
 }
 
-//FORM
-.form {
-    font-family: $base-font;
-    font-size: $paragraph-font-size;
-    input, textarea{
-        width: 154px;
-        margin: 15px;
-        padding: 10px;
-        border: 1px solid $form-border-color;
-        border-radius: 3px; 
-        &:hover {
-            color: $paragraph-color;
-            cursor: pointer;
-            border-color: $form-border-color-hover;
-            &::placeholder {//add opacity dla mozilli
-                color: $paragraph-color;
-            }
-        }
-        
-    }
-}
-//do poprawy pozycja tła obrazka
-.form-password {
-    @extend .form;
-    input {
-        background:  url("..\images\icons\password.svg");
-        background-repeat: no-repeat;
-        background-size: 20px 20px;
-        text-indent: 20px; 
-            &::placeholder {
-                background:  url("..\images\icons\password.svg");
-                background-repeat: no-repeat;
-                background-size: 20px 20px;   
-                text-align: left;
-                text-indent: 20px;
-            }
-    }
-}
-
-.form-text-input {
-    @extend .form;
-    textarea{
-        height: 124px;
-        resize: none;//czyści pole rozszerzaniaq w narożniku
-        &::placeholder {   
-            text-align: left;
-        }
-    }
-}
 
 //CHECKBOXES
 label.checkbox{//ostylowac do końca

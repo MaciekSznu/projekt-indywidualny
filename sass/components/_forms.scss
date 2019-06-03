@@ -1,0 +1,49 @@
+//FORM
+.form {
+    font-family: $base-font;
+    font-size: $paragraph-font-size;
+    input, textarea{
+        width: 154px;
+        margin: 15px;
+        padding: 10px;
+        border: 1px solid $form-border-color;
+        border-radius: 3px; 
+        &:hover {
+            color: $paragraph-color;
+            cursor: pointer;
+            border-color: $form-border-color-hover;
+            &::placeholder {//add opacity dla mozilli
+                color: $paragraph-color;
+            }
+        }
+        
+    }
+}
+//do poprawy pozycja tła obrazka
+.form-password {
+    @extend .form;
+    input {
+        background:  url("..\images\icons\password.svg");
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        text-indent: 20px; 
+            &::placeholder {
+                background:  url("..\images\icons\password.svg");
+                background-repeat: no-repeat;
+                background-size: 20px 20px;   
+                text-align: left;
+                text-indent: 20px;
+            }
+    }
+}
+
+.form-text-input {
+    @extend .form;
+    textarea{
+        height: 124px;
+        resize: none;//czyści pole rozszerzaniaq w narożniku
+        &::placeholder {   
+            text-align: left;
+        }
+    }
+}
