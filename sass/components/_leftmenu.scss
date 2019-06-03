@@ -1,0 +1,57 @@
+//NAVIGATION
+nav {
+    font-family: $base-font;
+    ul {
+	width: 188px;
+	list-style: none;
+	padding: 0;
+	position: relative;
+        li {
+            height: 40px;
+            background-color: $nav-bg-color;
+            cursor: pointer;
+            &:hover {
+                opacity: .8;
+            }
+            &:hover a {
+                color: $nav-text-color-hover;
+            }
+            &:hover div.stripe {
+                margin-left: 0px;
+                display: inline;
+            }
+            &:hover img {
+                margin-left: 14px;
+            }
+            div.stripe {
+                width: 4px;
+                height: 100%;
+                background-color: $nav-stripe-bg-color;
+                margin-left: -4px;
+                float: left;
+                display: none;
+            }
+            img {
+                margin-left: 18px;
+                width: 14px;
+                height: auto;
+                line-height: 40px;
+            }
+            a {
+            color: $nav-text-color;
+            text-decoration: none;
+            line-height: 40px;
+            padding-left: 16px;
+            font-size: $paragraph-font-size;
+            }
+        }
+
+    }
+}
+div.fill {
+    position: relative;
+    background-color: $nav-bg-color;
+    width: 100%;
+    height: 100vh;
+    margin-top: -16px;
+}
