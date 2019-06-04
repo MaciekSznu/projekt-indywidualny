@@ -257,13 +257,14 @@ label.checkbox{//ostylowac do końca
     }
     div {
         display: inline-block;
+        height: 40px;
         input {
             height: 38px;
             line-height: 38px;
             width: 140px;
             border: none;
             font-family: $base-font;
-            font-size: $table-paragraph-font-size;
+            font-size: $calendar-font-size;
             padding-left: 15px;
             cursor: pointer;
         }
@@ -274,11 +275,21 @@ label.checkbox{//ostylowac do końca
             cursor: pointer;
         }
 }    
-.date-period-separator {
+div.date-period-separator {
     width: 1px;
     height: 32px;
     line-height: 32px;
     background-color: $form-border-color;
+}
+.date-period-refresh-button {
+    button {
+        margin-left: 20px;
+        width: 40px;
+        padding: 10px;
+    img {
+        width: 20px;
+    }
+    }
 }
 
 //TOP MENU
@@ -307,6 +318,7 @@ div.top-menu-left {
         justify-content: center;
         background-color: $nav-bg-color;
         border: none;
+        cursor: pointer;
         div {        
             width: 20px;
             height: 2px;

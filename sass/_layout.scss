@@ -1,3 +1,57 @@
+@media (min-width: 768px){
+    body {
+    width: 100%;
+    margin: 0 auto;
+    }
+    /* TOP MENU GRID*/
+    .top-menu-left {
+        grid-area: top-menu-left;
+    }
+    .top-menu-space {
+        grid-area: top-menu-space;
+    }
+
+    .top-menu-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        max-width: 1280px;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 188px auto;
+        grid-template-rows: 60px;
+        grid-template-areas: 
+            "top-menu-left top-menu-space";
+    }
+    /* MAIN GRID */
+    .top-content {
+        grid-area: top-content;
+        background-color: #f5f5f2;
+        padding: 16px;
+    }
+    .bottom-content {
+        grid-area: bottom-content;
+        background-color: #f5f5f2;
+        padding: 16px;
+    }
+
+    .container {
+        top: 60px;
+        position: relative;
+        display: grid;
+        grid-template-columns: auto  342px 342px auto;
+        grid-template-rows: 832px 832px;
+        grid-template-areas: 
+            "top-content top-content top-content top-content"
+            "bottom-content bottom-content bottom-content bottom-content"; 
+    }
+}
+
+
+
+
+@media(min-width: 1200px) {
+
 body {
     width: 1280px;
     margin: 0 auto;
@@ -43,7 +97,6 @@ body {
 .left-menu {
     grid-area: left-menu;
     position: fixed;
-    //background-color: $nav-bg-color;
     margin-top: -16px;
 }
 .top-content {
@@ -62,7 +115,7 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: 188px 204px 342px 342px 204px;
-    grid-template-rows: 832px 832px;
+    grid-template-rows: auto auto;
     grid-template-areas: 
         "left-menu top-content top-content top-content top-content"
         "left-menu bottom-content bottom-content bottom-content bottom-content"; 
@@ -79,10 +132,13 @@ div.top-content-title {
     border-bottom: 1px solid $table-border-color;
 }
 div.top-content-calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     background-color: $content-bg-color;
     height: 110px;
-    line-height: 110px;
+    //line-height: 110px;
     text-align: center;
     margin-top: 0px;
     border-bottom: 1px solid $table-border-color
@@ -161,4 +217,15 @@ div.bottom-content-button-bottom {
     height: 90px;
     line-height: 90px;
     text-align: center;
+}
+}
+
+@media (min-width: 992px){
+    
+}
+@media (max-width: 767px){
+    body {
+    width: 100%;
+    margin: 0 auto;
+    }
 }
