@@ -23,6 +23,7 @@ $nav-bg-color: #333333;
 $nav-text-color: #777777;
 $nav-text-color-hover: #ffffff;
 $nav-stripe-bg-color: #f58220;
+$logo-color: #ffffff;
 $form-border-color: #979797;
 $form-border-color-hover: #333333;
 $label-checkbox-hover: #F5F5F2;
@@ -35,6 +36,8 @@ $notification-text-color: #ffffff;
 $column-name-hover-bg-color: #e3e3e3;
 $pagination-number-active-bg-color: #e3e3e3;
 $pagination-number-active-color: #777777;
+$top-menu-border-color: #e3e3e3;
+$hamburger-color: #e3e3e3;
 
 
 
@@ -43,6 +46,7 @@ $page-header-font-size: 16px;
 $section-header-font-size: 15px;
 $paragraph-font-size: 14px;
 $table-paragraph-font-size: 12px;
+$menu-paragraph-font-size: 12px;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');

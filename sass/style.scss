@@ -281,3 +281,85 @@ label.checkbox{//ostylowac do końca
     background-color: $form-border-color;
 }
 
+//TOP MENU
+
+.top-menu-container div {
+    border-left: 1px solid $top-menu-border-color;
+    border-bottom: 1px solid $top-menu-border-color;
+    background-color: $content-bg-color;
+}
+div.top-menu-left {
+    border: none;
+    background-color: $nav-bg-color;
+}
+.top-menu-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 18px;
+    padding-right: 18px;
+    p {
+        color: $logo-color;
+    }
+    div.hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $nav-bg-color;
+        border: none;
+        div {        
+            width: 20px;
+            height: 2px;
+            background-color: $hamburger-color;
+            margin: 2px 0;
+        }
+    }
+}
+
+.top-menu-money {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    img {
+        width: 20px;
+    }
+    #arrow-down  {
+        width: 12px;
+    }
+    span {
+        font-size: $page-header-font-size;
+        font-family: $base-font;
+    }
+}
+
+
+.top-menu-bell {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    img {
+        width: 20px;  
+    }
+}
+
+.top-menu-user-name {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    img {
+        width: 20px;
+    }
+    span {
+        font-size: $menu-paragraph-font-size;
+        font-family: $base-font;
+    }
+}
+
+.top-menu-exit {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    a img {
+        width: 20px;  
+    }
+}
