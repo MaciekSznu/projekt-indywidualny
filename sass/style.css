@@ -596,6 +596,7 @@ template {
 
 nav {
   font-family: "Open Sans", Helvetica, Arial;
+  position: fixed;
 }
 
 nav ul {
@@ -652,11 +653,11 @@ nav ul li a {
   font-size: 14px;
 }
 
-div.fill {
+.left-menu {
   position: relative;
   background-color: #333333;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin-top: -16px;
 }
 
@@ -1278,7 +1279,7 @@ label.checkbox img.checkbox-ico {
   width: 140px;
   border: none;
   font-family: "Open Sans", Helvetica, Arial;
-  font-size: 11px;
+  font-size: 12px;
   padding-left: 15px;
   cursor: pointer;
 }
@@ -1286,6 +1287,7 @@ label.checkbox img.checkbox-ico {
 .date-period img {
   height: 18px;
   padding-top: 5px;
+  padding-right: 10px;
   cursor: pointer;
 }
 
@@ -1297,7 +1299,7 @@ div.date-period-separator {
 }
 
 .date-period-refresh-button button {
-  margin-left: 20px;
+  margin-left: 10px;
   width: 40px;
   padding: 10px;
 }

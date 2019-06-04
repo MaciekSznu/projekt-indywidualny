@@ -1,6 +1,7 @@
 //NAVIGATION
 nav {
     font-family: $base-font;
+    position: fixed;
     ul {
 	width: 188px;
 	list-style: none;
@@ -48,10 +49,10 @@ nav {
 
     }
 }
-div.fill {
+.left-menu {
     position: relative;
     background-color: $nav-bg-color;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin-top: -16px;
 }

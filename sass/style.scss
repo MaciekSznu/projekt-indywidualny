@@ -10,6 +10,7 @@
 * {
     box-sizing: border-box;
     }
+//klasa ukrywająca sekcje     
 .display-none {
     display: none;
 }
@@ -272,6 +273,7 @@ label.checkbox{//ostylowac do końca
         img {
             height: 18px;
             padding-top: 5px;
+            padding-right: 10px;
             cursor: pointer;
         }
 }    
@@ -283,7 +285,7 @@ div.date-period-separator {
 }
 .date-period-refresh-button {
     button {
-        margin-left: 20px;
+        margin-left: 10px;
         width: 40px;
         padding: 10px;
     img {
