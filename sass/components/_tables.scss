@@ -1,4 +1,15 @@
 //TABLE
+.scroll-wrapper {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .scroll-wrapper table {
+    width: 100%;
+    max-width: 100%;
+  }
+
 table.base-table {
     border-collapse: collapse;
     width: 100%;
@@ -42,7 +53,7 @@ table.chart-table {
     width: 50%;
     max-width: 300px;
     float: left;
-    margin: 0 30px;        
+    margin: 0 30px; 
     td {
         height: 44px;
         border-top: none;
@@ -130,3 +141,4 @@ table.details-table {
         width: 7%;
     }
 }
+

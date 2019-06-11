@@ -342,7 +342,12 @@ template {
   display: none;
 }
 
-@media (min-width: 768px) {
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
   body {
     width: 100%;
     margin: 0 auto;
@@ -354,23 +359,21 @@ template {
     grid-area: top-menu-left;
   }
   .top-menu-space {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
     grid-area: top-menu-space;
   }
   .top-menu-container {
     position: fixed;
     top: 0;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1199px;
     z-index: 1;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 188px auto;
-        grid-template-columns: 188px auto;
+    -ms-grid-columns: 188px;
+        grid-template-columns: 188px;
     -ms-grid-rows: 60px;
         grid-template-rows: 60px;
-        grid-template-areas: "top-menu-left top-menu-space";
+        grid-template-areas: "top-menu-left";
   }
   /* MAIN GRID */
   .top-content {
@@ -396,9 +399,12 @@ template {
     display: grid;
     -ms-grid-columns: auto  342px 342px auto;
         grid-template-columns: auto  342px 342px auto;
-    -ms-grid-rows: 832px 832px;
-        grid-template-rows: 832px 832px;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
         grid-template-areas: "top-content top-content top-content top-content" "bottom-content bottom-content bottom-content bottom-content";
+  }
+  div.top-menu-money, div.top-menu-bell, div.top-menu-user-name, div.top-menu-exit {
+    display: none;
   }
 }
 
@@ -484,13 +490,13 @@ template {
     display: grid;
     -ms-grid-columns: 188px 204px 342px 342px 204px;
         grid-template-columns: 188px 204px 342px 342px 204px;
-    -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
+    -ms-grid-rows: 832px 832px;
+        grid-template-rows: 832px 832px;
         grid-template-areas: "left-menu top-content top-content top-content top-content" "left-menu bottom-content bottom-content bottom-content bottom-content";
   }
   /* MAIN GRID PROPERTIES */
   /* TOP */
-  div.top-content-title {
+  .top-content-title {
     width: 100%;
     background-color: #ffffff;
     height: 50px;
@@ -498,7 +504,7 @@ template {
     padding-left: 16px;
     border-bottom: 1px solid #979797;
   }
-  div.top-content-calendar {
+  .top-content-calendar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -515,28 +521,28 @@ template {
     margin-top: 0px;
     border-bottom: 1px solid #979797;
   }
-  div.top-content-general, div.top-content-payout, div.top-content-details {
+  .top-content-general, .top-content-payout, .top-content-details {
     width: 100%;
     background-color: #ffffff;
     height: 640px;
   }
   /* TOP SECTIONS PROPERTIES */
   /*GENERAL*/
-  div.top-content-general-table {
+  .top-content-general-table {
     width: 100%;
     background-color: #ffffff;
     height: 20%;
     vertical-align: center;
     padding: 20px 170px 20px 170px;
   }
-  div.top-content-general-chart-title {
+  .top-content-general-chart-title {
     padding: 60px 170px 20px 170px;
   }
-  div.top-content-general-chart-tabs {
+  .top-content-general-chart-tabs {
     padding: 20px 170px 20px 170px;
     text-align: center;
   }
-  div.top-content-general-chart {
+  .top-content-general-chart {
     padding: 20px 170px 20px 170px;
     text-align: center;
   }
@@ -544,21 +550,24 @@ template {
     height: 300px;
   }
   /*PAYOUT*/
-  div.top-content-payout-table {
+  .top-content-payout-table {
     width: 100%;
     background-color: #ffffff;
     vertical-align: center;
     padding: 20px;
   }
   /* DETAILS*/
-  div.top-content-details-table {
+  .top-content-details-table {
     width: 100%;
     background-color: #ffffff;
     vertical-align: center;
     padding: 20px;
   }
   /* BOTTOM */
-  div.bottom-content-title {
+  .bottom-content {
+    background-color: #ffffff;
+  }
+  .bottom-content-title {
     width: 100%;
     background-color: #ffffff;
     height: 50px;
@@ -566,19 +575,19 @@ template {
     padding-left: 16px;
     border-bottom: 1px solid #979797;
   }
-  div.bottom-content-button-top {
+  .bottom-content-button-top {
     width: 100%;
     background-color: #ffffff;
     height: 90px;
     line-height: 90px;
     text-align: center;
   }
-  div.bottom-content-links {
+  .bottom-content-links {
     width: 100%;
     background-color: #ffffff;
     height: 570px;
   }
-  div.bottom-content-button-bottom {
+  .bottom-content-button-bottom {
     width: 100%;
     background-color: #ffffff;
     height: 90px;
@@ -659,6 +668,17 @@ nav ul li a {
   width: 100%;
   height: 100%;
   margin-top: -16px;
+}
+
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scroll-wrapper table {
+  width: 100%;
+  max-width: 100%;
 }
 
 table.base-table, table.chart-table, table.payout-table, table.details-table {

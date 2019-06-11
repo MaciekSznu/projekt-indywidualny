@@ -36,15 +36,22 @@
             </div>
             <!-- TOP CONTENT -->
             <!-- SECTION GENERAL -->
-            <div class="top-content top-content-general display-none">
+            <div class="top-content top-content-general">
                 <div class="top-content-title">
                     <h1>general statistic</h1>
                 </div>
                 <div class="top-content-calendar">
-                    <p>calendar</p>
+                    <div class="date-period">
+                        <div><input class="date-period-start" type="date" id="start" value="2019-05-26"></div>
+                        <div class="date-period-separator">&nbsp</div>
+                        <div><input class="date-period-end" type="date" id="end" value="2019-06-26"></div>
+                        <div><img class="date-period-ico" src="images\icons\calendar.svg"></div>
+                    </div>
+                    <div class="date-period-refresh-button"><button class="warning-button"><img class="date-period-refresh-ico" src="images\icons\refresh.svg"></button></div>
                 </div>
                 <div class="top-content-general">
                     <div class="top-content-general-table">
+                        <div >
                         <table class="chart-table">
                             <tr>
                                 <td class="table-row-title"><h2>Line header</h2></td>
@@ -55,6 +62,8 @@
                                 <td class="table-row-data"><p>123</p></td>
                             </tr>
                         </table>
+                        </div>
+                        <div >
                         <table class="chart-table">
                             <tr>
                                 <td class="table-row-title"><h2>Line header</h2></td>
@@ -65,6 +74,7 @@
                                 <td class="table-row-data"><p>123</p></td>
                             </tr>
                         </table>
+                        </div>
                     </div>
                     <div class="top-content-general-chart-title">
                         <h2>Chart title</h2>
@@ -83,10 +93,16 @@
                     <h1>payout history</h1>
                 </div>
                 <div class="top-content-calendar">
-                    <p>calendar</p>
+                    <div class="date-period">
+                        <div><input class="date-period-start" type="date" id="start" value="2019-05-26"></div>
+                        <div class="date-period-separator">&nbsp</div>
+                        <div><input class="date-period-end" type="date" id="end" value="2019-06-26"></div>
+                        <div><img class="date-period-ico" src="images\icons\calendar.svg"></div>
+                    </div>
+                    <div class="date-period-refresh-button"><button class="warning-button"><img class="date-period-refresh-ico" src="images\icons\refresh.svg"></button></div>
                 </div>
                 <div class="top-content-payout">
-                    <div class="top-content-payout-table">
+                    <div class="top-content-payout-table scroll-wrapper">
                         <table class="payout-table">
                             <tr>
                                 <td class="table-row-date"><p>date</p></t>
@@ -152,7 +168,7 @@
                 </div>
             </div>
             <!-- SECTION DETAILS -->
-            <div class="top-content top-content-details">
+            <div class="top-content top-content-details display-none">
                 <div class="top-content-title">
                     <h1>detail statistics</h1>
                 </div>
@@ -166,7 +182,7 @@
                     <div class="date-period-refresh-button"><button class="warning-button"><img class="date-period-refresh-ico" src="images\icons\refresh.svg"></button></div>
                 </div>
                 <div class="top-content-details">
-                    <div class="top-content-details-table">
+                    <div class="top-content-details-table  scroll-wrapper">
                         <table class="details-table">
                             <tr class="table-head">
                                 <th class="table-row-tracker-name"><div class="column-name"> <span>Tracker name</span> <img class="column-name-ico" src="images\icons\arrow-up-small.svg"></div></th>
@@ -297,7 +313,7 @@
                 <div class="bottom-content-button-top">
                     <button class="warning-button">+ add new</button>
                 </div>
-                <div class="bottom-content-links">
+                <div class="bottom-content-links scroll-wrapper">
                     <table class="base-table">
                         <tr>
                           <td class="table-row-title"><h2>Line header</h2></td>

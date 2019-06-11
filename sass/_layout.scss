@@ -1,4 +1,7 @@
-@media (min-width: 768px){
+* {
+    box-sizing: border-box;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
     body {
     width: 100%;
     margin: 0 auto;
@@ -15,13 +18,13 @@
         position: fixed;
         top: 0;
         width: 100%;
-        max-width: 1280px;
+        max-width: 1199px;
         z-index: 1;
         display: grid;
-        grid-template-columns: 188px auto;
+        grid-template-columns: 188px;
         grid-template-rows: 60px;
         grid-template-areas: 
-            "top-menu-left top-menu-space";
+            "top-menu-left";
     }
     /* MAIN GRID */
     .top-content {
@@ -40,10 +43,15 @@
         position: relative;
         display: grid;
         grid-template-columns: auto  342px 342px auto;
-        grid-template-rows: 832px 832px;
+        grid-template-rows: auto auto;
         grid-template-areas: 
             "top-content top-content top-content top-content"
             "bottom-content bottom-content bottom-content bottom-content"; 
+    }
+
+    //usuwamy top menu poza hamburgerem 
+     div.top-menu-money, div.top-menu-bell, div.top-menu-user-name, div.top-menu-exit {
+         display: none;
     }
 }
 
@@ -115,7 +123,7 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: 188px 204px 342px 342px 204px;
-    grid-template-rows: auto auto;
+    grid-template-rows: 832px 832px;
     grid-template-areas: 
         "left-menu top-content top-content top-content top-content"
         "left-menu bottom-content bottom-content bottom-content bottom-content"; 
@@ -123,7 +131,7 @@ body {
 
 /* MAIN GRID PROPERTIES */
 /* TOP */
-div.top-content-title {
+.top-content-title {
     width: 100%;
     background-color: $content-bg-color;
     height: 50px;
@@ -131,7 +139,7 @@ div.top-content-title {
     padding-left: 16px;
     border-bottom: 1px solid $table-border-color;
 }
-div.top-content-calendar {
+.top-content-calendar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,14 +151,14 @@ div.top-content-calendar {
     margin-top: 0px;
     border-bottom: 1px solid $table-border-color
 }
-div.top-content-general, div.top-content-payout, div.top-content-details{
+.top-content-general, .top-content-payout, .top-content-details{
     width: 100%;
     background-color: $content-bg-color;
     height: 640px;
 }
 /* TOP SECTIONS PROPERTIES */
 /*GENERAL*/ 
-div.top-content-general-table {
+.top-content-general-table {
     width: 100%;
     background-color: $content-bg-color;
     height: 20%;
@@ -158,14 +166,14 @@ div.top-content-general-table {
     padding: 20px 170px 20px 170px;
 }
 
-div.top-content-general-chart-title {
+.top-content-general-chart-title {
     padding: 60px 170px 20px 170px;
 }
-div.top-content-general-chart-tabs {
+.top-content-general-chart-tabs {
     padding: 20px 170px 20px 170px;
     text-align: center;
 }
-div.top-content-general-chart {
+.top-content-general-chart {
     padding: 20px 170px 20px 170px;
     text-align: center;
 }
@@ -174,7 +182,7 @@ div.top-content-general-chart {
 }
 
 /*PAYOUT*/ 
-div.top-content-payout-table {
+.top-content-payout-table {
     width: 100%;
     background-color: $content-bg-color;
     //height: 20%;
@@ -182,7 +190,7 @@ div.top-content-payout-table {
     padding: 20px;
 }
 /* DETAILS*/
-div.top-content-details-table {
+.top-content-details-table {
     width: 100%;
     background-color: $content-bg-color;
     //height: 20%;
@@ -191,7 +199,10 @@ div.top-content-details-table {
 }
 
 /* BOTTOM */
-div.bottom-content-title {
+.bottom-content{
+    background-color: $content-bg-color;
+}
+.bottom-content-title {
     width: 100%;
     background-color: $content-bg-color;
     height: 50px;
@@ -199,19 +210,19 @@ div.bottom-content-title {
     padding-left: 16px;
     border-bottom: 1px solid $table-border-color
 }
-div.bottom-content-button-top {
+.bottom-content-button-top {
     width: 100%;
     background-color: $content-bg-color;
     height: 90px;
     line-height: 90px;
     text-align: center;
 }
-div.bottom-content-links {
+.bottom-content-links {
     width: 100%;
     background-color: $content-bg-color;
     height: 570px;
 }
-div.bottom-content-button-bottom {
+.bottom-content-button-bottom {
     width: 100%;
     background-color: $content-bg-color;
     height: 90px;
