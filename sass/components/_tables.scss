@@ -10,7 +10,7 @@
     max-width: 100%;
   }
 
-table.base-table {
+.base-table {
     border-collapse: collapse;
     width: 100%;
     max-width: 684px;
@@ -47,8 +47,8 @@ table.base-table {
 
 }
 
-table.chart-table {
-@extend table.base-table;
+.chart-table {
+@extend .base-table;
     position: relative;
     width: 50%;
     max-width: 300px;
@@ -64,11 +64,18 @@ table.chart-table {
     }
     td.table-row-data {
         text-align: right;
-}   
+    }
+    // @media (max-width: 767px) {
+    //     width: 100%;
+    //     max-width: 150px;
+    // }   
+    // @media (min-width: 767px) and (max-width: 1199px) {
+    //     width: 50%;     
+    // }   
 }
 
-table.payout-table {
-@extend table.base-table;
+.payout-table {
+@extend .base-table;
     max-width: 1020px;
     margin: 0 auto;
     padding: 18px;        
@@ -93,8 +100,8 @@ table.payout-table {
         width: 11%;
     }
 }
-table.details-table {
-@extend table.base-table;
+.details-table {
+@extend .base-table;
     max-width: 1020px;
     margin: 0 auto;
     padding: 18px;        
