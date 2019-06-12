@@ -552,13 +552,17 @@ template {
     width: 100%;
     max-width: 1199px;
     z-index: 1;
+    opacity: .8;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 188px;
-        grid-template-columns: 188px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
     -ms-grid-rows: 60px;
         grid-template-rows: 60px;
         grid-template-areas: "top-menu-left";
+  }
+  .top-menu-container:hover {
+    opacity: 1;
   }
   /* MAIN GRID */
   .top-content {
@@ -730,13 +734,17 @@ template {
     width: 100%;
     max-width: 1199px;
     z-index: 1;
+    opacity: .8;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 188px;
-        grid-template-columns: 188px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
     -ms-grid-rows: 60px;
         grid-template-rows: 60px;
         grid-template-areas: "top-menu-left";
+  }
+  .top-menu-container:hover {
+    opacity: 1;
   }
   /* MAIN GRID */
   .top-content {
@@ -1563,6 +1571,28 @@ label.checkbox img.checkbox-ico {
   height: 40px;
   line-height: 40px;
   font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .pagination ul {
+    height: 25px;
+  }
+  .pagination ul li {
+    width: 20px;
+  }
+  .pagination ul img {
+    height: 14px;
+    padding-top: 5px;
+  }
+  .pagination ul div {
+    line-height: 25px;
+    height: 25px;
+  }
+  .pagination ul p {
+    line-height: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
 }
 
 .date-period {

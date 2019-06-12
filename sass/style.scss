@@ -217,7 +217,7 @@ label.checkbox{//ostylowac do końca
     height: 40px;
     list-style: none;
 	padding: 0;
-	position: relative;
+    position: relative;
         li {
             display: inline-block;
             width: 40px;
@@ -245,6 +245,28 @@ label.checkbox{//ostylowac do końca
             font-size: $page-header-font-size;
             }
         }
+    @media (max-width: 767px) {
+        ul {
+            height: 25px;
+                li {
+                    width: 20px;
+                }
+                img {
+                    height: 14px;
+                    padding-top: 5px;
+                }
+                div {
+                    line-height: 25px;
+                    height: 25px;
+                }
+                p {
+                    line-height: 25px;
+                    height: 25px;
+                    font-size: $mobile-pagination-font-size;
+                }
+           }
+        
+    }
 }
 
 //DATE PERIOD
