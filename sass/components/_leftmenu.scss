@@ -56,3 +56,14 @@ nav {
     height: 100%;
     margin-top: -16px;
 }
+
+//MENU MOBILNE
+.mobile-menu {
+    position: fixed;
+    background-color: $nav-bg-color;
+    width: 188px;
+    height: 100%;
+    margin-top: -16px;
+    @extend nav;
+}
+

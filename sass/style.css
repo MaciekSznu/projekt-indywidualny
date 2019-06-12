@@ -546,23 +546,28 @@ template {
     -ms-grid-column: 1;
     grid-area: top-menu-left;
   }
+  .mobile-menu {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: mobile-menu;
+    z-index: 5;
+  }
   .top-menu-container {
     position: fixed;
     top: 0;
     width: 100%;
     max-width: 1199px;
-    z-index: 1;
-    opacity: .8;
+    z-index: 5;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 60px;
-        grid-template-rows: 60px;
-        grid-template-areas: "top-menu-left";
+    -ms-grid-rows: 60px auto;
+        grid-template-rows: 60px auto;
+        grid-template-areas: "top-menu-left" "mobile-menu";
   }
-  .top-menu-container:hover {
-    opacity: 1;
+  div.top-menu-space {
+    display: none;
   }
   /* MAIN GRID */
   .top-content {
@@ -728,23 +733,28 @@ template {
     -ms-grid-column: 1;
     grid-area: top-menu-left;
   }
+  .mobile-menu {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: mobile-menu;
+    z-index: 5;
+  }
   .top-menu-container {
     position: fixed;
     top: 0;
     width: 100%;
     max-width: 1199px;
-    z-index: 1;
-    opacity: .8;
+    z-index: 5;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 60px;
-        grid-template-rows: 60px;
-        grid-template-areas: "top-menu-left";
+    -ms-grid-rows: 60px auto;
+        grid-template-rows: 60px auto;
+        grid-template-areas: "top-menu-left" "mobile-menu";
   }
-  .top-menu-container:hover {
-    opacity: 1;
+  div.top-menu-space {
+    display: none;
   }
   /* MAIN GRID */
   .top-content {
@@ -898,42 +908,42 @@ template {
   }
 }
 
-nav {
+nav, .mobile-menu {
   font-family: "Open Sans", Helvetica, Arial;
   position: fixed;
 }
 
-nav ul {
+nav ul, .mobile-menu ul {
   width: 188px;
   list-style: none;
   padding: 0;
   position: relative;
 }
 
-nav ul li {
+nav ul li, .mobile-menu ul li {
   height: 40px;
   background-color: #333333;
   cursor: pointer;
 }
 
-nav ul li:hover {
+nav ul li:hover, .mobile-menu ul li:hover {
   opacity: .8;
 }
 
-nav ul li:hover a {
+nav ul li:hover a, .mobile-menu ul li:hover a {
   color: #ffffff;
 }
 
-nav ul li:hover div.stripe {
+nav ul li:hover div.stripe, .mobile-menu ul li:hover div.stripe {
   margin-left: 0px;
   display: inline;
 }
 
-nav ul li:hover img {
+nav ul li:hover img, .mobile-menu ul li:hover img {
   margin-left: 14px;
 }
 
-nav ul li div.stripe {
+nav ul li div.stripe, .mobile-menu ul li div.stripe {
   width: 4px;
   height: 100%;
   background-color: #f58220;
@@ -942,14 +952,14 @@ nav ul li div.stripe {
   display: none;
 }
 
-nav ul li img {
+nav ul li img, .mobile-menu ul li img {
   margin-left: 18px;
   width: 14px;
   height: auto;
   line-height: 40px;
 }
 
-nav ul li a {
+nav ul li a, .mobile-menu ul li a {
   color: #777777;
   text-decoration: none;
   line-height: 40px;
@@ -961,6 +971,14 @@ nav ul li a {
   position: relative;
   background-color: #333333;
   width: 100%;
+  height: 100%;
+  margin-top: -16px;
+}
+
+.mobile-menu {
+  position: fixed;
+  background-color: #333333;
+  width: 188px;
   height: 100%;
   margin-top: -16px;
 }
@@ -1676,7 +1694,7 @@ div.top-menu-left {
   color: #ffffff;
 }
 
-.top-menu-left div.hamburger {
+.top-menu-left .hamburger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1692,7 +1710,7 @@ div.top-menu-left {
   cursor: pointer;
 }
 
-.top-menu-left div.hamburger div {
+.top-menu-left .hamburger div {
   width: 20px;
   height: 2px;
   background-color: #e3e3e3;
