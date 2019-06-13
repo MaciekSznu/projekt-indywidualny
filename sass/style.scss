@@ -401,3 +401,15 @@ div.top-menu-left {
         width: 20px;  
     }
 }
+
+//CHART
+.scroll-wrapper-chart {
+    display: block;
+    width: 100%;
+    //overflow-x: auto;
+    transition: 0s;
+    canvas {
+        width: 100%;
+        max-width: 100%;
+    }
+  }

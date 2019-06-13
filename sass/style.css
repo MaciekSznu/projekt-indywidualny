@@ -673,7 +673,7 @@ template {
     text-align: center;
   }
   .top-content-general-chart {
-    padding: 20px 170px 20px 170px;
+    padding: 20px 50px 20px 50px;
     text-align: center;
   }
   .top-content-general-chart img {
@@ -1804,5 +1804,17 @@ div.top-menu-left {
 
 .top-menu-exit a img {
   width: 20px;
+}
+
+.scroll-wrapper-chart {
+  display: block;
+  width: 100%;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.scroll-wrapper-chart canvas {
+  width: 100%;
+  max-width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
