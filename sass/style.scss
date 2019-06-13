@@ -339,18 +339,69 @@ div.top-menu-left {
         color: $logo-color;
     }
     .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        width: 30px;
+        margin: 5px;
         background-color: $nav-bg-color;
         border: none;
         cursor: pointer;
-        div {        
-            width: 20px;
-            height: 2px;
+        &:after, &:before {        
             background-color: $hamburger-color;
-            margin: 2px 0;
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 3px;
+            margin: 7px 0;
+            transition: all .2s ease-in-out;
         }
+        div {        
+            background-color: $hamburger-color;
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 3px;
+            margin: 7px 0;
+            transition: all .2s ease-in-out;  
+        } 
+    }
+}
+//MUSI BYĆ W CSS OPISANE PONIŻEJ KLASY HAMBURGER!!!
+.top-menu-left {
+    .hamburger-clicked {
+        width: 30px;
+        margin: 5px;
+        background-color: $nav-bg-color;
+        border: none;
+        cursor: pointer;
+        &:after {        
+            background-color: $hamburger-color;
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 3px;
+            margin: 7px 0;
+            transition: all .2s ease-in-out;
+            transform: translateY(-10px) rotate(-135deg);
+        }
+        &:before {        
+            background-color: $hamburger-color;
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 3px;
+            margin: 7px 0;
+            transition: all .2s ease-in-out;
+            transform: translateY(10px) rotate(135deg);
+        }
+        div {        
+            background-color: $hamburger-color;
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 3px;
+            margin: 7px 0;
+            transition: all .2s ease-in-out;
+            transform: scale(0);  
+        } 
     }
 }
 

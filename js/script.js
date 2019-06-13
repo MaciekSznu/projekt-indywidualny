@@ -1,12 +1,19 @@
 'use strict';
 
-//funkcja ukrywająca/wyświetlająca menu mobile
+//funkcja ukrywająca/wyświetlająca menu mobile oraz zmieniająca hamburgera w X
 function toggleMenu(visible) {
     document.querySelector('.mobile-menu').classList.toggle('display-none', visible)
   }
+function toggleHamburger(){
+  var viewportWidth = document.documentElement.clientWidth;
+    if (viewportWidth < 1200) {
+  document.querySelector('.hamburger').classList.toggle('hamburger-clicked', )
+  }
+}
 document.querySelector('.hamburger').addEventListener('click', function(e) {
     e.preventDefault();
-    toggleMenu()
+    toggleMenu();
+    toggleHamburger()
 });
 
 //funkcje obsługujące linki z menu//
