@@ -533,6 +533,9 @@ template {
     line-height: 90px;
     text-align: center;
   }
+  .mobile-menu {
+    z-index: -10;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -545,6 +548,10 @@ template {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: top-menu-left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   .mobile-menu {
     -ms-grid-row: 2;
@@ -732,6 +739,10 @@ template {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: top-menu-left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
   .mobile-menu {
     -ms-grid-row: 2;

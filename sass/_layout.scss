@@ -30,7 +30,6 @@
         grid-area: top-menu-exit;
     }
 
-
     .top-menu-container {
         position: fixed;
         top: 0;
@@ -173,6 +172,11 @@
         line-height: 90px;
         text-align: center;
     }
+    //ukrywam menu mobile
+    .mobile-menu {
+        z-index: -10;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -183,6 +187,7 @@
     /* TOP MENU GRID*/
     .top-menu-left {
         grid-area: top-menu-left;
+        flex-direction: row-reverse;
     }
     .mobile-menu {
         grid-area: mobile-menu;
@@ -355,6 +360,7 @@
     /* TOP MENU GRID*/
     .top-menu-left {
         grid-area: top-menu-left;
+        flex-direction: row-reverse;
     }
     .mobile-menu {
         grid-area: mobile-menu;
