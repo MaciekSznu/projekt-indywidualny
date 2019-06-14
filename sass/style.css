@@ -465,7 +465,7 @@ template {
     background-color: #ffffff;
     height: 640px;
   }
-  .top-content-personal-data {
+  .top-content-personal-data, .top-content-postback {
     width: 100%;
     background-color: #ffffff;
     height: auto;
@@ -1367,7 +1367,8 @@ nav ul li a, .mobile-menu ul li a {
 }
 
 .button-submit button {
-  width: 90px;
+  min-width: 90px;
+  width: auto;
 }
 
 * {

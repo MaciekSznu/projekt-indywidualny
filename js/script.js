@@ -95,6 +95,22 @@ document.querySelector('.mobile-menu-item-personal-data').addEventListener('clic
   hideContent();
   toggleMenuPersonalData()
 });
+//postback//
+function toggleMenuPostback(){
+  document.querySelector('.postback').classList.remove('display-none')
+  }
+//desktop
+document.querySelector('.menu-item-postback').addEventListener('click', function(e) {
+  e.preventDefault();
+  hideContent();
+  toggleMenuPostback()
+});
+//mobile
+document.querySelector('.mobile-menu-item-postback').addEventListener('click', function(e) {
+  e.preventDefault();
+  hideContent();
+  toggleMenuPostback()
+});
 
 
 //OBSŁUGA CHART//
