@@ -99,6 +99,15 @@
         background-color: $content-bg-color;
         height: 640px;
     }
+    .top-content-personal-data {      
+        width: 100%;
+        background-color: $content-bg-color;
+        height: auto;
+    }
+    .top-content-personal-data-form {      
+        width: 100%;        
+    }
+
     /* TOP SECTIONS PROPERTIES */
     /*GENERAL*/ 
     .top-content-general-table {
@@ -120,9 +129,7 @@
         padding: 20px 170px 20px 170px;
         text-align: center;
     }
-    .top-content-general-chart img {
-        height: 300px;
-    }
+    
 
     /*PAYOUT*/ 
     .top-content-payout-table {
@@ -253,7 +260,7 @@
         margin-top: 0px;
         border-bottom: 1px solid $table-border-color
     }
-    .top-content-general, .top-content-payout, .top-content-details{
+    .top-content-general, .top-content-payout, .top-content-details, .top-content-personal-data {
         display: flex;
         flex-direction: column;
         justify-content: center;

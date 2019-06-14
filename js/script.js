@@ -5,6 +5,7 @@ function toggleMenu(visible) {
     document.querySelector('.mobile-menu').classList.toggle('display-none', visible)
   }
 function toggleHamburger(){
+  //pobieram rozmiar ekranu użtkownika od tego uzależniam czy funkcja ruszy czy nie
   var viewportWidth = document.documentElement.clientWidth;
     if (viewportWidth < 1200) {
   document.querySelector('.hamburger').classList.toggle('hamburger-clicked', )
@@ -77,6 +78,24 @@ document.querySelector('.mobile-menu-item-payout').addEventListener('click', fun
   hideContent();
   toggleMenuPayout()
 });
+
+//personal-data//
+function toggleMenuPersonalData(){
+  document.querySelector('.personal-data').classList.remove('display-none')
+  }
+//desktop
+document.querySelector('.menu-item-personal-data').addEventListener('click', function(e) {
+  e.preventDefault();
+  hideContent();
+  toggleMenuPersonalData()
+});
+//mobile
+document.querySelector('.mobile-menu-item-personal-data').addEventListener('click', function(e) {
+  e.preventDefault();
+  hideContent();
+  toggleMenuPersonalData()
+});
+
 
 //OBSŁUGA CHART//
 var ctx = document.getElementById('myChart').getContext('2d');

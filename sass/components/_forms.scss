@@ -3,7 +3,7 @@
     font-family: $base-font;
     font-size: $paragraph-font-size;
     input, textarea{
-        width: 154px;
+        width: 300px;
         margin: 15px;
         padding: 10px;
         border: 1px solid $form-border-color;
@@ -45,5 +45,28 @@
         &::placeholder {   
             text-align: left;
         }
+    }
+}
+
+.bottom-border {
+    border-bottom: 1px solid $table-border-color;
+}
+
+.flex-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-label {
+    width: 120px;
+    display: inline-flex;
+}
+
+
+.button-submit {
+    text-align: center;
+    margin: 15px auto;
+    button {
+        width: 90px;
     }
 }
