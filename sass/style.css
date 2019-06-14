@@ -507,6 +507,10 @@ template {
     vertical-align: center;
     padding: 20px;
   }
+  .top-content-postback-parameters {
+    margin-top: 20px;
+    margin-left: 16px;
+  }
   /* BOTTOM */
   .bottom-content {
     background-color: #ffffff;
@@ -1247,34 +1251,41 @@ nav ul li a, .mobile-menu ul li a {
   font-size: 14px;
 }
 
-.form input, .form-password input, .form-text-input input, .form textarea, .form-password textarea, .form-text-input textarea {
-  width: 300px;
+.form input, .form-password input, .form-text-input input, .form textarea, .form-password textarea, .form-text-input textarea, .form select, .form-password select, .form-text-input select {
   margin: 15px;
   padding: 10px;
   border: 1px solid #979797;
   border-radius: 3px;
 }
 
-.form input:hover, .form-password input:hover, .form-text-input input:hover, .form textarea:hover, .form-password textarea:hover, .form-text-input textarea:hover {
+.form input:hover, .form-password input:hover, .form-text-input input:hover, .form textarea:hover, .form-password textarea:hover, .form-text-input textarea:hover, .form select:hover, .form-password select:hover, .form-text-input select:hover {
   color: #333333;
   cursor: pointer;
   border-color: #333333;
 }
 
-.form input:hover::-webkit-input-placeholder, .form-password input:hover::-webkit-input-placeholder, .form-text-input input:hover::-webkit-input-placeholder, .form textarea:hover::-webkit-input-placeholder, .form-password textarea:hover::-webkit-input-placeholder, .form-text-input textarea:hover::-webkit-input-placeholder {
+.form input:hover::-webkit-input-placeholder, .form-password input:hover::-webkit-input-placeholder, .form-text-input input:hover::-webkit-input-placeholder, .form textarea:hover::-webkit-input-placeholder, .form-password textarea:hover::-webkit-input-placeholder, .form-text-input textarea:hover::-webkit-input-placeholder, .form select:hover::-webkit-input-placeholder, .form-password select:hover::-webkit-input-placeholder, .form-text-input select:hover::-webkit-input-placeholder {
   color: #333333;
 }
 
-.form input:hover:-ms-input-placeholder, .form-password input:hover:-ms-input-placeholder, .form-text-input input:hover:-ms-input-placeholder, .form textarea:hover:-ms-input-placeholder, .form-password textarea:hover:-ms-input-placeholder, .form-text-input textarea:hover:-ms-input-placeholder {
+.form input:hover:-ms-input-placeholder, .form-password input:hover:-ms-input-placeholder, .form-text-input input:hover:-ms-input-placeholder, .form textarea:hover:-ms-input-placeholder, .form-password textarea:hover:-ms-input-placeholder, .form-text-input textarea:hover:-ms-input-placeholder, .form select:hover:-ms-input-placeholder, .form-password select:hover:-ms-input-placeholder, .form-text-input select:hover:-ms-input-placeholder {
   color: #333333;
 }
 
-.form input:hover::-ms-input-placeholder, .form-password input:hover::-ms-input-placeholder, .form-text-input input:hover::-ms-input-placeholder, .form textarea:hover::-ms-input-placeholder, .form-password textarea:hover::-ms-input-placeholder, .form-text-input textarea:hover::-ms-input-placeholder {
+.form input:hover::-ms-input-placeholder, .form-password input:hover::-ms-input-placeholder, .form-text-input input:hover::-ms-input-placeholder, .form textarea:hover::-ms-input-placeholder, .form-password textarea:hover::-ms-input-placeholder, .form-text-input textarea:hover::-ms-input-placeholder, .form select:hover::-ms-input-placeholder, .form-password select:hover::-ms-input-placeholder, .form-text-input select:hover::-ms-input-placeholder {
   color: #333333;
 }
 
-.form input:hover::placeholder, .form-password input:hover::placeholder, .form-text-input input:hover::placeholder, .form textarea:hover::placeholder, .form-password textarea:hover::placeholder, .form-text-input textarea:hover::placeholder {
+.form input:hover::placeholder, .form-password input:hover::placeholder, .form-text-input input:hover::placeholder, .form textarea:hover::placeholder, .form-password textarea:hover::placeholder, .form-text-input textarea:hover::placeholder, .form select:hover::placeholder, .form-password select:hover::placeholder, .form-text-input select:hover::placeholder {
   color: #333333;
+}
+
+.form input input, .form-password input input, .form-text-input input input, .form textarea input, .form-password textarea input, .form-text-input textarea input, .form select input, .form-password select input, .form-text-input select input {
+  width: 300px;
+}
+
+.form input select, .form-password input select, .form-text-input input select, .form textarea select, .form-password textarea select, .form-text-input textarea select, .form select select, .form-password select select, .form-text-input select select {
+  width: 100%;
 }
 
 .form-password input {
@@ -1317,7 +1328,10 @@ nav ul li a, .mobile-menu ul li a {
 }
 
 .form-text-input textarea {
-  height: 124px;
+  width: 96%;
+  max-width: 490px;
+  margin: 16px;
+  height: 180px;
   resize: none;
 }
 
@@ -1335,6 +1349,10 @@ nav ul li a, .mobile-menu ul li a {
 
 .form-text-input textarea::placeholder {
   text-align: left;
+}
+
+.form-text-input label {
+  margin-left: 16px;
 }
 
 .bottom-border {
@@ -1361,6 +1379,65 @@ nav ul li a, .mobile-menu ul li a {
   display: inline-flex;
 }
 
+.flex-form-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 16px;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+.text-areas .form-text-input {
+  width: 100%;
+}
+
+.form-label-on-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.multiple-choice {
+  width: 31%;
+  margin-left: 16px;
+}
+
+.multiple-choice select {
+  width: 100%;
+  margin-left: 0;
+}
+
+.checkboxes, .range {
+  width: 96%;
+  max-width: 514px;
+}
+
+.checkboxes {
+  margin-left: 16px;
+}
+
+.checkboxes span {
+  color: #ff0000;
+  font-weight: 700;
+}
+
+.range label {
+  margin-left: 16px;
+}
+
+.range input[type="range"] {
+  width: 100%;
+  color: #f58220;
+}
+
 .button-submit {
   text-align: center;
   margin: 15px auto;
@@ -1369,6 +1446,11 @@ nav ul li a, .mobile-menu ul li a {
 .button-submit button {
   min-width: 90px;
   width: auto;
+}
+
+.button-submit-options {
+  text-align: right;
+  margin: 16px;
 }
 
 * {

@@ -436,47 +436,63 @@
                     </div>
                     <div class="top-content-postback">
                         <div class="top-content-postback-parameters">
+                            <p>You can insert some parameters in this postback:</p>
                         </div>
-                        <div class="top-content-postback-parameters-form"></div>
+                        <div class="top-content-postback-parameters-form">
                             <form class="form" action="" method="POST">
-                                <div class="text-areas flex-form">
-                                    <div>
-                                        <label class="form-label">Name</label>
-                                        <input type="text" name="user-name" placeholder="Leonardo">
+                                <div class="text-areas flex-form-horizontal">
+                                    <div class="form-text-input">
+                                        <label class="form-label-on-top">Signup</label>
+                                        <textarea type="textarea" name="user-singup" placeholder="Text input"></textarea>
                                     </div>
-                                    <div>
-                                        <label class="form-label">Surname</label>
-                                        <input type="text" name="user-surname" placeholder="Dicaprio">
-                                    </div>
-                                </div>
-                                <div class="bottom-border"></div>
-                                <div class="multiple-choice flex-form">
-                                    <div>
-                                        <label class="form-label">Skype</label>
-                                        <input type="text" name="user-skype" placeholder="Leonardo.O">
-                                    </div>
-                                    <div>
-                                        <label class="form-label">ICQ</label>
-                                        <input type="text" name="user-icq" placeholder="">
-                                    </div>
-                                    <div>
-                                        <label class="form-label">Msn</label>
-                                        <input type="email" name="user-msn" placeholder="">
+                                    <div class="form-text-input">
+                                        <label class="form-label-on-top">Deposit</label>
+                                        <textarea type="textarea" name="user-deposit" placeholder="Text input"></textarea>
                                     </div>
                                 </div>
                                 <div class="bottom-border"></div>
-                                <div class="options flex-form">
-                                    <div>
-                                        <label class="form-label">Wallet</label>
-                                        <input type="text" name="user-wallet" placeholder="">
+                                <div class="flex-form-horizontal">
+                                    <div class="multiple-choice">
+                                        <label class="form-label-on-top">Postback type</label>
+                                        <select placeholder="S2S">
+                                            <option value="first">First</option>
+                                            <option value="second">Second</option>
+                                            <option value="third">Third</option>
+                                        </select>
                                     </div>
-                                    <div>
-                                        <label class="form-label">Msn</label>
-                                        <input type="email" name="user-msn" placeholder="">
+                                    <div class="multiple-choice">
+                                        <label class="form-label-on-top">To countries</label>
+                                        <select>
+                                            <option value="poland">Poland</option>
+                                            <option value="england">England</option>
+                                            <option value="russia">Russia</option>
+                                        </select>
+                                    </div>
+                                    <div class="multiple-choice">
+                                        <label class="form-label-on-top">Sending options:</label>
+                                        <select>
+                                            <option value="option1">Option 1</option>
+                                            <option value="option2">Option 2</option>
+                                            <option value="option3">Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="bottom-border"></div>
+                                <div class="options flex-form-horizontal">
+                                    <div class="checkboxes">
+                                        <label class="form-label-on-top"><span>NOT &nbsp</span> sent statuses</label>
+                                        <label class="checkbox">checkNumber<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                        <label class="checkbox">noAnswer<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                        <label class="checkbox">noCall<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                        <label class="checkbox">callAgain<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                    </div>
+                                    <div class="range">
+                                        <label class="form-label-on-top">Send after</label>
+                                        <input type="range" name="user-range" min="0" max="200" step="1" value="100">
                                     </div>
                                 </div>                                
                                 <div class="bottom-border"></div>
-                                <div class="button-submit">
+                                <div class="button-submit-options">
                                     <button type="submit" class="warning-button">Create Pixel</button>
                                 </div>
                             </form>

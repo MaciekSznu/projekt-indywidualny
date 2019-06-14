@@ -2,8 +2,7 @@
 .form {
     font-family: $base-font;
     font-size: $paragraph-font-size;
-    input, textarea{
-        width: 300px;
+    input, textarea, select {
         margin: 15px;
         padding: 10px;
         border: 1px solid $form-border-color;
@@ -16,7 +15,12 @@
                 color: $paragraph-color;
             }
         }
-        
+    input {
+        width: 300px;
+    }
+    select {
+        width: 100%;
+    }    
     }
 }
 //do poprawy pozycja tła obrazka
@@ -40,11 +44,17 @@
 .form-text-input {
     @extend .form;
     textarea{
-        height: 124px;
+        width: 96%;
+        max-width: 490px;
+        margin: 16px;
+        height: 180px;
         resize: none;//czyści pole rozszerzaniaq w narożniku
         &::placeholder {   
             text-align: left;
         }
+    }
+    label {
+        margin-left: 16px;
     }
 }
 
@@ -61,8 +71,51 @@
     width: 120px;
     display: inline-flex;
 }
+.flex-form-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 16px;
+    align-content: stretch;
+}
+.text-areas .form-text-input {
+    width: 100%;
+}
 
+.form-label-on-top {
+    display: flex;
+    margin-top: 20px;
+    //margin-left: 16px;
+}
 
+.multiple-choice {
+    width: 31%;
+    margin-left: 16px;
+    select {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.checkboxes, .range {
+    width: 96%;
+    max-width: 514px;
+}
+.checkboxes {
+    margin-left: 16px;
+    span {
+        color:$checkboxes-span-color;
+        font-weight: 700;
+    }
+}
+.range {
+    label {
+        margin-left: 16px;
+    }
+    input[type="range"] {
+    width: 100%;
+    color: $range-stripe-color;
+    }
+}
 .button-submit {
     text-align: center;
     margin: 15px auto;
@@ -70,4 +123,8 @@
         min-width: 90px;
         width: auto;
     }
+}
+.button-submit-options {
+    text-align: right;
+    margin: 16px;
 }
