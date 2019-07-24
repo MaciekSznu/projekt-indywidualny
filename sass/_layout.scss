@@ -156,6 +156,7 @@
 
     /* BOTTOM */
     .bottom-content{
+        margin-top: 20px;
         background-color: $content-bg-color;
     }
     .bottom-content-title {
@@ -169,8 +170,8 @@
     .bottom-content-button-top {
         width: 100%;
         background-color: $content-bg-color;
-        height: 90px;
-        line-height: 90px;
+        height: 80px;
+        line-height: 80px;
         text-align: center;
     }
     .bottom-content-links {
@@ -181,8 +182,8 @@
     .bottom-content-button-bottom {
         width: 100%;
         background-color: $content-bg-color;
-        height: 90px;
-        line-height: 90px;
+        height: 80px;
+        line-height: 80px;
         text-align: center;
     }
     //ukrywam menu mobile
@@ -301,11 +302,12 @@
     }
     .top-content-general-chart {
         padding: 20px 50px 20px 50px;
-        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        //text-align: center;
     }
-    .top-content-general-chart img {
-        height: 300px;
-    }
+    
 
     /*PAYOUT*/ 
     .top-content-payout-table {

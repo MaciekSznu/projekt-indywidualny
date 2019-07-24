@@ -161,6 +161,29 @@ document.querySelector('.mobile-menu-item-postback').addEventListener('click', f
 });
 
 
+//obsłyga buttonów chart
+function toggleButtonBlue(){
+  document.querySelector('.tab-button-blue').classList.toggle('clicked');
+}
+document.querySelector('.tab-button-blue').addEventListener('click', function(e) {
+  e.preventDefault();
+  toggleButtonBlue();
+});
+function toggleButtonOrange(){
+  document.querySelector('.tab-button-orange').classList.toggle('clicked');
+}
+document.querySelector('.tab-button-orange').addEventListener('click', function(e) {
+  e.preventDefault();
+  toggleButtonOrange();
+});
+function toggleButtonGreen(){
+  document.querySelector('.tab-button-green').classList.toggle('clicked');
+}
+document.querySelector('.tab-button-green').addEventListener('click', function(e) {
+  e.preventDefault();
+  toggleButtonGreen();
+});
+
 //OBSŁUGA CHART//
 var ctx = document.getElementById('myChart').getContext('2d');
 

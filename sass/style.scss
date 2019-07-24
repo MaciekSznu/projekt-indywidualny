@@ -455,13 +455,18 @@ div.top-menu-left {
 
 //CHART
 .scroll-wrapper-chart {
-    display: block;
+    display: flex;
     width: 100%;
-    //overflow-x: auto;
+    overflow-x: auto;
     transition: 0s;
     canvas {
+        //display: block;
         width: 100%;
-        max-width: 100%;
+        max-width: 700px;
+        //padding: 10px;
+        // #myChart {
+        //     max-width: 700px;
+        // }
     }
   }
 

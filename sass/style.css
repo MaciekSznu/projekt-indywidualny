@@ -513,6 +513,7 @@ template {
   }
   /* BOTTOM */
   .bottom-content {
+    margin-top: 20px;
     background-color: #ffffff;
   }
   .bottom-content-title {
@@ -526,8 +527,8 @@ template {
   .bottom-content-button-top {
     width: 100%;
     background-color: #ffffff;
-    height: 90px;
-    line-height: 90px;
+    height: 80px;
+    line-height: 80px;
     text-align: center;
   }
   .bottom-content-links {
@@ -538,8 +539,8 @@ template {
   .bottom-content-button-bottom {
     width: 100%;
     background-color: #ffffff;
-    height: 90px;
-    line-height: 90px;
+    height: 80px;
+    line-height: 80px;
     text-align: center;
   }
   .mobile-menu {
@@ -686,10 +687,16 @@ template {
   }
   .top-content-general-chart {
     padding: 20px 50px 20px 50px;
-    text-align: center;
-  }
-  .top-content-general-chart img {
-    height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   /*PAYOUT*/
   .top-content-payout-table {
@@ -1251,6 +1258,10 @@ nav ul li.active img, .mobile-menu ul li.active img {
 }
 
 .tab-button:active, .tab-button-blue:active, .tab-button-orange:active, .tab-button-green:active {
+  background-color: #f5f5f2;
+}
+
+.tab-button.clicked, .clicked.tab-button-blue, .clicked.tab-button-orange, .clicked.tab-button-green {
   background-color: #f5f5f2;
 }
 
@@ -2002,14 +2013,17 @@ div.top-menu-left {
 }
 
 .scroll-wrapper-chart {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
+  overflow-x: auto;
   -webkit-transition: 0s;
   transition: 0s;
 }
 
 .scroll-wrapper-chart canvas {
   width: 100%;
-  max-width: 100%;
+  max-width: 700px;
 }
 /*# sourceMappingURL=style.css.map */

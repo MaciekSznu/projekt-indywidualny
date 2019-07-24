@@ -54,6 +54,9 @@
         background-color: $tab-button-bg-color-hover;
     }
 }
+.tab-button.clicked {
+    background-color: $tab-button-bg-color-hover;
+}
 
 .tab-button-blue {
     @extend .tab-button;
@@ -61,6 +64,8 @@
     background-color: $tab-circle-color-blue;
     }
 }
+
+
 .tab-button-orange {
     @extend .tab-button;
     div {
