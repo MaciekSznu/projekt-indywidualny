@@ -545,6 +545,9 @@ template {
   .mobile-menu {
     z-index: -10;
   }
+  .hamburger {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -985,6 +988,23 @@ nav ul li a, .mobile-menu ul li a {
   line-height: 40px;
   padding-left: 16px;
   font-size: 14px;
+}
+
+nav ul li.active, .mobile-menu ul li.active {
+  opacity: .8;
+}
+
+nav ul li.active a, .mobile-menu ul li.active a {
+  color: #ffffff;
+}
+
+nav ul li.active div.stripe, .mobile-menu ul li.active div.stripe {
+  margin-left: 0px;
+  display: inline;
+}
+
+nav ul li.active img, .mobile-menu ul li.active img {
+  margin-left: 14px;
 }
 
 .left-menu {
@@ -1827,8 +1847,8 @@ div.top-menu-left {
 }
 
 .top-menu-left .hamburger {
-  width: 30px;
-  margin: 5px;
+  width: 21px;
+  margin: 4px;
   background-color: #333333;
   border: none;
   cursor: pointer;
@@ -1840,7 +1860,7 @@ div.top-menu-left {
   content: '';
   display: block;
   height: 3px;
-  margin: 7px 0;
+  margin: 4px 0;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -1851,14 +1871,14 @@ div.top-menu-left {
   content: '';
   display: block;
   height: 3px;
-  margin: 7px 0;
+  margin: 4px 0;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
 .top-menu-left .hamburger-clicked {
-  width: 30px;
-  margin: 5px;
+  width: 21px;
+  margin: 4px;
   background-color: #333333;
   border: none;
   cursor: pointer;
@@ -1896,7 +1916,7 @@ div.top-menu-left {
   content: '';
   display: block;
   height: 3px;
-  margin: 7px 0;
+  margin: 4px 0;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   -webkit-transform: scale(0);

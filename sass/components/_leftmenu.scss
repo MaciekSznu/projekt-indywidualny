@@ -46,7 +46,19 @@ nav {
             font-size: $paragraph-font-size;
             }
         }
-
+        li.active {
+            opacity: .8;
+            a {
+                color: $nav-text-color-hover;
+            }
+            div.stripe {
+                margin-left: 0px;
+                display: inline;
+            }
+            img {
+                margin-left: 14px;
+            }
+        }
     }
 }
 .left-menu {

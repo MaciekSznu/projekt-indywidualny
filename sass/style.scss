@@ -339,8 +339,8 @@ div.top-menu-left {
         color: $logo-color;
     }
     .hamburger {
-        width: 30px;
-        margin: 5px;
+        width: 21px;
+        margin: 4px;
         background-color: $nav-bg-color;
         border: none;
         cursor: pointer;
@@ -350,7 +350,7 @@ div.top-menu-left {
             content: '';
             display: block;
             height: 3px;
-            margin: 7px 0;
+            margin: 4px 0;
             transition: all .2s ease-in-out;
         }
         div {        
@@ -359,7 +359,7 @@ div.top-menu-left {
             content: '';
             display: block;
             height: 3px;
-            margin: 7px 0;
+            margin: 4px 0;
             transition: all .2s ease-in-out;  
         } 
     }
@@ -367,8 +367,8 @@ div.top-menu-left {
 //MUSI BYĆ W CSS OPISANE PONIŻEJ KLASY HAMBURGER!!!
 .top-menu-left {
     .hamburger-clicked {
-        width: 30px;
-        margin: 5px;
+        width: 21px;
+        margin: 4px;
         background-color: $nav-bg-color;
         border: none;
         cursor: pointer;
@@ -398,7 +398,7 @@ div.top-menu-left {
             content: '';
             display: block;
             height: 3px;
-            margin: 7px 0;
+            margin: 4px 0;
             transition: all .2s ease-in-out;
             transform: scale(0);  
         } 
