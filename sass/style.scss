@@ -238,6 +238,9 @@ label.checkbox{//ostylowac do końca
                     }
                 }
             }
+            div.selected {
+                background-color: $tab-button-bg-color-hover
+            }
             p {
             color: $nav-text-color;
             height: 40px;
@@ -245,6 +248,7 @@ label.checkbox{//ostylowac do końca
             font-size: $page-header-font-size;
             }
         }
+        
     @media (max-width: 767px) {
         ul {
             height: 25px;

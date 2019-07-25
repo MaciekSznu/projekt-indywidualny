@@ -1747,6 +1747,10 @@ label.checkbox img.checkbox-ico {
   color: #777777;
 }
 
+.pagination ul div.selected {
+  background-color: #f5f5f2;
+}
+
 .pagination ul p {
   color: #777777;
   height: 40px;

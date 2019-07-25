@@ -2,7 +2,7 @@
 
 //funkcja ukrywająca/wyświetlająca menu mobile oraz zmieniająca hamburgera w X
 function toggleMenu(visible) {
-    document.querySelector('.mobile-menu').classList.toggle('display-none', visible)
+    document.querySelector('.mobile-menu').classList.toggle('display-none', visible);
   }
 function toggleHamburger(){
   //pobieram rozmiar ekranu użtkownika od tego uzależniam czy funkcja ruszy czy nie
@@ -18,11 +18,18 @@ document.querySelector('.hamburger').addEventListener('click', function(e) {
 });
 
 //funkcje obsługujące linki z menu//
+//funkcja odsyłająca na góre strony po kliknięciu w element menu
+function scrollTop (){
+  window.scroll({
+    top: 0,
+    left:0,
+  });
+}
 //funkcja ukrywająca wszystkie elementy z klasa content
 function hideContent(){
   var contentElements = document.querySelectorAll('.content');
   for ( var j = 0; j < contentElements.length; j++){
-    contentElements[j].classList.add('display-none')
+    contentElements[j].classList.add('display-none');
   }
 }
 //funkcja usuwająca klasę active z wszystkich elementów menu
@@ -51,6 +58,7 @@ document.querySelector('.menu-item-general').addEventListener('click', function(
   toggleMenuGenaral();
   hideActive();
   activeMenuGenral();
+  scrollTop();
 });
 //mobile
 document.querySelector('.mobile-menu-item-general').addEventListener('click', function(e) {
@@ -59,6 +67,7 @@ document.querySelector('.mobile-menu-item-general').addEventListener('click', fu
   toggleMenuGenaral();
   hideActive();
   activeMenuGenral();
+  scrollTop();
 });
 
 //details//
@@ -76,6 +85,7 @@ document.querySelector('.menu-item-details').addEventListener('click', function(
   toggleMenuDetails();
   hideActive();
   activeMenuDetails();
+  scrollTop();
 });
 //mobile
 document.querySelector('.mobile-menu-item-details').addEventListener('click', function(e) {
@@ -84,11 +94,12 @@ document.querySelector('.mobile-menu-item-details').addEventListener('click', fu
   toggleMenuDetails();
   hideActive();
   activeMenuDetails();
+  scrollTop();
 });
 
 //payout//
 function toggleMenuPayout(){
-  document.querySelector('.payout').classList.remove('display-none')
+  document.querySelector('.payout').classList.remove('display-none');
 }
 function activeMenuPayout(){
   document.querySelector('.menu-item-payout').classList.add('active');
@@ -101,6 +112,7 @@ document.querySelector('.menu-item-payout').addEventListener('click', function(e
   toggleMenuPayout();
   hideActive();
   activeMenuPayout();
+  scrollTop();
 });
 //mobile
 document.querySelector('.mobile-menu-item-payout').addEventListener('click', function(e) {
@@ -109,11 +121,12 @@ document.querySelector('.mobile-menu-item-payout').addEventListener('click', fun
   toggleMenuPayout();
   hideActive();
   activeMenuPayout();
+  scrollTop();
 });
 
 //personal-data//
 function toggleMenuPersonalData(){
-  document.querySelector('.personal-data').classList.remove('display-none')
+  document.querySelector('.personal-data').classList.remove('display-none');
 }
 function activeMenuPersonalData(){
   document.querySelector('.menu-item-personal-data').classList.add('active');
@@ -126,6 +139,7 @@ document.querySelector('.menu-item-personal-data').addEventListener('click', fun
   toggleMenuPersonalData();
   hideActive();
   activeMenuPersonalData();
+  scrollTop();
 });
 //mobile
 document.querySelector('.mobile-menu-item-personal-data').addEventListener('click', function(e) {
@@ -134,10 +148,11 @@ document.querySelector('.mobile-menu-item-personal-data').addEventListener('clic
   toggleMenuPersonalData();
   hideActive();
   activeMenuPersonalData();
+  scrollTop();
 });
 //postback//
 function toggleMenuPostback(){
-  document.querySelector('.postback').classList.remove('display-none')
+  document.querySelector('.postback').classList.remove('display-none');
 }
 function activeMenuPostback(){
   document.querySelector('.menu-item-postback').classList.add('active');
@@ -150,6 +165,7 @@ document.querySelector('.menu-item-postback').addEventListener('click', function
   toggleMenuPostback();
   hideActive();
   activeMenuPostback();
+  scrollTop();
 });
 //mobile
 document.querySelector('.mobile-menu-item-postback').addEventListener('click', function(e) {
@@ -158,10 +174,23 @@ document.querySelector('.mobile-menu-item-postback').addEventListener('click', f
   toggleMenuPostback();
   hideActive();
   activeMenuPostback();
+  scrollTop();
 });
 
+//obsługa details->pagination
+function hideSelected(){
+  var contentElements = document.querySelectorAll('[class*="pagination-number"]');
+  for ( var j = 0; j < contentElements.length; j++){
+    contentElements[j].classList.remove('selected');
+  }
+}
+function activeSelected(){
+  document.querySelector('.pagination-number').classList.add('selected');
+}
 
-//obsłyga buttonów chart
+///do skończenia!!!!
+
+//obsługa buttonów chart
 function toggleButtonBlue(){
   document.querySelector('.tab-button-blue').classList.toggle('clicked');
 }
