@@ -222,25 +222,34 @@ label.checkbox{//ostylowac do końca
             display: inline-block;
             width: 40px;
             cursor: pointer;
+            line-height: 40px;
+            height: 40px;
+            border-radius: 3px;
+            }
+            .selected {
+                background-color: $tab-button-bg-color-hover;
+                a {
+                    color: $hovered-link-color;
+                }
             }
             img {
                 height: 18px;
                 padding-top: 5px;
             }
-            div {
-                line-height: 40px;
-                height: 40px;
-                border-radius: 3px;
-                &:active, &:visited { //do poprawy stan visited
-                    background-color: $pagination-number-active-bg-color;
-                    p {
-                        color: $pagination-number-active-color;
-                    }
-                }
-            }
-            div.selected {
-                background-color: $tab-button-bg-color-hover
-            }
+            // div {
+            //     line-height: 40px;
+            //     height: 40px;
+            //     border-radius: 3px;
+            //     &:active, &:visited { //do poprawy stan visited
+            //         background-color: $pagination-number-active-bg-color;
+            //         p {
+            //             color: $pagination-number-active-color;
+            //         }
+            //     }
+            // }
+            // div.selected {
+            //     background-color: $tab-button-bg-color-hover
+            // }
             p {
             color: $nav-text-color;
             height: 40px;
