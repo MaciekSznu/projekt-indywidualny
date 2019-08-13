@@ -15,24 +15,27 @@
                 color: $paragraph-color;
             }
         }
-    input {
-        width: 300px;
+        input {
+            width: 300px;
+        }
+        select {
+            width: 100%;
+        }    
     }
-    select {
-        width: 100%;
-    }    
+    input.personal-data-input {
+        width: 300px;
     }
 }
 //do poprawy pozycja tła obrazka
 .form-password {
     @extend .form;
     input {
-        background:  url("..\images\icons\password.svg");
+        background:  url("..\..\images\icons\password.svg");
         background-repeat: no-repeat;
         background-size: 20px 20px;
         text-indent: 20px; 
             &::placeholder {
-                background:  url("..\images\icons\password.svg");
+                background:  url("..\..\images\icons\password.svg");
                 background-repeat: no-repeat;
                 background-size: 20px 20px;   
                 text-align: left;
@@ -70,6 +73,8 @@
 .form-label {
     width: 120px;
     display: inline-flex;
+    color: $header-color;
+    font-weight: 700;
 }
 .flex-form-horizontal {
     display: flex;
@@ -85,7 +90,10 @@
 .form-label-on-top {
     display: flex;
     margin-top: 20px;
-    //margin-left: 16px;
+    margin-bottom: 16px;
+    font-size: $section-header-font-size;
+    font-weight: 700;
+    color: $header-color;
 }
 
 .multiple-choice {
@@ -107,15 +115,7 @@
         font-weight: 700;
     }
 }
-.range {
-    label {
-        margin-left: 16px;
-    }
-    input[type="range"] {
-    width: 100%;
-    color: $range-stripe-color;
-    }
-}
+
 .button-submit {
     text-align: center;
     margin: 15px auto;

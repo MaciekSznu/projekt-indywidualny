@@ -7,6 +7,8 @@
 @import "../sass/components/buttons";
 @import "../sass/components/forms";
 @import "../sass/components/modals";
+@import "../sass/components/range";
+
 
 
 * {
@@ -65,10 +67,28 @@ a {
 
 
 //CHECKBOXES
-label.checkbox{//ostylowac do końca
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
+.checkboxes {
+    margin-right: 16px;
+    min-height: 228px;
+}
+.checkboxes-scroll {
+    max-height: 180px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $scrollbar-track-color; 
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $scrollbar-thumb-color; 
+    }
+    
+}
+label.checkbox{
+    width: 90%;
+    height: 36px;
+    line-height: 36px;
     padding-left: 46px;
     &:hover{
         background-color: $label-checkbox-hover;
@@ -80,7 +100,7 @@ label.checkbox{//ostylowac do końca
         display: none;
         float: right;
         margin-right: 12px;
-        margin-top: 12px;
+        margin-top: 11px;
         height: 15px;
     }
 }

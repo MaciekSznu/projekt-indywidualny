@@ -372,52 +372,52 @@
                             <div class="contact-data flex-form">
                                 <div>
                                     <label class="form-label">Name</label>
-                                    <input type="text" name="user-name" placeholder="Leonardo">
+                                    <input class="personal-data-input" type="text" name="user-name" placeholder="Leonardo">
                                 </div>
                                 <div>
                                     <label class="form-label">Surname</label>
-                                    <input type="text" name="user-surname" placeholder="Dicaprio">
+                                    <input class="personal-data-input" type="text" name="user-surname" placeholder="Dicaprio">
                                 </div>
                                 <div>
                                     <label class="form-label">E-mail</label>
-                                    <input type="email" name="user-email" placeholder="leo@gmail.com">
+                                    <input class="personal-data-input" type="email" name="user-email" placeholder="leo@gmail.com">
                                 </div>
                                 <div>
                                     <label class="form-label">Phone number</label>
-                                    <input type="text" name="user-phone-number" placeholder="+12 345 678 901">
+                                    <input class="personal-data-input" type="text" name="user-phone-number" placeholder="+12 345 678 901">
                                 </div>
                             </div>
                             <div class="bottom-border"></div>
                             <div class="contact-data-additional flex-form">
                                 <div>
                                     <label class="form-label">Skype</label>
-                                    <input type="text" name="user-skype" placeholder="Leonardo.O">
+                                    <input class="personal-data-input" type="text" name="user-skype" placeholder="Leonardo.O">
                                 </div>
                                 <div>
                                     <label class="form-label">ICQ</label>
-                                    <input type="text" name="user-icq" placeholder="">
+                                    <input class="personal-data-input" type="text" name="user-icq" placeholder="">
                                 </div>
                                 <div>
                                     <label class="form-label">Msn</label>
-                                    <input type="email" name="user-msn" placeholder="">
+                                    <input class="personal-data-input" type="email" name="user-msn" placeholder="">
                                 </div>
                             </div>
                             <div class="bottom-border"></div>
                             <div class="wallet flex-form">
                                 <div>
                                     <label class="form-label">Wallet</label>
-                                    <input type="text" name="user-wallet" placeholder="">
+                                    <input class="personal-data-input" type="text" name="user-wallet" placeholder="">
                                 </div>
                             </div>
                             <div class="bottom-border"></div>
                             <div class="password form-password  flex-form">
                                 <div>
                                     <label class="form-label">Password</label>
-                                    <input type="password" name="user-password" placeholder="">
+                                    <input class="personal-data-input" type="password" name="user-password" placeholder="">
                                 </div>
                                 <div>
                                     <label class="form-label">Repeat</label>
-                                    <input type="password" name="user-password+repeat" placeholder="">
+                                    <input class="personal-data-input" type="password" name="user-password+repeat" placeholder="">
                                 </div>            
                             </div>
                             <div class="bottom-border"></div>
@@ -481,13 +481,24 @@
                                 <div class="options flex-form-horizontal">
                                     <div class="checkboxes">
                                         <label class="form-label-on-top"><span>NOT &nbsp</span> sent statuses</label>
-                                        <label class="checkbox">checkNumber<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
-                                        <label class="checkbox">noAnswer<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
-                                        <label class="checkbox">noCall<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
-                                        <label class="checkbox">callAgain<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                        <div class="checkboxes-scroll">
+                                            <label class="checkbox">checkNumber<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                            <label class="checkbox">noAnswer<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                            <label class="checkbox">noCall<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                            <label class="checkbox">callAgain<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                            <label class="checkbox">callAgain<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                            <label class="checkbox">callAgain<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                            <label class="checkbox">callAgain<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                            <label class="checkbox">callAgain<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                            <label class="checkbox">callAgain<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                                        </div>
                                     </div>
                                     <div class="range">
                                         <label class="form-label-on-top">Send after</label>
+                                        <div class="range-description">
+                                            <span>0</span>
+                                            <span>200</span>
+                                        </div>
                                         <input type="range" name="user-range" min="0" max="200" step="1" value="100">
                                     </div>
                                 </div>                                
@@ -577,11 +588,52 @@
                 </div>
             </div>
         </div>
-        <div class="overlay" id="overlay">
+        <div class="overlay display-none" id="overlay">
             <div class="modal" id="linksModal">
-
+                <div class="top-content-title">
+                    <h1>add url</h1>
+                </div>
+                <div class="flex-form-horizontal">
+                    <div class="multiple-choice">
+                        <label class="form-label-on-top">Scheme name</label>
+                        <textarea placeholder="Name"></textarea>
+                    </div>
+                    <div class="multiple-choice">
+                        <select placeholder="Select compain">
+                            <option value="poland">Poland</option>
+                            <option value="england">England</option>
+                            <option value="russia">Russia</option>
+                        </select>
+                    </div>
+                    <div class="multiple-choice">
+                        <label class="form-label-on-top">Sending options:</label>
+                        <select placeholder="EN">
+                            <option value="poland">PL</option>
+                            <option value="england">EN</option>
+                            <option value="russia">RU</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="checkboxes-container">
+                    <div class="checkboxes">
+                        <label class="form-label-on-top">Select-websites</label>
+                        <label class="checkbox">Landing page Money<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                        <label class="checkbox">LP Your choise<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                        <label class="checkbox">LP Wallet<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                        <label class="checkbox">E-shop 01<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                        <label class="checkbox">Toy Store<input type="checkbox" checked="checked"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                    </div>
+                </div>
+                <div class="bottom-border"></div>
+                <div class="button-submit-options">
+                    <button class="base-button"><i src="images\icons\links.svg"></i>Copy link</button>
+                    <button type="submit" class="warning-button">Save</button>
+                </div>
             </div>
             <div class="modal" id="bannersModal">
+                <div class="top-content-title">
+                    <h1>add baners</h1>
+                </div>
 
             </div>
 
