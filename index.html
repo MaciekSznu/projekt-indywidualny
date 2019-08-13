@@ -413,11 +413,11 @@
                             <div class="password form-password  flex-form">
                                 <div>
                                     <label class="form-label">Password</label>
-                                    <input class="personal-data-input" type="password" name="user-password" placeholder="">
+                                    <input class="personal-data-input" type="password" autocomplete="on" name="user-password" placeholder="">
                                 </div>
                                 <div>
                                     <label class="form-label">Repeat</label>
-                                    <input class="personal-data-input" type="password" name="user-password+repeat" placeholder="">
+                                    <input class="personal-data-input" type="password" autocomplete="off" name="user-password+repeat" placeholder="">
                                 </div>            
                             </div>
                             <div class="bottom-border"></div>
@@ -588,10 +588,11 @@
                 </div>
             </div>
         </div>
-        <div class="overlay display-none" id="overlay">
+        <div class="overlay" id="overlay">
             <div class="modal" id="linksModal">
-                <div class="top-content-title">
+                <div class="top-content-title-modal">
                     <h1>add url</h1>
+                    <button><img src="images\icons\close.svg"></button>
                 </div>
                 <div class="flex-form-horizontal">
                     <div class="multiple-choice">
@@ -630,7 +631,7 @@
                     <button type="submit" class="warning-button">Save</button>
                 </div>
             </div>
-            <div class="modal" id="bannersModal">
+            <div class="modal display-none" id="bannersModal">
                 <div class="top-content-title">
                     <h1>add baners</h1>
                 </div>
