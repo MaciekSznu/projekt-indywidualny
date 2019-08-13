@@ -1881,32 +1881,19 @@ label.checkbox img.checkbox-ico {
   padding-top: 5px;
 }
 
-.pagination ul p {
-  color: #777777;
-  height: 40px;
-  line-height: 40px;
-  font-size: 16px;
-}
-
 @media (max-width: 767px) {
   .pagination ul {
     height: 25px;
   }
   .pagination ul li {
     width: 20px;
+    line-height: 25px;
+    height: 25px;
+    font-size: 12px;
   }
   .pagination ul img {
     height: 14px;
     padding-top: 5px;
-  }
-  .pagination ul div {
-    line-height: 25px;
-    height: 25px;
-  }
-  .pagination ul p {
-    line-height: 25px;
-    height: 25px;
-    font-size: 12px;
   }
 }
 

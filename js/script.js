@@ -177,31 +177,20 @@ document.querySelector('.mobile-menu-item-postback').addEventListener('click', f
   scrollTop();
 });
 
-//obsługa details->pagination
+//obsługa details->pagination 
+//dodać obsługe strzałek
 document.querySelector('.pagination-ul').addEventListener('click', function(e) {
   e.preventDefault();
-  var paginationNumbers = document.querySelectorAll('.pagination-number');
-  for ( var j = 0; j < paginationNumbers.length; j++){
-  paginationNumbers[j].classList.remove('selected');
-  }
   var target = e.target;
-  target.parentElement.classList.add('selected');
-  //usunąć obsługę z strzałek
+  if (target.parentElement.classList == 'pagination-number') {
+    var paginationNumbers = document.querySelectorAll('.pagination-number');
+    for ( var j = 0; j < paginationNumbers.length; j++){
+    paginationNumbers[j].classList.remove('selected');
+    }
+    target.parentElement.classList.add('selected');
+  }
 });
 
-
-
-// function hideSelected(){
-//   var contentElements = document.querySelectorAll('[class*="pagination-number"]');
-//   for ( var j = 0; j < contentElements.length; j++){
-//     contentElements[j].classList.remove('selected');
-//   }
-// }
-// function activeSelected(){
-//   document.querySelector('.pagination-number').classList.add('selected');
-// }
-
-///do skończenia!!!!
 
 //obsługa buttonów chart
 function toggleButtonBlue(){
