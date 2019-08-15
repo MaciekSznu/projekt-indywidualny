@@ -71,7 +71,6 @@ a {
     min-height: 228px;
 }
 .checkboxes-scroll {
-    max-height: 180px;
     overflow: auto;
     &::-webkit-scrollbar {
         width: 16px;
@@ -82,8 +81,12 @@ a {
     &::-webkit-scrollbar-thumb {
         background: $scrollbar-thumb-color; 
     }
-    
 }
+.postback-checkboxes-scroll {
+    @extend .checkboxes-scroll;
+    max-height: 180px;
+}
+
 label.checkbox{
     width: 90%;
     height: 36px;

@@ -1647,6 +1647,9 @@ input[type="range"]::-webkit-slider-runnable-track {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin-left: 16px;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
 }
 
 .modal-title {
@@ -1664,12 +1667,13 @@ input[type="range"]::-webkit-slider-runnable-track {
           justify-content: space-between;
 }
 
-.modal-title button {
+.modal-title div {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
-.modal-title button img {
+.modal-title div img {
   width: 16px;
   height: 16px;
 }
@@ -1748,18 +1752,26 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 .links-modal .multiple-choice-language {
-  width: 13%;
-  max-width: 130px;
+  width: 15%;
+  max-width: 148px;
 }
 
 .links-modal .multiple-choice-language select {
-  max-width: 130px;
+  max-width: 148px;
 }
 
 .links-modal .links-modal-checkboxes-container {
   height: 510px;
   max-height: 510px;
   width: calc(100% - 32px);
+}
+
+.links-modal .links-modal-checkboxes-container .form-label-on-top {
+  margin: 8px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #979797;
+  font-family: "Open Sans", Helvetica, Arial;
 }
 
 .links-modal .links-modal-checkboxes-container .links-modal-checkboxes {
@@ -1770,16 +1782,21 @@ input[type="range"]::-webkit-slider-runnable-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
+.links-modal .links-modal-checkboxes-container .links-modal-checkboxes .form-label-on-top {
+  width: 100%;
+}
+
 .links-modal .links-modal-checkboxes-container .links-modal-checkboxes .checkbox {
-  max-width: 30%;
+  max-width: 31%;
+}
+
+.links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll {
+  max-height: 470px;
+  overflow: auto;
 }
 
 .links-modal .modal-bottom-container {
@@ -1896,21 +1913,24 @@ a:hover {
   min-height: 228px;
 }
 
-.checkboxes-scroll {
-  max-height: 180px;
+.checkboxes-scroll, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll, .postback-checkboxes-scroll {
   overflow: auto;
 }
 
-.checkboxes-scroll::-webkit-scrollbar {
+.checkboxes-scroll::-webkit-scrollbar, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar, .postback-checkboxes-scroll::-webkit-scrollbar {
   width: 16px;
 }
 
-.checkboxes-scroll::-webkit-scrollbar-track {
+.checkboxes-scroll::-webkit-scrollbar-track, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar-track, .postback-checkboxes-scroll::-webkit-scrollbar-track {
   background: #777777;
 }
 
-.checkboxes-scroll::-webkit-scrollbar-thumb {
+.checkboxes-scroll::-webkit-scrollbar-thumb, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar-thumb, .postback-checkboxes-scroll::-webkit-scrollbar-thumb {
   background: #e3e3e3;
+}
+
+.postback-checkboxes-scroll {
+  max-height: 180px;
 }
 
 label.checkbox {

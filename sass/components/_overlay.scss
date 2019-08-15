@@ -26,6 +26,9 @@
 .links-modal-flex-form-horizontal {
   @extend .flex-form-horizontal;
     align-items: flex-end;
+    //justify-content: space-between;
+    margin-left: 16px;
+    align-content: space-between;
 }
 
 .modal-title {
@@ -37,9 +40,10 @@
   border-bottom: 1px solid $table-border-color;
   display: flex;
   justify-content: space-between;
-  button {
+  div {
     background-color: transparent;
     border: none;
+    cursor: pointer;
     img {
       width: 16px;
       height: 16px;
@@ -103,16 +107,23 @@
   }
   .multiple-choice-language {
     @extend .multiple-choice-compain;
-    width: 13%;
-    max-width: 130px;
+    width: 15%;
+    max-width: 148px;
     select {
-      max-width: 130px;
+      max-width: 148px;
     }
   }
   .links-modal-checkboxes-container {
     height: 510px;
     max-height: 510px;
     width: calc(100% - 32px);
+    .form-label-on-top {
+      margin: 8px 20px;
+      font-size: $section-header-font-size;
+      font-weight: 700;
+      color: $header-color;
+      font-family: $base-font;
+    }
     .links-modal-checkboxes {
       @extend .checkboxes;
       height: 100%;
@@ -120,12 +131,18 @@
       max-width: 100%;
       overflow: auto;
       display: flex;
-      flex-direction: column;
       flex-wrap: wrap;
-      //justify-content: space-between;
-      .checkbox {
-        max-width: 30%;
+      .form-label-on-top {
+        width: 100%;
       }
+      .checkbox {
+        max-width: 31%;
+      }
+    }
+    .links-modal-checkboxes-scroll {
+      @extend .checkboxes-scroll;
+      max-height: 470px;
+      overflow: auto;
     }
   }
   .modal-bottom-container {

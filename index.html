@@ -30,8 +30,8 @@
                     <ul>
                       <li class="menu-item-general active"><div class="stripe"></div><img src="images/icons/general.svg"><a href="#general">General</a></li>
                       <li class="menu-item-details"><div class="stripe"></div><img src="images/icons/details.svg"><a href="#details">Details</a></li>
-                      <li class="menu-item"><div class="stripe"></div><img src="images/icons/links.svg"><a href="#links">Links</a></li>
-                      <li class="menu-item"><div class="stripe"></div><img src="images/icons/banners.svg"><a href="#baners">Banners</a></li>
+                      <li class="menu-item-links"><div class="stripe"></div><img src="images/icons/links.svg"><a href="#links">Links</a></li>
+                      <li class="menu-item-banners"><div class="stripe"></div><img src="images/icons/banners.svg"><a href="#baners">Banners</a></li>
                       <li class="menu-item-personal-data"><div class="stripe"></div><img src="images/icons/personaldata.svg"><a href="#personal-data">Personal data</a></li>
                       <li class="menu-item-payout"><div class="stripe"></div><img src="images/icons/payout.svg"><a href="#payout">Payout</a></li>
                       <li class="menu-item-postback"><div class="stripe"></div><img src="images/icons/postback.svg"><a href="#postback">Postback</a></li>
@@ -44,8 +44,8 @@
                         <ul>
                           <li class="mobile-menu-item-general active"><div class="stripe"></div><img src="images/icons/general.svg"><a href="#">General</a></li>
                           <li class="mobile-menu-item-details"><div class="stripe"></div><img src="images/icons/details.svg"><a href="#">Details</a></li>
-                          <li class="mobile-menu-item"><div class="stripe"></div><img src="images/icons/links.svg"><a href="#">Links</a></li>
-                          <li class="menu-item"><div class="stripe"></div><img src="images/icons/banners.svg"><a href="#">Banners</a></li>
+                          <li class="mobile-menu-item-links"><div class="stripe"></div><img src="images/icons/links.svg"><a href="#">Links</a></li>
+                          <li class="mobile-menu-item-banners"><div class="stripe"></div><img src="images/icons/banners.svg"><a href="#">Banners</a></li>
                           <li class="mobile-menu-item-personal-data"><div class="stripe"></div><img src="images/icons/personaldata.svg"><a href="#">Personal data</a></li>
                           <li class="mobile-menu-item-payout"><div class="stripe"></div><img src="images/icons/payout.svg"><a href="#">Payout</a></li>
                           <li class="mobile-menu-item-postback"><div class="stripe"></div><img src="images/icons/postback.svg"><a href="#">Postback</a></li>
@@ -481,7 +481,7 @@
                                 <div class="options flex-form-horizontal">
                                     <div class="checkboxes">
                                         <label class="form-label-on-top"><span>NOT &nbsp</span> sent statuses</label>
-                                        <div class="checkboxes-scroll">
+                                        <div class="postback-checkboxes-scroll">
                                             <label class="checkbox">checkNumber<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
                                             <label class="checkbox">noAnswer<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
                                             <label class="checkbox">noCall<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
@@ -590,11 +590,11 @@
                 </div>
             </div>
         </div>
-        <div class="overlay" id="overlay">
-            <div class="modal links-modal" id="linksModal">
+        <div class="overlay display-none" id="overlay">
+            <div class="modal links-modal display-none" id="linksModal">
                 <div class="modal-title">
                     <h1>add url</h1>
-                    <button><img src="images\icons\close.svg"></button>
+                    <div class="js--close-modal"><img src="images\icons\close.svg"></div>
                 </div>
                 <div class="links-modal-flex-form-horizontal">
                     <div class="form-text-input">
@@ -619,8 +619,8 @@
                     <div class="bottom-border"></div>
                 </div>
                 <div class="links-modal-checkboxes-container">
-                    <div class="links-modal-checkboxes">
                         <label class="form-label-on-top">Select-websites</label>
+                    <div class="links-modal-checkboxes links-modal-checkboxes-scroll">
                         <label class="checkbox">Landing page Money<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
                         <label class="checkbox">LP Your choise<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
                         <label class="checkbox">LP Wallet<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
@@ -665,7 +665,7 @@
                     </div>
                     <div class="button-submit-options">
                         <button class="base-button"><img src="images\icons\links.svg">Copy link</button>
-                        <button type="submit" class="warning-button">Save</button>
+                        <button type="submit" class="warning-button js--close-modal">Save</button>
                     </div>
                 </div>
             </div>

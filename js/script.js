@@ -177,6 +177,60 @@ document.querySelector('.mobile-menu-item-postback').addEventListener('click', f
   scrollTop();
 });
 
+//obsługa modali
+function closeModal() {
+  document.getElementById('overlay').classList.add('display-none');
+}
+//zamykanie przyciskami
+document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeModal();
+  })
+})
+//zamykanie po kliknięci na tło
+document.querySelector('#overlay').addEventListener('click', function(e) {
+  if(e.target === this) {
+    closeModal();
+  }
+})
+//zamykanie po kliknięci esc
+document.addEventListener('keyup', function(e) {
+  if(e.keyCode === 27) {
+    closeModal()
+  }
+})
+//otwieranie modali
+function openModal(modal) {
+  document.querySelectorAll('#overlay > *').forEach(function(modal) {
+    modal.classList.add('display-none');
+  })
+  document.querySelector('#overlay').classList.remove('display-none');
+  document.querySelector(modal).classList.remove('display-none');
+}
+//obsługa otiwerania modali w menu 
+function activeMenuLinks(){
+  document.querySelector('.menu-item-links').classList.add('active');
+  document.querySelector('.mobile-menu-item-links').classList.add('active');
+}
+
+//desktop
+document.querySelector('.menu-item-links').addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal('#linksModal');
+  hideActive();
+  activeMenuLinks();
+});
+//mobile
+document.querySelector('.mobile-menu-item-links').addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal('#linksModal');
+  hideActive();
+  activeMenuLinks();
+});
+
+
+
 //obsługa details->pagination 
 //dodać obsługe strzałek
 document.querySelector('.pagination-ul').addEventListener('click', function(e) {
