@@ -257,3 +257,7 @@ var chart = new Chart(ctx, {
   },
 });
 
+//obsługa range
+function updateTextInput(val) {
+  document.getElementById('textInput').value=(val + ' hours'); 
+}

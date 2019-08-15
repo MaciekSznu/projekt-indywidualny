@@ -100,8 +100,14 @@
     width: 31%;
     margin-left: 16px;
     select {
+        appearance: none;
         width: 100%;
         margin-left: 0;
+        padding-right: 30px;
+        background-image: url(../../images/icons/arrow-down-small.svg);
+        background-size: 15px auto;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
     }
 }
 .checkboxes, .range {
