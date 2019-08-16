@@ -4,9 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Main page</title>
-		<!-- <link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;subset=latin-ext" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous"> -->
 		<link rel="stylesheet" type="text/css" href="sass\style.css">
     </head>
     <body>
@@ -499,8 +496,8 @@
                                             <span>0</span>
                                             <span>200</span>
                                         </div>
-                                        <input type="range" name="user-range" min="0" max="200" step="1" value="100" onchange="updateTextInput(this.value);">
-                                        <input type="text" id="textInput" value="100" style="margin-left: calc(value/200)">
+                                        <input type="range" id="range" name="user-range" min="0" max="200" step="1" value="0" onchange="updateTextInput(this.value);">
+                                        <input type="text" id="textInput" value="0 hours">
                                          <!-- do poprawy -->
                                     </div>
                                 </div>                                

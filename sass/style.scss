@@ -6,9 +6,10 @@
 @import "../sass/components/tables";
 @import "../sass/components/buttons";
 @import "../sass/components/forms";
-@import "../sass/components/modals";
 @import "../sass/components/range";
-@import "../sass/components/overlay";
+@import "../sass/components/modals";
+
+
 
 * {
     box-sizing: border-box;
@@ -17,6 +18,9 @@
 //klasa ukrywająca sekcje     
 .display-none {
     display: none;
+}
+body {
+    background-color: $content-bg-color;
 }
 
 //BASE ELEMENTS
@@ -28,7 +32,6 @@ h1 {
     text-transform: uppercase;
     margin: 0;
 }
-
 h2 {
     font-size: $section-header-font-size;
     font-family: $base-font;
@@ -56,14 +59,12 @@ a {
         color: $hovered-link-color;
     }
 }
-
 .top-content-data-chart-title h2 {
     margin: 0 30px;
 }
 .top-content-data-chart-tabs button {
     margin: 0 20px;
 }
-
 
 //CHECKBOXES
 .checkboxes {
@@ -107,7 +108,7 @@ label.checkbox{
     }
 }
 
-.checkbox {//ostylowac kolory
+.checkbox {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -135,7 +136,7 @@ label.checkbox{
         width: 0;
         &:checked ~ .checkmark {
             background-color: $marked-checkbox-box;
-            &:after {//niekoniecznie zadziała
+            &:after {
                 display: block;
             }
         }
@@ -303,13 +304,20 @@ label.checkbox{
             padding-left: 15px;
             cursor: pointer;
         }
-        }
+    }
         img {
             height: 18px;
             padding-top: 5px;
             padding-right: 10px;
             cursor: pointer;
+    }
+    @media (max-width: 400px){
+        width: 250px;
+        div input {
+            width: 105px;
+            padding-left: 5px;
         }
+    }
 }    
 div.date-period-separator {
     width: 1px;
@@ -322,9 +330,9 @@ div.date-period-separator {
         margin-left: 10px;
         width: 40px;
         padding: 10px;
-    img {
-        width: 20px;
-    }
+        img {
+            width: 20px;
+        }
     }
 }
 
@@ -345,7 +353,6 @@ div.top-menu-left {
     align-items: center;
     padding-left: 18px;
     padding-right: 18px;
-    
     p {
         color: $logo-color;
     }
@@ -362,7 +369,7 @@ div.top-menu-left {
             display: block;
             height: 3px;
             margin: 4px 0;
-            transition: all .2s ease-in-out;
+            transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out;
         }
         div {        
             background-color: $hamburger-color;
@@ -371,7 +378,7 @@ div.top-menu-left {
             display: block;
             height: 3px;
             margin: 4px 0;
-            transition: all .2s ease-in-out;  
+            transition: scale 1.5s ease-in-out;  
         } 
     }
 }
@@ -390,7 +397,7 @@ div.top-menu-left {
             display: block;
             height: 3px;
             margin: 7px 0;
-            transition: all .2s ease-in-out;
+            transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out;
             transform: translateY(-10px) rotate(-135deg);
         }
         &:before {        
@@ -400,7 +407,7 @@ div.top-menu-left {
             display: block;
             height: 3px;
             margin: 7px 0;
-            transition: all .2s ease-in-out;
+            transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out,;
             transform: translateY(10px) rotate(135deg);
         }
         div {        
@@ -410,58 +417,26 @@ div.top-menu-left {
             display: block;
             height: 3px;
             margin: 4px 0;
-            transition: all .2s ease-in-out;
+            transition: scale 1.5s ease-in-out;
             transform: scale(0);  
         } 
     }
 }
 
-.top-menu-money {
+.top-menu-money, .top-menu-bell, .top-menu-user-name, .top-menu-exit {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     img {
         width: 20px;
     }
-    #arrow-down  {
-        width: 12px;
-    }
-    span {
-        font-size: $page-header-font-size;
-        font-family: $base-font;
-    }
 }
-
-
-.top-menu-bell {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    img {
-        width: 20px;  
-    }
+.top-menu-money span, .top-menu-user-name span {
+    font-size: $menu-paragraph-font-size;
+    font-family: $base-font;
 }
-
-.top-menu-user-name {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    img {
-        width: 20px;
-    }
-    span {
-        font-size: $menu-paragraph-font-size;
-        font-family: $base-font;
-    }
-}
-
-.top-menu-exit {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    a img {
-        width: 20px;  
-    }
+.top-menu-money #arrow-down  {
+    width: 12px;
 }
 
 //CHART
@@ -471,13 +446,8 @@ div.top-menu-left {
     overflow-x: auto;
     transition: 0s;
     canvas {
-        //display: block;
         width: 100%;
         max-width: 700px;
-        //padding: 10px;
-        // #myChart {
-        //     max-width: 700px;
-        // }
     }
-  }
+}
 

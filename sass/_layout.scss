@@ -43,7 +43,6 @@
             "top-menu-left top-menu-space top-menu-money top-menu-bell top-menu-user-name top-menu-exit";
     }
 
-
     /* MAIN GRID */
     .left-menu {
         grid-area: left-menu;
@@ -60,7 +59,6 @@
         background-color: #f5f5f2;
         padding: 16px;
     }
-
     .container {
         top: 60px;
         position: relative;
@@ -89,7 +87,6 @@
         width: 100%;
         background-color: $content-bg-color;
         height: 110px;
-        //line-height: 110px;
         text-align: center;
         margin-top: 0px;
         border-bottom: 1px solid $table-border-color
@@ -103,6 +100,7 @@
         width: 100%;
         background-color: $content-bg-color;
         height: auto;
+        min-height: 100vh;
     }
     .top-content-personal-data-form {      
         width: 100%;        
@@ -117,7 +115,6 @@
         vertical-align: center;
         padding: 20px 170px 20px 170px;
     }
-
     .top-content-general-chart-title {
         padding: 60px 170px 20px 170px;
     }
@@ -129,13 +126,11 @@
         padding: 20px 170px 20px 170px;
         text-align: center;
     }
-    
 
     /*PAYOUT*/ 
     .top-content-payout-table {
         width: 100%;
         background-color: $content-bg-color;
-        //height: 20%;
         vertical-align: center;
         padding: 20px;
     }
@@ -143,17 +138,14 @@
     .top-content-details-table {
         width: 100%;
         background-color: $content-bg-color;
-        //height: 20%;
         vertical-align: center;
         padding: 20px;
     }
-
     //* POSTBACK *//
     .top-content-postback-parameters {
         margin-top: 20px;
         margin-left: 16px;
     }
-
     /* BOTTOM */
     .bottom-content{
         margin-top: 20px;
@@ -186,11 +178,11 @@
         line-height: 80px;
         text-align: center;
     }
-    //ukrywam menu mobile
+    //ukrywamy menu mobile
     .mobile-menu {
         z-index: -10;
     }
-    //ukrywam hamburgera
+    //ukrywamy hamburgera
     .hamburger {
         display: none;
     }
@@ -207,11 +199,13 @@
         grid-area: top-menu-left;
         flex-direction: row-reverse;
     }
+    .left-menu {
+        display: none;
+    }
     .mobile-menu {
         grid-area: mobile-menu;
         z-index: 5;
     }
-
     .top-menu-container {
         position: fixed;
         top: 0;
@@ -239,7 +233,6 @@
         background-color: $content-bg-color;
         padding: 16px;
     }
-
     .container {
         top: 60px;
         position: relative;
@@ -266,7 +259,6 @@
         width: 100%;
         background-color: $content-bg-color;
         height: 110px;
-        //line-height: 110px;
         text-align: center;
         margin-top: 0px;
         border-bottom: 1px solid $table-border-color
@@ -291,7 +283,6 @@
         width: 100%;
         padding: 20px;
     }
-
     .top-content-general-chart-title {
         width: 100%;
         padding: 30px;
@@ -305,15 +296,11 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        //text-align: center;
     }
-    
-
     /*PAYOUT*/ 
     .top-content-payout-table {
         width: 100%;
         background-color: $content-bg-color;
-        //height: 20%;
         vertical-align: center;
         padding: 20px;
     }
@@ -321,7 +308,6 @@
     .top-content-details-table {
         width: 100%;
         background-color: $content-bg-color;
-        //height: 20%;
         vertical-align: center;
         padding: 20px;
     }
@@ -356,25 +342,17 @@
         line-height: 90px;
         text-align: center;
     }
-
-
-
     //usuwamy top menu poza hamburgerem 
      div.top-menu-money, div.top-menu-bell, div.top-menu-user-name, div.top-menu-exit {
          display: none;
     }
 }
 
-
-
-//@media (min-width: 992px){  
-//}
-
-
 @media (max-width: 767px){
     body {
     width: 100%;
     margin: 0 auto;
+    min-height: 100vh;
     }
     /* TOP MENU GRID*/
     .top-menu-left {
@@ -385,7 +363,6 @@
         grid-area: mobile-menu;
         z-index: 5;
     }
-
     .top-menu-container {
         position: fixed;
         top: 0;
@@ -413,10 +390,8 @@
         background-color: $content-bg-color;
         padding: 16px;
     }
-
     .container {
         top: 60px;
-        //max-width: 100vw;
         position: relative;
         display: grid;
         grid-template-columns: 50vw 50vw;
@@ -441,7 +416,6 @@
         width: 100%;
         background-color: $content-bg-color;
         height: 110px;
-        //line-height: 110px;
         text-align: center;
         margin-top: 0px;
         border-bottom: 1px solid $table-border-color
@@ -454,7 +428,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
 /* TOP SECTIONS PROPERTIES */
     /*GENERAL*/ 
@@ -481,7 +454,6 @@
         max-width: 400px;
         overflow: scroll;
     }
-    
     /*PAYOUT*/ 
     .top-content-payout-table {
         width: 100%;

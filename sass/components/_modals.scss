@@ -1,31 +1,196 @@
-* {
-  box-sizing: border-box;
-}
 .overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
+  top:0;
+  left:0;
+  z-index: 100;
   width: 100%;
   height: 100%;
   background-color: $overlay-color;
+  display: flex;
   justify-content: center;
   align-items: center;
   overflow: auto;
   padding: 30px;
-  display: none;
-  &.show {
-    display: flex;
-  }
 }
 .modal {
+  width: 1074px;
   max-width: 1074px;
   margin: auto;
   background-color: $modal-bg-color;
-  padding: 94px 104px;
-  display: none;
-  &.show {
-    display: block;
+  position: relative;
+  padding: 0;
+  display: block;
+}
+.links-modal-flex-form-horizontal {
+  @extend .flex-form-horizontal;
+    align-items: flex-end;
+    margin-left: 16px;
+    align-content: space-between;
+}
+
+.modal-title {
+  width: 100%;
+  background-color: $content-bg-color;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 16px;
+  border-bottom: 1px solid $table-border-color;
+  display: flex;
+  justify-content: space-between;
+  div {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    img {
+      width: 16px;
+      height: 16px;
+    }
   }
 }
 
+.links-modal {
+  @extend .modal;
+  .form-label-on-top {
+    margin: 8px 0;
+    font-size: $section-header-font-size;
+    font-weight: 700;
+    color: $header-color;
+    font-family: $base-font;
+  }
+  .form-text-input {
+    width: 41%;
+    max-width: 436px;
+    margin: 0;
+    textarea {
+      display: block;//likwiduje dodatkowe generowane z automatu marginesy
+      font-family: $base-font;
+      width: 100%;
+      max-width: 436px;
+      margin: 0;
+      height: 40px;
+      padding: 10px;
+      resize: none;
+      &::placeholder {   
+          text-align: left;
+      }
+    }
+  }
+  .multiple-choice-compain {
+    width: 41%;
+    max-width: 436px;
+    margin-left: 16px;
+    select {
+      width: 100%;
+      max-width: 436px;
+      margin: 0;
+      height: 40px;
+      font-family: $base-font;
+      font-size: $paragraph-font-size;
+      appearance: none;
+      padding-right: 30px;
+      padding-left: 10px;
+      background-image: url(../../images/icons/arrow-down-small.svg);
+      background-size: 15px auto;
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      border: 1px solid $form-border-color;
+      border-radius: 3px;
+      &:hover {
+        color: $paragraph-color;
+        cursor: pointer;
+        border-color: $form-border-color-hover;
+      }
+    }
+  }
+  .multiple-choice-language {
+    @extend .multiple-choice-compain;
+    width: 15%;
+    max-width: 148px;
+    select {
+      max-width: 148px;
+    }
+  }
+  .links-modal-checkboxes-container {
+    height: 510px;
+    max-height: 510px;
+    width: calc(100% - 32px);
+    .form-label-on-top {
+      margin: 8px 20px;
+      font-size: $section-header-font-size;
+      font-weight: 700;
+      color: $header-color;
+      font-family: $base-font;
+    }
+    .links-modal-checkboxes {
+      @extend .checkboxes;
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+      overflow: auto;
+      display: flex;
+      flex-wrap: wrap;
+      .form-label-on-top {
+        width: 100%;
+      }
+      .checkbox {
+        max-width: 31%;
+        min-width: 220px;
+      }
+    }
+    .links-modal-checkboxes-scroll {
+      @extend .checkboxes-scroll;
+      max-height: 470px;
+      overflow: auto;
+    }
+  }
+  .modal-bottom-container {
+    @extend .links-modal-flex-form-horizontal;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    .form-text-input {
+      margin-left: 16px;
+      width: 71%;
+      max-width: 756px;
+      flex-shrink: 1;
+      textarea {
+        width: 100%;
+        max-width: 756px;
+      }
+    }
+    .button-submit-options {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 25%;
+      max-width: 262px;
+      .base-button {
+        flex-shrink: 0;
+        width: 148px;
+        margin-right: 16px;
+        img {
+          height: 11px;
+          width: auto;
+          margin-right: 15px;
+        }
+      }
+      .warning-button {
+        flex-shrink: 0;
+        width: 94px;
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 1199px){
+      flex-direction: column;
+      .form-text-input {
+        margin-top: 16px;
+        margin-left: 0px;
+        width: 80%
+      }
+      .button-submit-options {
+        width: 80%;
+      }
+    }
+  }
+}

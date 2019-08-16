@@ -38,148 +38,122 @@ function hideActive(){
   for ( var j = 0; j < contentElements.length; j++){
     contentElements[j].classList.remove('active');
   }
+}//paczki funkcji dla menu
+function desktopMenuPackage() {
+  hideContent();
+  hideActive();
+  scrollTop();
 }
+function mobileMenuPackage() {
+  hideContent();
+  hideActive();
+  scrollTop();
+  toggleMenu();
+  toggleHamburger();
+}
+
 //general//
 function toggleMenuGenaral(){
   var generalElements = document.querySelectorAll('.general');
   for ( var i = 0; i < generalElements.length; i++){
     generalElements[i].classList.remove('display-none');
   }
-}
-function activeMenuGenral(){
   document.querySelector('.menu-item-general').classList.add('active');
   document.querySelector('.mobile-menu-item-general').classList.add('active');
 }
-
 //desktop
 document.querySelector('.menu-item-general').addEventListener('click', function(e) {
   e.preventDefault();
-  hideContent();
+  desktopMenuPackage();
   toggleMenuGenaral();
-  hideActive();
-  activeMenuGenral();
-  scrollTop();
 });
 //mobile
 document.querySelector('.mobile-menu-item-general').addEventListener('click', function(e) {
   e.preventDefault();
-  hideContent();
+  mobileMenuPackage();
   toggleMenuGenaral();
-  hideActive();
-  activeMenuGenral();
-  scrollTop();
 });
 
 //details//
 function toggleMenuDetails(){
   document.querySelector('.details').classList.remove('display-none');
-  }
-function activeMenuDetails(){
   document.querySelector('.menu-item-details').classList.add('active');
   document.querySelector('.mobile-menu-item-details').classList.add('active');
-}
+  }
 //desktop
 document.querySelector('.menu-item-details').addEventListener('click', function(e) {
   e.preventDefault();
-  hideContent();
+  desktopMenuPackage();
   toggleMenuDetails();
-  hideActive();
-  activeMenuDetails();
-  scrollTop();
 });
 //mobile
 document.querySelector('.mobile-menu-item-details').addEventListener('click', function(e) {
   e.preventDefault();
-  hideContent();
+  mobileMenuPackage();
   toggleMenuDetails();
-  hideActive();
-  activeMenuDetails();
-  scrollTop();
 });
 
 //payout//
 function toggleMenuPayout(){
   document.querySelector('.payout').classList.remove('display-none');
-}
-function activeMenuPayout(){
   document.querySelector('.menu-item-payout').classList.add('active');
   document.querySelector('.mobile-menu-item-payout').classList.add('active');
 }
 //desktop
 document.querySelector('.menu-item-payout').addEventListener('click', function(e) {
   e.preventDefault();
-  hideContent();
+  desktopMenuPackage();
   toggleMenuPayout();
-  hideActive();
-  activeMenuPayout();
-  scrollTop();
 });
 //mobile
 document.querySelector('.mobile-menu-item-payout').addEventListener('click', function(e) {
   e.preventDefault();
-  hideContent();
+  mobileMenuPackage();
   toggleMenuPayout();
-  hideActive();
-  activeMenuPayout();
-  scrollTop();
 });
 
 //personal-data//
 function toggleMenuPersonalData(){
   document.querySelector('.personal-data').classList.remove('display-none');
-}
-function activeMenuPersonalData(){
   document.querySelector('.menu-item-personal-data').classList.add('active');
   document.querySelector('.mobile-menu-item-personal-data').classList.add('active');
 }
 //desktop
 document.querySelector('.menu-item-personal-data').addEventListener('click', function(e) {
   e.preventDefault();
-  hideContent();
+  desktopMenuPackage();
   toggleMenuPersonalData();
-  hideActive();
-  activeMenuPersonalData();
-  scrollTop();
 });
 //mobile
 document.querySelector('.mobile-menu-item-personal-data').addEventListener('click', function(e) {
   e.preventDefault();
-  hideContent();
+  mobileMenuPackage();
   toggleMenuPersonalData();
-  hideActive();
-  activeMenuPersonalData();
-  scrollTop();
 });
+
 //postback//
 function toggleMenuPostback(){
   document.querySelector('.postback').classList.remove('display-none');
-}
-function activeMenuPostback(){
   document.querySelector('.menu-item-postback').classList.add('active');
   document.querySelector('.mobile-menu-item-postback').classList.add('active');
 }
 //desktop
 document.querySelector('.menu-item-postback').addEventListener('click', function(e) {
   e.preventDefault();
-  hideContent();
+  desktopMenuPackage();
   toggleMenuPostback();
-  hideActive();
-  activeMenuPostback();
-  scrollTop();
 });
 //mobile
 document.querySelector('.mobile-menu-item-postback').addEventListener('click', function(e) {
   e.preventDefault();
-  hideContent();
+  mobileMenuPackage();
   toggleMenuPostback();
-  hideActive();
-  activeMenuPostback();
-  scrollTop();
 });
 
 //obsługa modali
 function closeModal() {
   document.getElementById('overlay').classList.add('display-none');
+  hideActive();
 }
 //zamykanie przyciskami
 document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
@@ -213,7 +187,6 @@ function activeMenuLinks(){
   document.querySelector('.menu-item-links').classList.add('active');
   document.querySelector('.mobile-menu-item-links').classList.add('active');
 }
-
 //desktop
 document.querySelector('.menu-item-links').addEventListener('click', function(e) {
   e.preventDefault();
@@ -229,8 +202,6 @@ document.querySelector('.mobile-menu-item-links').addEventListener('click', func
   activeMenuLinks();
 });
 
-
-
 //obsługa details->pagination 
 //dodać obsługe strzałek
 document.querySelector('.pagination-ul').addEventListener('click', function(e) {
@@ -244,7 +215,6 @@ document.querySelector('.pagination-ul').addEventListener('click', function(e) {
     target.parentElement.classList.add('selected');
   }
 });
-
 
 //obsługa buttonów chart
 function toggleButtonBlue(){
@@ -271,7 +241,6 @@ document.querySelector('.tab-button-green').addEventListener('click', function(e
 
 //OBSŁUGA CHART//
 var ctx = document.getElementById('myChart').getContext('2d');
-
 var chart = new Chart(ctx, {
   // typ wykresu bar (kolumnowy)
   type: 'bar',
@@ -313,5 +282,8 @@ var chart = new Chart(ctx, {
 
 //obsługa range
 function updateTextInput(val) {
-  document.getElementById('textInput').value=(val + ' hours'); 
+  document.getElementById('textInput').value=(val + " hours");
+  var rangeWidth = document.getElementById('range').offsetWidth;
+  var margLeft = (val/200)*(rangeWidth-24);
+  document.getElementById('textInput').style.marginLeft = margLeft+"px";
 }

@@ -11,7 +11,7 @@
             color: $paragraph-color;
             cursor: pointer;
             border-color: $form-border-color-hover;
-            &::placeholder {//add opacity dla mozilli
+            &::placeholder {
                 color: $paragraph-color;
             }
         }
@@ -26,16 +26,18 @@
         width: 300px;
     }
 }
+
 //do poprawy pozycja tła obrazka
 .form-password {
     @extend .form;
     input {
-        background:  url("..\..\images\icons\password.svg");
+        background:  url("../../images/icons/password.svg");
         background-repeat: no-repeat;
         background-size: 20px 20px;
+        background-position: 5% 50%;
         text-indent: 20px; 
             &::placeholder {
-                background:  url("..\..\images\icons\password.svg");
+                background:  url("../../images/icons/password.svg");
                 background-repeat: no-repeat;
                 background-size: 20px 20px;   
                 text-align: left;
@@ -51,7 +53,7 @@
         max-width: 490px;
         margin: 16px;
         height: 180px;
-        resize: none;//czyści pole rozszerzaniaq w narożniku
+        resize: none;//czyści pole rozszerzania w narożniku
         &::placeholder {   
             text-align: left;
         }
@@ -104,7 +106,7 @@
         width: 100%;
         margin-left: 0;
         padding-right: 30px;
-        background-image: url(../../images/icons/arrow-down-small.svg);
+        background: url(../../images/icons/arrow-down-small.svg);
         background-size: 15px auto;
         background-repeat: no-repeat;
         background-position: right 10px center;
