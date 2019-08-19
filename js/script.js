@@ -162,7 +162,7 @@ document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
     closeModal();
   })
 })
-//zamykanie po kliknięci na tło
+//zamykanie po kliknięciu na tło
 document.querySelector('#overlay').addEventListener('click', function(e) {
   if(e.target === this) {
     closeModal();
@@ -182,7 +182,8 @@ function openModal(modal) {
   document.querySelector('#overlay').classList.remove('display-none');
   document.querySelector(modal).classList.remove('display-none');
 }
-//obsługa otiwerania modali w menu 
+//obsługa otiwerania modali w menu
+//links2 
 function activeMenuLinks(){
   document.querySelector('.menu-item-links').classList.add('active');
   document.querySelector('.mobile-menu-item-links').classList.add('active');
@@ -201,6 +202,26 @@ document.querySelector('.mobile-menu-item-links').addEventListener('click', func
   hideActive();
   activeMenuLinks();
 });
+//banners
+function activeMenuBanners(){
+  document.querySelector('.menu-item-banners').classList.add('active');
+  document.querySelector('.mobile-menu-item-banners').classList.add('active');
+}
+//desktop
+document.querySelector('.menu-item-banners').addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal('#bannersModal');
+  hideActive();
+  activeMenuBanners();
+});
+//mobile
+document.querySelector('.mobile-menu-item-banners').addEventListener('click', function(e) {
+  e.preventDefault();
+  openModal('#bannersModal');
+  hideActive();
+  activeMenuBanners();
+});
+
 
 //obsługa details->pagination 
 //dodać obsługe strzałek
