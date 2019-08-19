@@ -1422,7 +1422,7 @@ nav ul li.active img, .mobile-menu ul li.active img {
   font-weight: 700;
 }
 
-.flex-form-horizontal, .links-modal-flex-form-horizontal, .links-modal .modal-bottom-container {
+.flex-form-horizontal, .links-modal-flex-form-horizontal, .links-modal .modal-bottom-container, .banners-modal .modal-bottom-container, .banners-modal-flex-form-horizontal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1470,16 +1470,16 @@ nav ul li.active img, .mobile-menu ul li.active img {
   background-position: right 10px center;
 }
 
-.checkboxes, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes, .range {
+.checkboxes, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes, .range {
   width: 96%;
   max-width: 514px;
 }
 
-.checkboxes, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes {
+.checkboxes, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes {
   margin-left: 16px;
 }
 
-.checkboxes span, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes span {
+.checkboxes span, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes span, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes span, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes span, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes span {
   color: #ff0000;
   font-weight: 700;
 }
@@ -1606,7 +1606,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   padding: 30px;
 }
 
-.modal, .links-modal {
+.modal, .links-modal, .banners-modal {
   width: 1074px;
   max-width: 1074px;
   margin: auto;
@@ -1616,7 +1616,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   display: block;
 }
 
-.links-modal-flex-form-horizontal, .links-modal .modal-bottom-container {
+.links-modal-flex-form-horizontal, .links-modal .modal-bottom-container, .banners-modal .modal-bottom-container, .banners-modal-flex-form-horizontal {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -1651,7 +1651,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   height: 16px;
 }
 
-.links-modal .form-label-on-top {
+.links-modal .form-label-on-top, .banners-modal .form-label-on-top {
   margin: 8px 0;
   font-size: 15px;
   font-weight: 700;
@@ -1659,13 +1659,13 @@ input[type="range"]::-webkit-slider-runnable-track {
   font-family: "Open Sans", Helvetica, Arial;
 }
 
-.links-modal .form-text-input {
+.links-modal .form-text-input, .banners-modal .form-text-input {
   width: 41%;
   max-width: 436px;
   margin: 0;
 }
 
-.links-modal .form-text-input textarea {
+.links-modal .form-text-input textarea, .banners-modal .form-text-input textarea {
   display: block;
   font-family: "Open Sans", Helvetica, Arial;
   width: 100%;
@@ -1676,29 +1676,29 @@ input[type="range"]::-webkit-slider-runnable-track {
   resize: none;
 }
 
-.links-modal .form-text-input textarea::-webkit-input-placeholder {
+.links-modal .form-text-input textarea::-webkit-input-placeholder, .banners-modal .form-text-input textarea::-webkit-input-placeholder {
   text-align: left;
 }
 
-.links-modal .form-text-input textarea:-ms-input-placeholder {
+.links-modal .form-text-input textarea:-ms-input-placeholder, .banners-modal .form-text-input textarea:-ms-input-placeholder {
   text-align: left;
 }
 
-.links-modal .form-text-input textarea::-ms-input-placeholder {
+.links-modal .form-text-input textarea::-ms-input-placeholder, .banners-modal .form-text-input textarea::-ms-input-placeholder {
   text-align: left;
 }
 
-.links-modal .form-text-input textarea::placeholder {
+.links-modal .form-text-input textarea::placeholder, .banners-modal .form-text-input textarea::placeholder {
   text-align: left;
 }
 
-.links-modal .multiple-choice-compain, .links-modal .multiple-choice-language {
+.links-modal .multiple-choice-compain, .banners-modal .multiple-choice-compain, .links-modal .multiple-choice-language, .banners-modal .multiple-choice-language, .banners-modal .multiple-choice-weight, .banners-modal .multiple-choice-design, .banners-modal .multiple-choice-fill {
   width: 41%;
   max-width: 436px;
   margin-left: 16px;
 }
 
-.links-modal .multiple-choice-compain select, .links-modal .multiple-choice-language select {
+.links-modal .multiple-choice-compain select, .banners-modal .multiple-choice-compain select, .links-modal .multiple-choice-language select, .banners-modal .multiple-choice-language select, .banners-modal .multiple-choice-weight select, .banners-modal .multiple-choice-design select, .banners-modal .multiple-choice-fill select {
   width: 100%;
   max-width: 436px;
   margin: 0;
@@ -1718,28 +1718,28 @@ input[type="range"]::-webkit-slider-runnable-track {
   border-radius: 3px;
 }
 
-.links-modal .multiple-choice-compain select:hover, .links-modal .multiple-choice-language select:hover {
+.links-modal .multiple-choice-compain select:hover, .banners-modal .multiple-choice-compain select:hover, .links-modal .multiple-choice-language select:hover, .banners-modal .multiple-choice-language select:hover, .banners-modal .multiple-choice-weight select:hover, .banners-modal .multiple-choice-design select:hover, .banners-modal .multiple-choice-fill select:hover {
   color: #333333;
   cursor: pointer;
   border-color: #333333;
 }
 
-.links-modal .multiple-choice-language {
+.links-modal .multiple-choice-language, .banners-modal .multiple-choice-language {
   width: 15%;
   max-width: 148px;
 }
 
-.links-modal .multiple-choice-language select {
+.links-modal .multiple-choice-language select, .banners-modal .multiple-choice-language select {
   max-width: 148px;
 }
 
-.links-modal .links-modal-checkboxes-container {
+.links-modal .links-modal-checkboxes-container, .banners-modal .links-modal-checkboxes-container, .links-modal .banners-modal .banners-modal-checkboxes-container, .banners-modal .links-modal .banners-modal-checkboxes-container, .banners-modal .banners-modal-checkboxes-container {
   height: 510px;
   max-height: 510px;
   width: calc(100% - 32px);
 }
 
-.links-modal .links-modal-checkboxes-container .form-label-on-top {
+.links-modal .links-modal-checkboxes-container .form-label-on-top, .banners-modal .links-modal-checkboxes-container .form-label-on-top, .banners-modal .banners-modal-checkboxes-container .form-label-on-top {
   margin: 8px 20px;
   font-size: 15px;
   font-weight: 700;
@@ -1747,7 +1747,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   font-family: "Open Sans", Helvetica, Arial;
 }
 
-.links-modal .links-modal-checkboxes-container .links-modal-checkboxes {
+.links-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes {
   height: 100%;
   width: 100%;
   max-width: 100%;
@@ -1759,21 +1759,21 @@ input[type="range"]::-webkit-slider-runnable-track {
       flex-wrap: wrap;
 }
 
-.links-modal .links-modal-checkboxes-container .links-modal-checkboxes .form-label-on-top {
+.links-modal .links-modal-checkboxes-container .links-modal-checkboxes .form-label-on-top, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes .form-label-on-top, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes .form-label-on-top, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes .form-label-on-top {
   width: 100%;
 }
 
-.links-modal .links-modal-checkboxes-container .links-modal-checkboxes .checkbox {
+.links-modal .links-modal-checkboxes-container .links-modal-checkboxes .checkbox, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes .checkbox, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes .checkbox, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes .checkbox {
   max-width: 31%;
   min-width: 220px;
 }
 
-.links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll {
+.links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes-scroll, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes-scroll {
   max-height: 470px;
   overflow: auto;
 }
 
-.links-modal .modal-bottom-container {
+.links-modal .modal-bottom-container, .banners-modal .modal-bottom-container {
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1788,7 +1788,7 @@ input[type="range"]::-webkit-slider-runnable-track {
       flex-wrap: nowrap;
 }
 
-.links-modal .modal-bottom-container .form-text-input {
+.links-modal .modal-bottom-container .form-text-input, .banners-modal .modal-bottom-container .form-text-input {
   margin-left: 16px;
   width: 71%;
   max-width: 756px;
@@ -1796,12 +1796,12 @@ input[type="range"]::-webkit-slider-runnable-track {
       flex-shrink: 1;
 }
 
-.links-modal .modal-bottom-container .form-text-input textarea {
+.links-modal .modal-bottom-container .form-text-input textarea, .banners-modal .modal-bottom-container .form-text-input textarea {
   width: 100%;
   max-width: 756px;
 }
 
-.links-modal .modal-bottom-container .button-submit-options {
+.links-modal .modal-bottom-container .button-submit-options, .banners-modal .modal-bottom-container .button-submit-options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1811,20 +1811,20 @@ input[type="range"]::-webkit-slider-runnable-track {
   max-width: 262px;
 }
 
-.links-modal .modal-bottom-container .button-submit-options .base-button, .links-modal .modal-bottom-container .button-submit-options .standard-button, .links-modal .modal-bottom-container .button-submit-options .warning-button, .links-modal .modal-bottom-container .button-submit-options .disabled-button, .links-modal .modal-bottom-container .button-submit-options .tab-button, .links-modal .modal-bottom-container .button-submit-options .tab-button-blue, .links-modal .modal-bottom-container .button-submit-options .tab-button-orange, .links-modal .modal-bottom-container .button-submit-options .tab-button-green {
+.links-modal .modal-bottom-container .button-submit-options .base-button, .banners-modal .modal-bottom-container .button-submit-options .base-button, .links-modal .modal-bottom-container .button-submit-options .standard-button, .banners-modal .modal-bottom-container .button-submit-options .standard-button, .links-modal .modal-bottom-container .button-submit-options .warning-button, .banners-modal .modal-bottom-container .button-submit-options .warning-button, .links-modal .modal-bottom-container .button-submit-options .disabled-button, .banners-modal .modal-bottom-container .button-submit-options .disabled-button, .links-modal .modal-bottom-container .button-submit-options .tab-button, .banners-modal .modal-bottom-container .button-submit-options .tab-button, .links-modal .modal-bottom-container .button-submit-options .tab-button-blue, .banners-modal .modal-bottom-container .button-submit-options .tab-button-blue, .links-modal .modal-bottom-container .button-submit-options .tab-button-orange, .banners-modal .modal-bottom-container .button-submit-options .tab-button-orange, .links-modal .modal-bottom-container .button-submit-options .tab-button-green, .banners-modal .modal-bottom-container .button-submit-options .tab-button-green {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 148px;
   margin-right: 16px;
 }
 
-.links-modal .modal-bottom-container .button-submit-options .base-button img, .links-modal .modal-bottom-container .button-submit-options .standard-button img, .links-modal .modal-bottom-container .button-submit-options .warning-button img, .links-modal .modal-bottom-container .button-submit-options .disabled-button img, .links-modal .modal-bottom-container .button-submit-options .tab-button img, .links-modal .modal-bottom-container .button-submit-options .tab-button-blue img, .links-modal .modal-bottom-container .button-submit-options .tab-button-orange img, .links-modal .modal-bottom-container .button-submit-options .tab-button-green img {
+.links-modal .modal-bottom-container .button-submit-options .base-button img, .banners-modal .modal-bottom-container .button-submit-options .base-button img, .links-modal .modal-bottom-container .button-submit-options .standard-button img, .banners-modal .modal-bottom-container .button-submit-options .standard-button img, .links-modal .modal-bottom-container .button-submit-options .warning-button img, .banners-modal .modal-bottom-container .button-submit-options .warning-button img, .links-modal .modal-bottom-container .button-submit-options .disabled-button img, .banners-modal .modal-bottom-container .button-submit-options .disabled-button img, .links-modal .modal-bottom-container .button-submit-options .tab-button img, .banners-modal .modal-bottom-container .button-submit-options .tab-button img, .links-modal .modal-bottom-container .button-submit-options .tab-button-blue img, .banners-modal .modal-bottom-container .button-submit-options .tab-button-blue img, .links-modal .modal-bottom-container .button-submit-options .tab-button-orange img, .banners-modal .modal-bottom-container .button-submit-options .tab-button-orange img, .links-modal .modal-bottom-container .button-submit-options .tab-button-green img, .banners-modal .modal-bottom-container .button-submit-options .tab-button-green img {
   height: 11px;
   width: auto;
   margin-right: 15px;
 }
 
-.links-modal .modal-bottom-container .button-submit-options .warning-button {
+.links-modal .modal-bottom-container .button-submit-options .warning-button, .banners-modal .modal-bottom-container .button-submit-options .warning-button {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 94px;
@@ -1832,20 +1832,88 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 @media (max-width: 1199px) {
-  .links-modal .modal-bottom-container {
+  .links-modal .modal-bottom-container, .banners-modal .modal-bottom-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .links-modal .modal-bottom-container .form-text-input {
+  .links-modal .modal-bottom-container .form-text-input, .banners-modal .modal-bottom-container .form-text-input {
     margin-top: 16px;
     margin-left: 0px;
     width: 80%;
   }
-  .links-modal .modal-bottom-container .button-submit-options {
+  .links-modal .modal-bottom-container .button-submit-options, .banners-modal .modal-bottom-container .button-submit-options {
     width: 80%;
   }
+}
+
+.banners-modal .multiple-choice-weight, .banners-modal .multiple-choice-design, .banners-modal .multiple-choice-fill {
+  width: 33%;
+  max-width: 335px;
+}
+
+.banners-modal .multiple-choice-weight select, .banners-modal .multiple-choice-design select, .banners-modal .multiple-choice-fill select {
+  max-width: 335px;
+}
+
+.banners-modal .multiple-choice-weight {
+  margin-left: 0;
+}
+
+.banners-modal .banners-modal-checkboxes-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 405px;
+  max-height: 405px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+  .banners-modal .banners-modal-checkboxes-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.banners-modal .banners-modal-checkboxes-container .vertical-border {
+  border-right: 1px solid #979797;
+  width: 20px;
+  margin: -16px 0 -16px 16px;
+}
+
+.banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes-column {
+  min-width: calc(50% - 16px);
+}
+
+.banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes-column .form-label-on-top {
+  margin-bottom: 16px;
+}
+
+.banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes .checkbox {
+  width: 90%;
+  max-width: 90%;
+}
+
+.banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes-scroll {
+  max-height: 365px;
+  overflow-x: auto;
 }
 
 * {
@@ -1913,24 +1981,24 @@ a:hover {
   margin: 0 20px;
 }
 
-.checkboxes, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes {
+.checkboxes, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes {
   margin-right: 16px;
   min-height: 228px;
 }
 
-.checkboxes-scroll, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll, .postback-checkboxes-scroll {
+.checkboxes-scroll, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes-scroll, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes-scroll, .postback-checkboxes-scroll {
   overflow: auto;
 }
 
-.checkboxes-scroll::-webkit-scrollbar, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar, .postback-checkboxes-scroll::-webkit-scrollbar {
+.checkboxes-scroll::-webkit-scrollbar, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes-scroll::-webkit-scrollbar, .postback-checkboxes-scroll::-webkit-scrollbar {
   width: 16px;
 }
 
-.checkboxes-scroll::-webkit-scrollbar-track, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar-track, .postback-checkboxes-scroll::-webkit-scrollbar-track {
+.checkboxes-scroll::-webkit-scrollbar-track, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar-track, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar-track, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar-track, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes-scroll::-webkit-scrollbar-track, .postback-checkboxes-scroll::-webkit-scrollbar-track {
   background: #777777;
 }
 
-.checkboxes-scroll::-webkit-scrollbar-thumb, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar-thumb, .postback-checkboxes-scroll::-webkit-scrollbar-thumb {
+.checkboxes-scroll::-webkit-scrollbar-thumb, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar-thumb, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar-thumb, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes-scroll::-webkit-scrollbar-thumb, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes-scroll::-webkit-scrollbar-thumb, .postback-checkboxes-scroll::-webkit-scrollbar-thumb {
   background: #e3e3e3;
 }
 

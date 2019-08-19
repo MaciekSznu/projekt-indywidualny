@@ -21,7 +21,7 @@
   padding: 0;
   display: block;
 }
-.links-modal-flex-form-horizontal {
+.links-modal-flex-form-horizontal, .banners-modal-flex-form-horizontal {
   @extend .flex-form-horizontal;
     align-items: flex-end;
     margin-left: 16px;
@@ -191,6 +191,58 @@
       .button-submit-options {
         width: 80%;
       }
+    }
+  }
+}
+
+.banners-modal {
+  @extend .links-modal;
+  .multiple-choice-weight, .multiple-choice-design, .multiple-choice-fill {
+    @extend .multiple-choice-compain;
+    width: 33%;
+    max-width: 335px;
+    select {
+      max-width: 335px;
+    }
+  }
+  .multiple-choice-weight {
+    margin-left: 0;
+  }
+  .banners-modal-checkboxes-container {
+    @extend .links-modal-checkboxes-container;
+    display: flex;
+    justify-content: space-between;
+    height: 405px;
+    max-height: 405px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    @media (max-width: 767px){
+      flex-direction: column;
+    }
+    .vertical-border {
+      border-right: 1px solid $table-border-color;
+      width: 20px;
+      margin: -16px 0 -16px 16px;
+    }
+    .banners-modal-checkboxes-column {
+      min-width: calc(50% - 16px);
+      .form-label-on-top {
+        margin-bottom: 16px;
+      }
+    }
+    .banners-modal-checkboxes {
+      @extend .links-modal-checkboxes;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      .checkbox {
+        width: 90%;
+        max-width: 90%;
+      }
+    }
+    .banners-modal-checkboxes-scroll {
+      @extend .links-modal-checkboxes-scroll;
+      max-height: 365px;
+      overflow-x: auto;
     }
   }
 }

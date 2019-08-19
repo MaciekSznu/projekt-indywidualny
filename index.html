@@ -498,7 +498,6 @@
                                         </div>
                                         <input type="range" id="range" name="user-range" min="0" max="200" step="1" value="0" onchange="updateTextInput(this.value);">
                                         <input type="text" id="textInput" value="0 hours">
-                                         <!-- do poprawy -->
                                     </div>
                                 </div>                                
                                 <div class="bottom-border"></div>
@@ -587,7 +586,8 @@
                 </div>
             </div>
         </div>
-        <div class="overlay display-none" id="overlay">
+        <div class="overlay" id="overlay">
+            <!-- LINKS MODAL -->
             <div class="modal links-modal display-none" id="linksModal">
                 <div class="modal-title">
                     <h1>add url</h1>
@@ -666,13 +666,108 @@
                     </div>
                 </div>
             </div>
-            <div class="modal display-none" id="bannersModal">
-                <div class="top-content-title">
-                    <h1>add baners</h1>
+            <!-- BANNERS MODAL -->
+            <div class="modal banners-modal" id="bannersModal">
+                <div class="modal-title">
+                    <h1>add banners</h1>
+                    <div class="js--close-modal"><img src="images\icons\close.svg"></div>
                 </div>
-
+                <div class="banners-modal-flex-form-horizontal">
+                    <div class="form-text-input">
+                        <label class="form-label-on-top">Scheme name</label>
+                        <textarea type="textarea" name="name" placeholder="Name"></textarea>
+                    </div>
+                    <div class="multiple-choice-compain">
+                        <select>
+                            <option value="poland">Poland</option>
+                            <option value="england">England</option>
+                            <option value="russia">Russia</option>
+                        </select>
+                    </div>
+                    <div class="multiple-choice-language">
+                        <label class="form-label-on-top">Language</label>
+                        <select>
+                            <option value="polish">PL</option>
+                            <option value="english">EN</option>
+                            <option value="russian">RU</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="banners-modal-flex-form-horizontal">
+                    <div class="multiple-choice-weight">
+                        <label class="form-label-on-top">Weight-Height</label>
+                        <select>
+                            <option value="firstvalue"></option>
+                            <option value="secondvalue"></option>
+                            <option value="thirdvalue"></option>
+                        </select>
+                    </div>
+                    <div class="multiple-choice-design">
+                        <label class="form-label-on-top">Design</label>
+                        <select>
+                            <option value="firstvalue"></option>
+                            <option value="secondvalue"></option>
+                            <option value="thirdvalue"></option>
+                        </select>
+                    </div>
+                    <div class="multiple-choice-fill">
+                        <label class="form-label-on-top">Fill type</label>
+                        <select>
+                            <option value="firstvalue"></option>
+                            <option value="secondvalue"></option>
+                            <option value="thirdvalue"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bottom-border"></div>
+                <div class="banners-modal-checkboxes-container">
+                    <div class="banners-modal-checkboxes-column">
+                        <label class="form-label-on-top">Select banners</label>
+                        <div class="banners-modal-checkboxes banners-modal-checkboxes-scroll">
+                            <label class="checkbox">Landing page Money<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">LP Your choise<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">LP Wallet<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">E-shop 01<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">Toy Store<input type="checkbox" checked="checked"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">Toy Store<input type="checkbox" checked="checked"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">Landing page Money<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">LP Your choise<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">LP Wallet<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">E-shop 01<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">Toy Store<input type="checkbox" checked="checked"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">Toy Store<input type="checkbox" checked="checked"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                        </div>
+                    </div>
+                    <div class="vertical-border"></div>
+                    <div class="banners-modal-checkboxes-column">
+                        <label class="form-label-on-top">Select websites</label>
+                        <div class="banners-modal-checkboxes banners-modal-checkboxes-scroll">
+                            <label class="checkbox">Landing page Money<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">LP Your choise<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">LP Wallet<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">E-shop 01<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">Toy Store<input type="checkbox" checked="checked"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">Toy Store<input type="checkbox" checked="checked"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">Landing page Money<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">LP Your choise<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">LP Wallet<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">E-shop 01<input type="checkbox"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">Toy Store<input type="checkbox" checked="checked"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                            <label class="checkbox">Toy Store<input type="checkbox" checked="checked"><span class="checkmark"></span><img class="checkbox-ico" src="images\icons\show.svg"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-border"></div>
+                <div class="modal-bottom-container">
+                    <div class="form-text-input">
+                        <textarea type="textarea" name="name" placeholder="Name"></textarea>
+                    </div>
+                    <div class="button-submit-options">
+                        <button class="base-button"><img src="images\icons\links.svg">Copy link</button>
+                        <button type="submit" class="warning-button js--close-modal">Save</button>
+                    </div>
+                </div>
             </div>
-
         </div>
         <!-- ładujemy bibliotekę chart.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
