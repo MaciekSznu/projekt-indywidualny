@@ -17,25 +17,28 @@ document.querySelector('.hamburger').addEventListener('click', function(e) {
     toggleHamburger();
 });
 
-//pobieram element ul menu
-var leftMenu = document.getElementById('leftMenu');
-leftMenu.addEventListener('click', function(e) {
-  //hideContent
+//funkcja ukrywająca wszystkie elementy z klasa content
+function displayNone (){
   var contentElements = document.querySelectorAll('.content');
   for ( var j = 0; j < contentElements.length; j++){
     contentElements[j].classList.add('display-none');
   }
-  //hideActive
-  var menuElements = document.querySelectorAll('[class*="menu-item"]');
+}
+//funkcja usuwająca klasę active z wszystkich elementów menu
+function disActive () {
+var menuElements = document.querySelectorAll('[class*="menu-item"]');
   for ( var j = 0; j < menuElements.length; j++){
-    //uzupełnicwarunek do modali
     menuElements[j].classList.remove('active');
   }
-  console.log(e.target);
-  console.log(e.target.tagName);
-  if (e.target.tagName != 'LI') {
-    var parentClassName = e.target.parentNode.className;
-    var parentClassNameSliced = parentClassName.slice(10);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
+}
+
+//pobieram element ul menu
+var leftMenu = document.getElementById('leftMenu');
+leftMenu.addEventListener('click', function(e) {  
+  if (e.target.tagName !== 'LI' && e.target.parentNode.classList[0] !== 'menu-item-links'  && e.target.parentNode.classList[0] !== 'menu-item-banners') {
+    displayNone();
+    disActive();
+    var parentClassNameSliced = e.target.parentNode.className.slice(10);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
     var elementClassName = '.' + parentClassNameSliced;
     var documentElements = document.querySelectorAll(elementClassName);
     for ( var i = 0; i < documentElements.length; i++){
@@ -43,9 +46,10 @@ leftMenu.addEventListener('click', function(e) {
     }
     e.target.parentNode.classList.add('active');
   }
-  else {
-    var parentClassName = e.target.className;
-    var parentClassNameSliced = parentClassName.slice(10);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
+  else if (e.target.tagName == 'LI' && e.target.classList[0] !== 'menu-item-links'  && e.target.classList[0] !== 'menu-item-banners') {
+    displayNone();
+    disActive();
+    var parentClassNameSliced = e.target.className.slice(10);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
     var elementClassName = '.' + parentClassNameSliced;
     var documentElements = document.querySelectorAll(elementClassName);
     for ( var i = 0; i < documentElements.length; i++){
@@ -53,7 +57,7 @@ leftMenu.addEventListener('click', function(e) {
     }
     e.target.classList.add('active');
   }
-  //scrollTop
+  //funkcja odsyłająca na góre strony po kliknięciu w element menu
   window.scroll({
     top: 0,
     left:0,
@@ -62,32 +66,7 @@ leftMenu.addEventListener('click', function(e) {
 
 
 //funkcje obsługujące linki z menu//
-//funkcja odsyłająca na góre strony po kliknięciu w element menu
-function scrollTop (){
-  window.scroll({
-    top: 0,
-    left:0,
-  });
-}
-//funkcja ukrywająca wszystkie elementy z klasa content
-function hideContent(){
-  var contentElements = document.querySelectorAll('.content');
-  for ( var j = 0; j < contentElements.length; j++){
-    contentElements[j].classList.add('display-none');
-  }
-}
-//funkcja usuwająca klasę active z wszystkich elementów menu
-function hideActive(){
-  var contentElements = document.querySelectorAll('[class*="menu-item"]');
-  for ( var j = 0; j < contentElements.length; j++){
-    contentElements[j].classList.remove('active');
-  }
-}//paczki funkcji dla menu
-function desktopMenuPackage() {
-  hideContent();
-  hideActive();
-  scrollTop();
-}
+
 function mobileMenuPackage() {
   hideContent();
   hideActive();
@@ -96,102 +75,6 @@ function mobileMenuPackage() {
   toggleHamburger();
 }
 
-// //general//
-// function toggleMenuGenaral(){
-//   var generalElements = document.querySelectorAll('.general');
-//   for ( var i = 0; i < generalElements.length; i++){
-//     generalElements[i].classList.remove('display-none');
-//   }
-//   document.querySelector('.menu-item-general').classList.add('active');
-//   document.querySelector('.mobile-menu-item-general').classList.add('active');
-// }
-// //desktop
-// document.querySelector('.menu-item-general').addEventListener('click',  function(e) {
-//   e.preventDefault();
-//   desktopMenuPackage();
-//   toggleMenuGenaral();
-// });
-// //mobile
-// document.querySelector('.mobile-menu-item-general').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   mobileMenuPackage();
-//   toggleMenuGenaral();
-// });
-
-// //details//
-// function toggleMenuDetails(){
-//   document.querySelector('.details').classList.remove('display-none');
-//   document.querySelector('.menu-item-details').classList.add('active');
-//   document.querySelector('.mobile-menu-item-details').classList.add('active');
-//   }
-// //desktop
-// document.querySelector('.menu-item-details').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   desktopMenuPackage();
-//   toggleMenuDetails();
-// });
-// //mobile
-// document.querySelector('.mobile-menu-item-details').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   mobileMenuPackage();
-//   toggleMenuDetails();
-// });
-
-// //payout//
-// function toggleMenuPayout(){
-//   document.querySelector('.payout').classList.remove('display-none');
-//   document.querySelector('.menu-item-payout').classList.add('active');
-//   document.querySelector('.mobile-menu-item-payout').classList.add('active');
-// }
-// //desktop
-// document.querySelector('.menu-item-payout').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   desktopMenuPackage();
-//   toggleMenuPayout();
-// });
-// //mobile
-// document.querySelector('.mobile-menu-item-payout').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   mobileMenuPackage();
-//   toggleMenuPayout();
-// });
-
-// //personal-data//
-// function toggleMenuPersonalData(){
-//   document.querySelector('.personal-data').classList.remove('display-none');
-//   document.querySelector('.menu-item-personal-data').classList.add('active');
-//   document.querySelector('.mobile-menu-item-personal-data').classList.add('active');
-// }
-// //desktop
-// document.querySelector('.menu-item-personal-data').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   desktopMenuPackage();
-//   toggleMenuPersonalData();
-// });
-// //mobile
-// document.querySelector('.mobile-menu-item-personal-data').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   mobileMenuPackage();
-//   toggleMenuPersonalData();
-// });
-// //postback//
-// function toggleMenuPostback(){
-//   document.querySelector('.postback').classList.remove('display-none');
-//   document.querySelector('.menu-item-postback').classList.add('active');
-//   document.querySelector('.mobile-menu-item-postback').classList.add('active');
-// }
-// //desktop
-// document.querySelector('.menu-item-postback').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   desktopMenuPackage();
-//   toggleMenuPostback();
-// });
-// //mobile
-// document.querySelector('.mobile-menu-item-postback').addEventListener('click', function(e) {
-//   e.preventDefault();
-//   mobileMenuPackage();
-//   toggleMenuPostback();
-// });
 
 //obsługa modali
 function closeModal() {
@@ -238,14 +121,12 @@ function activeMenuLinks(){
 document.querySelector('.menu-item-links').addEventListener('click', function(e) {
   e.preventDefault();
   openModal('#linksModal');
-  //hideActive();
   activeMenuLinks();
 });
 //mobile
 document.querySelector('.mobile-menu-item-links').addEventListener('click', function(e) {
   e.preventDefault();
   openModal('#linksModal');
-  //hideActive();
   activeMenuLinks();
 });
 //banners
@@ -257,14 +138,12 @@ function activeMenuBanners(){
 document.querySelector('.menu-item-banners').addEventListener('click', function(e) {
   e.preventDefault();
   openModal('#bannersModal');
-  //hideActive();
   activeMenuBanners();
 });
 //mobile
 document.querySelector('.mobile-menu-item-banners').addEventListener('click', function(e) {
   e.preventDefault();
   openModal('#bannersModal');
-  //hideActive();
   activeMenuBanners();
 });
 
