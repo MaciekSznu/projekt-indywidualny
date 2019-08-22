@@ -17,27 +17,29 @@ document.querySelector('.hamburger').addEventListener('click', function(e) {
     toggleHamburger();
 });
 
-//funkcja ukrywająca wszystkie elementy z klasa content
-function displayNone (){
+//funkcja ukrywająca wszystkie elementy z klasa content oraz usuwająca klasę active z wszystkich elementów menu
+function displayNoneDisActive (){
   var contentElements = document.querySelectorAll('.content');
   for ( var j = 0; j < contentElements.length; j++){
     contentElements[j].classList.add('display-none');
   }
-}
-//funkcja usuwająca klasę active z wszystkich elementów menu
-function disActive () {
-var menuElements = document.querySelectorAll('[class*="menu-item"]');
-  for ( var j = 0; j < menuElements.length; j++){
-    menuElements[j].classList.remove('active');
+  var menuElements = document.querySelectorAll('[class*="menu-item"]');
+  for ( var i = 0; i < menuElements.length; i++){
+    menuElements[i].classList.remove('active');
   }
 }
+//funkcja odsyłająca na góre strony po kliknięciu w element menu
+function scrollTop (){
+  window.scroll({
+    top: 0,
+    left:0,
+  });
+}
 
-//pobieram element ul menu
 var leftMenu = document.getElementById('leftMenu');
-leftMenu.addEventListener('click', function(e) {  
+leftMenu.addEventListener('click', function(e) {
   if (e.target.tagName !== 'LI' && e.target.parentNode.classList[0] !== 'menu-item-links'  && e.target.parentNode.classList[0] !== 'menu-item-banners') {
-    displayNone();
-    disActive();
+    displayNoneDisActive();
     var parentClassNameSliced = e.target.parentNode.className.slice(10);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
     var elementClassName = '.' + parentClassNameSliced;
     var documentElements = document.querySelectorAll(elementClassName);
@@ -47,8 +49,7 @@ leftMenu.addEventListener('click', function(e) {
     e.target.parentNode.classList.add('active');
   }
   else if (e.target.tagName == 'LI' && e.target.classList[0] !== 'menu-item-links'  && e.target.classList[0] !== 'menu-item-banners') {
-    displayNone();
-    disActive();
+    displayNoneDisActive();
     var parentClassNameSliced = e.target.className.slice(10);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
     var elementClassName = '.' + parentClassNameSliced;
     var documentElements = document.querySelectorAll(elementClassName);
@@ -57,24 +58,58 @@ leftMenu.addEventListener('click', function(e) {
     }
     e.target.classList.add('active');
   }
-  //funkcja odsyłająca na góre strony po kliknięciu w element menu
-  window.scroll({
-    top: 0,
-    left:0,
-  });
-})
+  else if (e.target.tagName !== 'LI' && e.target.parentNode.classList[0] == 'menu-item-links') {
+    openModal('#linksModal');
+    e.target.parentNode.classList.add('active');
+  }
+  else if (e.target.tagName == 'LI' && e.target.classList[0] == 'menu-item-links') {
+    openModal('#linksModal');
+    e.target.classList.add('active');
+  }
+  else if (e.target.tagName !== 'LI' && e.target.parentNode.classList[0] == 'menu-item-banners') {
+    openModal('#bannersModal');
+    e.target.parentNode.classList.add('active');
+  }
+  else if (e.target.tagName == 'LI' && e.target.classList[0] == 'menu-item-banners') {
+    openModal('#bannersModal');
+    e.target.classList.add('active');
+  }
+  scrollTop();
+});
 
-
-//funkcje obsługujące linki z menu//
-
-function mobileMenuPackage() {
-  hideContent();
-  hideActive();
+var mobileMenu = document.getElementById('mobileMenu');
+mobileMenu.addEventListener('click', function(e) {
+  if (e.target.tagName !== 'LI' && e.target.parentNode.classList[0] !== 'mobile-menu-item-links'  && e.target.parentNode.classList[0] !== 'mobile-menu-item-banners') {
+    displayNoneDisActive();
+    var parentClassNameSliced = e.target.parentNode.className.slice(17);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
+    var elementClassName = '.' + parentClassNameSliced;
+    var documentElements = document.querySelectorAll(elementClassName);
+    for ( var i = 0; i < documentElements.length; i++){
+    documentElements[i].classList.remove('display-none');
+    }
+    e.target.parentNode.classList.add('active');
+  }
+  else if (e.target.tagName == 'LI' && e.target.classList[0] !== 'mobile-menu-item-links'  && e.target.classList[0] !== 'mobile-menu-item-banners') {
+    displayNoneDisActive();
+    var parentClassNameSliced = e.target.className.slice(17);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
+    var elementClassName = '.' + parentClassNameSliced;
+    var documentElements = document.querySelectorAll(elementClassName);
+    for ( var i = 0; i < documentElements.length; i++){
+    documentElements[i].classList.remove('display-none');
+    }
+    e.target.classList.add('active');
+  }
+  else if ((e.target.tagName !== 'LI' && e.target.parentNode.classList[0] == 'mobile-menu-item-links') || (e.target.tagName == 'LI' && e.target.classList[0] == 'mobile-menu-item-links')) {
+    openModal('#linksModal');
+  }
+  else if ((e.target.tagName !== 'LI' && e.target.parentNode.classList[0] == 'mobile-menu-item-banners') || (e.target.tagName == 'LI' && e.target.classList[0] == 'mobile-menu-item-banners')) {
+    openModal('#bannersModal');
+  }
+  //obsługa active w modalach nie potrzebna ze względy na znikające manu po kliknięciu
   scrollTop();
   toggleMenu();
   toggleHamburger();
-}
-
+});
 
 //obsługa modali
 function closeModal() {
@@ -93,7 +128,7 @@ document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
 });
 //zamykanie po kliknięciu na tło
 document.querySelector('#overlay').addEventListener('click', function(e) {
-  if(e.target === this) {
+  if(e.target === this) { 
     closeModal();
   }
 });
@@ -111,42 +146,6 @@ function openModal(modal) {
   document.querySelector('#overlay').classList.remove('display-none');
   document.querySelector(modal).classList.remove('display-none');
 }
-//obsługa otiwerania modali w menu
-//links2 
-function activeMenuLinks(){
-  document.querySelector('.menu-item-links').classList.add('active');
-  document.querySelector('.mobile-menu-item-links').classList.add('active');
-}
-//desktop
-document.querySelector('.menu-item-links').addEventListener('click', function(e) {
-  e.preventDefault();
-  openModal('#linksModal');
-  activeMenuLinks();
-});
-//mobile
-document.querySelector('.mobile-menu-item-links').addEventListener('click', function(e) {
-  e.preventDefault();
-  openModal('#linksModal');
-  activeMenuLinks();
-});
-//banners
-function activeMenuBanners(){
-  document.querySelector('.menu-item-banners').classList.add('active');
-  document.querySelector('.mobile-menu-item-banners').classList.add('active');
-}
-//desktop
-document.querySelector('.menu-item-banners').addEventListener('click', function(e) {
-  e.preventDefault();
-  openModal('#bannersModal');
-  activeMenuBanners();
-});
-//mobile
-document.querySelector('.mobile-menu-item-banners').addEventListener('click', function(e) {
-  e.preventDefault();
-  openModal('#bannersModal');
-  activeMenuBanners();
-});
-
 
 //obsługa details->pagination 
 //dodać obsługe strzałek
@@ -163,26 +162,17 @@ document.querySelector('.pagination-ul').addEventListener('click', function(e) {
 });
 
 //obsługa buttonów chart
-function toggleButtonBlue(){
-  document.querySelector('.tab-button-blue').classList.toggle('clicked');
-}
 document.querySelector('.tab-button-blue').addEventListener('click', function(e) {
   e.preventDefault();
-  toggleButtonBlue();
+  e.target.classList.toggle('clicked');
 });
-function toggleButtonOrange(){
-  document.querySelector('.tab-button-orange').classList.toggle('clicked');
-}
 document.querySelector('.tab-button-orange').addEventListener('click', function(e) {
   e.preventDefault();
-  toggleButtonOrange();
+  e.target.classList.toggle('clicked');
 });
-function toggleButtonGreen(){
-  document.querySelector('.tab-button-green').classList.toggle('clicked');
-}
 document.querySelector('.tab-button-green').addEventListener('click', function(e) {
   e.preventDefault();
-  toggleButtonGreen();
+  e.target.classList.toggle('clicked');
 });
 
 //OBSŁUGA CHART//

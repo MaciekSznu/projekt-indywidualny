@@ -1258,10 +1258,6 @@ nav ul li.active img, .mobile-menu ul li.active img {
   border-radius: 50%;
 }
 
-.tab-button:hover, .tab-button-blue:hover, .tab-button-orange:hover, .tab-button-green:hover {
-  background-color: #f5f5f2;
-}
-
 .tab-button:active, .tab-button-blue:active, .tab-button-orange:active, .tab-button-green:active {
   background-color: #f5f5f2;
 }

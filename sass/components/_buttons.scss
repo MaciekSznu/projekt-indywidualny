@@ -47,9 +47,9 @@
         border: 0px;
         border-radius: 50%;
     }
-    &:hover {
-        background-color: $tab-button-bg-color-hover;
-    }
+    // &:hover {
+    //     background-color: $tab-button-bg-color-hover;
+    // }
     &:active {//nie działa...
         background-color: $tab-button-bg-color-hover;
     }
