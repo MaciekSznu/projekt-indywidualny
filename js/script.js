@@ -1,24 +1,31 @@
 'use strict';
 
+//funkcja ogólna click
+function click (target, callback) {
+  document.querySelector(target).addEventListener('click', function (e) {
+    e.preventDefault();
+    return callback(e)
+  });
+}
+
 //funkcja ukrywająca/wyświetlająca menu mobile oraz zmieniająca hamburgera w X
 function toggleMenu(visible) {
     document.querySelector('.mobile-menu').classList.toggle('display-none', visible);
   }
-function toggleHamburger(){
+function toggleHamburger() {
   //pobieram rozmiar ekranu użtkownika od tego uzależniam czy funkcja ruszy czy nie
   var viewportWidth = document.documentElement.clientWidth;
     if (viewportWidth < 1200) {
   document.querySelector('.hamburger').classList.toggle('hamburger-clicked');
   }
 }
-document.querySelector('.hamburger').addEventListener('click', function(e) {
-    e.preventDefault();
-    toggleMenu();
-    toggleHamburger();
+click('.hamburger', function(e) {
+  toggleMenu();
+  toggleHamburger();
 });
 
 //funkcja ukrywająca wszystkie elementy z klasa content oraz usuwająca klasę active z wszystkich elementów menu
-function displayNoneDisActive (){
+function displayNoneDisActive () {
   var contentElements = document.querySelectorAll('.content');
   for ( var j = 0; j < contentElements.length; j++){
     contentElements[j].classList.add('display-none');
@@ -29,31 +36,30 @@ function displayNoneDisActive (){
   }
 }
 //funkcja odsyłająca na góre strony po kliknięciu w element menu
-function scrollTop (){
+function scrollTop () {
   window.scroll({
     top: 0,
     left:0,
   });
 }
 
-var leftMenu = document.getElementById('leftMenu');
-leftMenu.addEventListener('click', function(e) {
+click('#leftMenu', function(e) {
   if (e.target.tagName !== 'LI' && e.target.parentNode.classList[0] !== 'menu-item-links'  && e.target.parentNode.classList[0] !== 'menu-item-banners') {
     displayNoneDisActive();
     var parentClassNameSliced = e.target.parentNode.className.slice(10);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
     var elementClassName = '.' + parentClassNameSliced;
     var documentElements = document.querySelectorAll(elementClassName);
-    for ( var i = 0; i < documentElements.length; i++){
+    for ( var i = 0; i < documentElements.length; i++) {
     documentElements[i].classList.remove('display-none');
     }
     e.target.parentNode.classList.add('active');
   }
   else if (e.target.tagName == 'LI' && e.target.classList[0] !== 'menu-item-links'  && e.target.classList[0] !== 'menu-item-banners') {
     displayNoneDisActive();
-    var parentClassNameSliced = e.target.className.slice(10);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
+    var parentClassNameSliced = e.target.className.slice(10);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym trzem członom
     var elementClassName = '.' + parentClassNameSliced;
     var documentElements = document.querySelectorAll(elementClassName);
-    for ( var i = 0; i < documentElements.length; i++){
+    for ( var i = 0; i < documentElements.length; i++) {
     documentElements[i].classList.remove('display-none');
     }
     e.target.classList.add('active');
@@ -77,14 +83,13 @@ leftMenu.addEventListener('click', function(e) {
   scrollTop();
 });
 
-var mobileMenu = document.getElementById('mobileMenu');
-mobileMenu.addEventListener('click', function(e) {
+click('#mobileMenu', function(e) {
   if (e.target.tagName !== 'LI' && e.target.parentNode.classList[0] !== 'mobile-menu-item-links'  && e.target.parentNode.classList[0] !== 'mobile-menu-item-banners') {
     displayNoneDisActive();
     var parentClassNameSliced = e.target.parentNode.className.slice(17);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
     var elementClassName = '.' + parentClassNameSliced;
     var documentElements = document.querySelectorAll(elementClassName);
-    for ( var i = 0; i < documentElements.length; i++){
+    for ( var i = 0; i < documentElements.length; i++) {
     documentElements[i].classList.remove('display-none');
     }
     e.target.parentNode.classList.add('active');
@@ -94,7 +99,7 @@ mobileMenu.addEventListener('click', function(e) {
     var parentClassNameSliced = e.target.className.slice(17);//przycinam nazwę klasy o ilość znaków odpowiadającą pierwszym dwóm członom
     var elementClassName = '.' + parentClassNameSliced;
     var documentElements = document.querySelectorAll(elementClassName);
-    for ( var i = 0; i < documentElements.length; i++){
+    for ( var i = 0; i < documentElements.length; i++) {
     documentElements[i].classList.remove('display-none');
     }
     e.target.classList.add('active');
@@ -127,14 +132,16 @@ document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
   });
 });
 //zamykanie po kliknięciu na tło
-document.querySelector('#overlay').addEventListener('click', function(e) {
-  if(e.target === this) { 
+click('#overlay', function(e) {
+  if(e.target.id === 'overlay') {
     closeModal();
   }
+  console.log(e.target);
 });
 //zamykanie po kliknięci esc
+const ESC_KEY = 27;
 document.addEventListener('keyup', function(e) {
-  if(e.keyCode === 27) {
+  if(e.keyCode === ESC_KEY) {
     closeModal();
   }
 });
@@ -147,10 +154,8 @@ function openModal(modal) {
   document.querySelector(modal).classList.remove('display-none');
 }
 
-//obsługa details->pagination 
-//dodać obsługe strzałek
-document.querySelector('.pagination-ul').addEventListener('click', function(e) {
-  e.preventDefault();
+//obsługa details->pagination
+click('.pagination-ul', function(e) {
   var target = e.target;
   if (target.parentElement.classList == 'pagination-number') {
     var paginationNumbers = document.querySelectorAll('.pagination-number');
@@ -162,18 +167,16 @@ document.querySelector('.pagination-ul').addEventListener('click', function(e) {
 });
 
 //obsługa buttonów chart
-document.querySelector('.tab-button-blue').addEventListener('click', function(e) {
-  e.preventDefault();
+click('.tab-button-blue', function(e) {
   e.target.classList.toggle('clicked');
 });
-document.querySelector('.tab-button-orange').addEventListener('click', function(e) {
-  e.preventDefault();
+click('.tab-button-orange', function(e) {
   e.target.classList.toggle('clicked');
 });
-document.querySelector('.tab-button-green').addEventListener('click', function(e) {
-  e.preventDefault();
+click('.tab-button-green', function(e) {
   e.target.classList.toggle('clicked');
 });
+
 
 //OBSŁUGA CHART//
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -217,9 +220,11 @@ var chart = new Chart(ctx, {
 });
 
 //obsługa range
+const MAX_RANGE_VAL = 200;
+const SLIDER_THUMB_WIDTH = 24;
 function updateTextInput(val) {
   document.getElementById('textInput').value=(val + " hours");
   var rangeWidth = document.getElementById('range').offsetWidth;
-  var margLeft = (val/200)*(rangeWidth-24);
+  var margLeft = (val/MAX_RANGE_VAL)*(rangeWidth-SLIDER_THUMB_WIDTH);
   document.getElementById('textInput').style.marginLeft = margLeft+"px";
 }

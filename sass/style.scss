@@ -9,18 +9,18 @@
 @import "../sass/components/range";
 @import "../sass/components/modals";
 
-
-
 * {
     box-sizing: border-box;
     transition: .5s;
     }
-//klasa ukrywająca sekcje     
+
+body {
+  background-color: $content-bg-color;
+  }
+
+//klasa ukrywająca sekcje
 .display-none {
     display: none;
-}
-body {
-    background-color: $content-bg-color;
 }
 
 //BASE ELEMENTS
@@ -32,6 +32,7 @@ h1 {
     text-transform: uppercase;
     margin: 0;
 }
+
 h2 {
     font-size: $section-header-font-size;
     font-family: $base-font;
@@ -42,6 +43,7 @@ h2 {
         text-transform: uppercase;
     }
 }
+
 p {
     font-size: $paragraph-font-size;
     font-family: $base-font;
@@ -51,6 +53,7 @@ p {
         text-transform: uppercase;
     }
 }
+
 a {
     color: $link-color;
     font-weight: 400;
@@ -59,9 +62,11 @@ a {
         color: $hovered-link-color;
     }
 }
+
 .top-content-data-chart-title h2 {
     margin: 0 30px;
 }
+
 .top-content-data-chart-tabs button {
     margin: 0 20px;
 }
@@ -71,40 +76,42 @@ a {
     margin-right: 16px;
     min-height: 228px;
 }
+
 .checkboxes-scroll {
     overflow: auto;
     &::-webkit-scrollbar {
         width: 16px;
     }
     &::-webkit-scrollbar-track {
-        background: $scrollbar-track-color; 
+        background: $scrollbar-track-color;
     }
     &::-webkit-scrollbar-thumb {
-        background: $scrollbar-thumb-color; 
+        background: $scrollbar-thumb-color;
     }
 }
+
 .postback-checkboxes-scroll {
     @extend .checkboxes-scroll;
     max-height: 180px;
 }
 
 label.checkbox{
-    width: 90%;
-    height: 36px;
-    line-height: 36px;
-    padding-left: 46px;
-    &:hover{
+  width: 90%;
+  height: 36px;
+  line-height: 36px;
+  padding-left: 46px;
+  &:hover{
         background-color: $label-checkbox-hover;
     }
-    &:hover img.checkbox-ico {
+  &:hover img.checkbox-ico {
         display: inline-block;
     }
-    img.checkbox-ico {
-        display: none;
-        float: right;
-        margin-right: 12px;
-        margin-top: 11px;
-        height: 15px;
+  img.checkbox-ico {
+    display: none;
+    float: right;
+    margin-right: 12px;
+    margin-top: 11px;
+    height: 15px;
     }
 }
 
@@ -318,7 +325,7 @@ label.checkbox{
             padding-left: 5px;
         }
     }
-}    
+}
 div.date-period-separator {
     width: 1px;
     height: 32px;
@@ -362,7 +369,7 @@ div.top-menu-left {
         background-color: $nav-bg-color;
         border: none;
         cursor: pointer;
-        &:after, &:before {        
+        &:after, &:before {
             background-color: $hamburger-color;
             border-radius: 3px;
             content: '';
@@ -371,15 +378,15 @@ div.top-menu-left {
             margin: 4px 0;
             transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out;
         }
-        div {        
+        div {
             background-color: $hamburger-color;
             border-radius: 3px;
             content: '';
             display: block;
             height: 3px;
             margin: 4px 0;
-            transition: scale 1.5s ease-in-out;  
-        } 
+            transition: scale 1.5s ease-in-out;
+        }
     }
 }
 //MUSI BYĆ W CSS OPISANE PONIŻEJ KLASY HAMBURGER!!!
@@ -390,7 +397,7 @@ div.top-menu-left {
         background-color: $nav-bg-color;
         border: none;
         cursor: pointer;
-        &:after {        
+        &:after {
             background-color: $hamburger-color;
             border-radius: 3px;
             content: '';
@@ -400,7 +407,7 @@ div.top-menu-left {
             transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out;
             transform: translateY(-10px) rotate(-135deg);
         }
-        &:before {        
+        &:before {
             background-color: $hamburger-color;
             border-radius: 3px;
             content: '';
@@ -410,7 +417,7 @@ div.top-menu-left {
             transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out,;
             transform: translateY(10px) rotate(135deg);
         }
-        div {        
+        div {
             background-color: $hamburger-color;
             border-radius: 3px;
             content: '';
@@ -418,8 +425,8 @@ div.top-menu-left {
             height: 3px;
             margin: 4px 0;
             transition: scale 1.5s ease-in-out;
-            transform: scale(0);  
-        } 
+            transform: scale(0);
+        }
     }
 }
 

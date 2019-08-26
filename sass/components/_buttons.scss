@@ -16,6 +16,7 @@
         outline: 0;
     }
 }
+
 .standard-button {
     @extend .base-button;
     background-color: $standard-button-bg-color;
@@ -23,6 +24,7 @@
         background-color: $standard-button-bg-color-hover;
     }
 }
+
 .warning-button {
     @extend .base-button;
     background-color: $warning-button-bg-color;
@@ -30,10 +32,12 @@
         background-color: $warning-button-bg-color-hover;
     }
 }
+
 .disabled-button {
     @extend .base-button;
     background-color: $disabled-button-bg-color;
 }
+
 .tab-button {
     @extend .base-button;
     color: $tab-button-text-color;
@@ -47,13 +51,11 @@
         border: 0px;
         border-radius: 50%;
     }
-    // &:hover {
-    //     background-color: $tab-button-bg-color-hover;
-    // }
-    &:active {//nie działa...
+    &:active {
         background-color: $tab-button-bg-color-hover;
     }
 }
+
 .tab-button.clicked {
     background-color: $tab-button-bg-color-hover;
 }
@@ -71,6 +73,7 @@
     background-color: $tab-circle-color-orange;
     }
 }
+
 .tab-button-green {
     @extend .tab-button;
     div {

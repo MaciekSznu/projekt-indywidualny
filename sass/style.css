@@ -1919,12 +1919,12 @@ input[type="range"]::-webkit-slider-runnable-track {
   transition: .5s;
 }
 
-.display-none {
-  display: none;
-}
-
 body {
   background-color: #ffffff;
+}
+
+.display-none {
+  display: none;
 }
 
 h1 {
