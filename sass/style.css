@@ -1248,7 +1248,7 @@ nav ul li.active img, .mobile-menu ul li.active img {
   background-color: #ffffff;
 }
 
-.tab-button div, .tab-button-blue div, .tab-button-orange div, .tab-button-green div {
+.tab-button span, .tab-button-blue span, .tab-button-orange span, .tab-button-green span {
   float: left;
   margin-top: 3px;
   margin-right: 10px;
@@ -1266,15 +1266,15 @@ nav ul li.active img, .mobile-menu ul li.active img {
   background-color: #f5f5f2;
 }
 
-.tab-button-blue div {
+.tab-button-blue span {
   background-color: #56819f;
 }
 
-.tab-button-orange div {
+.tab-button-orange span {
   background-color: #f58220;
 }
 
-.tab-button-green div {
+.tab-button-green span {
   background-color: #04ae00;
 }
 
@@ -2385,7 +2385,10 @@ div.top-menu-left {
           transform: scale(0);
 }
 
-.top-menu-money, .top-menu-bell, .top-menu-user-name, .top-menu-exit {
+.top-menu-money,
+.top-menu-bell,
+.top-menu-user-name,
+.top-menu-exit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2397,16 +2400,20 @@ div.top-menu-left {
           align-items: center;
 }
 
-.top-menu-money img, .top-menu-bell img, .top-menu-user-name img, .top-menu-exit img {
+.top-menu-money img,
+.top-menu-bell img,
+.top-menu-user-name img,
+.top-menu-exit img {
   width: 20px;
 }
 
-.top-menu-money span, .top-menu-user-name span {
+.top-menu-money span,
+.top-menu-user-name span {
   font-size: 12px;
   font-family: "Open Sans", Helvetica, Arial;
 }
 
-.top-menu-money #arrow-down {
+.top-menu-money .arrow-down {
   width: 12px;
 }
 

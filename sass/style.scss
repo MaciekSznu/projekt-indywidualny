@@ -10,451 +10,511 @@
 @import "../sass/components/modals";
 
 * {
-    box-sizing: border-box;
-    transition: .5s;
-    }
+  box-sizing: border-box;
+  transition: .5s;
+}
 
 body {
   background-color: $content-bg-color;
-  }
+}
 
 //klasa ukrywająca sekcje
 .display-none {
-    display: none;
+  display: none;
 }
 
 //BASE ELEMENTS
 h1 {
-    font-size: $page-header-font-size;
-    font-family: $base-font;
-    font-weight: 400;
-    color: $header-color;
-    text-transform: uppercase;
-    margin: 0;
+  font-size: $page-header-font-size;
+  font-family: $base-font;
+  font-weight: 400;
+  color: $header-color;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 h2 {
-    font-size: $section-header-font-size;
-    font-family: $base-font;
-    font-weight: 400;
-    color: $header-color;
-    margin: 0;
-        &::first-letter {
-        text-transform: uppercase;
-    }
+  font-size: $section-header-font-size;
+  font-family: $base-font;
+  font-weight: 400;
+  color: $header-color;
+  margin: 0;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
 }
 
 p {
-    font-size: $paragraph-font-size;
-    font-family: $base-font;
-    color: $paragraph-color;
-    margin: 0;
-        &::first-letter {
-        text-transform: uppercase;
-    }
+  font-size: $paragraph-font-size;
+  font-family: $base-font;
+  color: $paragraph-color;
+  margin: 0;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
 }
 
 a {
-    color: $link-color;
-    font-weight: 400;
-    text-decoration: none;
-        &:hover {
-        color: $hovered-link-color;
-    }
+  color: $link-color;
+  font-weight: 400;
+  text-decoration: none;
+
+  &:hover {
+    color: $hovered-link-color;
+  }
 }
 
 .top-content-data-chart-title h2 {
-    margin: 0 30px;
+  margin: 0 30px;
 }
 
 .top-content-data-chart-tabs button {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 
 //CHECKBOXES
 .checkboxes {
-    margin-right: 16px;
-    min-height: 228px;
+  margin-right: 16px;
+  min-height: 228px;
 }
 
 .checkboxes-scroll {
-    overflow: auto;
-    &::-webkit-scrollbar {
-        width: 16px;
-    }
-    &::-webkit-scrollbar-track {
-        background: $scrollbar-track-color;
-    }
-    &::-webkit-scrollbar-thumb {
-        background: $scrollbar-thumb-color;
-    }
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb-color;
+  }
 }
 
 .postback-checkboxes-scroll {
-    @extend .checkboxes-scroll;
-    max-height: 180px;
+  @extend .checkboxes-scroll;
+  max-height: 180px;
 }
 
-label.checkbox{
+label.checkbox {
   width: 90%;
   height: 36px;
   line-height: 36px;
   padding-left: 46px;
-  &:hover{
-        background-color: $label-checkbox-hover;
-    }
+
+  &:hover {
+    background-color: $label-checkbox-hover;
+  }
+
   &:hover img.checkbox-ico {
-        display: inline-block;
-    }
+    display: inline-block;
+  }
+
   img.checkbox-ico {
     display: none;
     float: right;
     margin-right: 12px;
     margin-top: 11px;
     height: 15px;
-    }
+  }
 }
 
 .checkbox {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: $paragraph-font-size;
-    font-family: $base-font;
-    user-select: none;
-    .checkmark:after {
-        left: 4px;
-        top: 1px;
-        width: 4px;
-        height: 8px;
-        border: solid white;
-        border-width: 0 2px 2px 0;
-        transform: rotate(45deg);
-    }
-    
-    input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-        &:checked ~ .checkmark {
-            background-color: $marked-checkbox-box;
-            &:after {
-                display: block;
-            }
-        }
-    }
-}
-.checkmark {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: $paragraph-font-size;
+  font-family: $base-font;
+  user-select: none;
+
+  .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  input {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 16px;
-    width: 16px;
-    margin-top: 11px;
-    margin-left: 12px;
-    border: 1px solid $form-border-color;
-    &:after {
-        content: "";
-        position: absolute;
-        display: none;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked~.checkmark {
+      background-color: $marked-checkbox-box;
+
+      &:after {
+        display: block;
+      }
     }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  margin-top: 11px;
+  margin-left: 12px;
+  border: 1px solid $form-border-color;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
 }
 
 //NOTIFICATIONS
 .notification {
-    height: 40px;
-    line-height: 40px;
-    width: 260px;
-    border-style: none;
-    padding: 0 15px 0 20px;
-    overflow: hidden;
-    cursor: pointer;
-    span {
-        font-family: $base-font;
-        font-size: $paragraph-font-size;
-        color: $notification-text-color;
-    }
-    img.positive{
-        float: left;
-        margin-top: 11px;
-        height: 18px;
-        padding-right: 14px;
-    }
-    img.close{
-        float: right;
-        margin-top: 13px;
-        height: 14px;
-        padding-right: 10px;
-    }
+  height: 40px;
+  line-height: 40px;
+  width: 260px;
+  border-style: none;
+  padding: 0 15px 0 20px;
+  overflow: hidden;
+  cursor: pointer;
+
+  span {
+    font-family: $base-font;
+    font-size: $paragraph-font-size;
+    color: $notification-text-color;
+  }
+
+  img.positive {
+    float: left;
+    margin-top: 11px;
+    height: 18px;
+    padding-right: 14px;
+  }
+
+  img.close {
+    float: right;
+    margin-top: 13px;
+    height: 14px;
+    padding-right: 10px;
+  }
 }
+
 .notification-positive {
-    @extend .notification;
-    background-color: $notification-positive-bg-color;
-    &:hover {
-        background-color: $notification-positive-bg-color-hover;
-    }
+  @extend .notification;
+  background-color: $notification-positive-bg-color;
+
+  &:hover {
+    background-color: $notification-positive-bg-color-hover;
+  }
 }
+
 .notification-negative {
-    @extend .notification;
-    background-color: $notification-negative-bg-color;
-    &:hover {
-        background-color: $notification-negative-bg-color-hover;
-    }
+  @extend .notification;
+  background-color: $notification-negative-bg-color;
+
+  &:hover {
+    background-color: $notification-negative-bg-color-hover;
+  }
 }
 
 //COLUMN NAME
 .column-name {
-    height: 26px;
-    line-height: 26px;
-    border-style: none;
-    border-radius: 3px;
-    overflow: hidden;
-    cursor: pointer;
-    &:hover  {
-        background-color: $column-name-hover-bg-color;
-    }
-    span {
-        padding: 0 5px;
-        font-family: $base-font;
-        font-size: $table-paragraph-font-size;
-        color: $tab-button-text-color;
-        font-weight: 600;
-    }
-    &:hover span {
-        color: $paragraph-color;
-    }
-    img.column-name-ico {
-        float: right;
-        padding-right: 7px;
-        margin-top: 9px;
-        height: 7px;
-        display: none;
-    }
-    &:hover img {
-        display: inline;
-    }
+  height: 26px;
+  line-height: 26px;
+  border-style: none;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $column-name-hover-bg-color;
+  }
+
+  span {
+    padding: 0 5px;
+    font-family: $base-font;
+    font-size: $table-paragraph-font-size;
+    color: $tab-button-text-color;
+    font-weight: 600;
+  }
+
+  &:hover span {
+    color: $paragraph-color;
+  }
+
+  img.column-name-ico {
+    float: right;
+    padding-right: 7px;
+    margin-top: 9px;
+    height: 7px;
+    display: none;
+  }
+
+  &:hover img {
+    display: inline;
+  }
 
 }
 
 //PAGINATION
 .pagination {
-    text-align: center;
-    font-family: $base-font;
-    ul {
+  text-align: center;
+  font-family: $base-font;
+
+  ul {
     height: 40px;
     list-style: none;
-	padding: 0;
+    padding: 0;
     position: relative;
-        li {
-            display: inline-block;
-            width: 40px;
-            cursor: pointer;
-            line-height: 40px;
-            height: 40px;
-            border-radius: 3px;
-            }
-            .selected {
-                background-color: $tab-button-bg-color-hover;
-                a {
-                    color: $hovered-link-color;
-                }
-            }
-            img {
-                height: 18px;
-                padding-top: 5px;
-            }
-        }
-        
-    @media (max-width: 767px) {
-        ul {
-            height: 25px;
-            li {
-                width: 20px;
-                line-height: 25px;
-                height: 25px;
-                font-size: $mobile-pagination-font-size;
-            }
-            img {
-                height: 14px;
-                padding-top: 5px;
-            }
-        }
-        
+
+    li {
+      display: inline-block;
+      width: 40px;
+      cursor: pointer;
+      line-height: 40px;
+      height: 40px;
+      border-radius: 3px;
     }
+
+    .selected {
+      background-color: $tab-button-bg-color-hover;
+
+      a {
+        color: $hovered-link-color;
+      }
+    }
+
+    img {
+      height: 18px;
+      padding-top: 5px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    ul {
+      height: 25px;
+
+      li {
+        width: 20px;
+        line-height: 25px;
+        height: 25px;
+        font-size: $mobile-pagination-font-size;
+      }
+
+      img {
+        height: 14px;
+        padding-top: 5px;
+      }
+    }
+
+  }
 }
 
 //DATE PERIOD
 .date-period {
-    width: 320px;
+  width: 320px;
+  height: 40px;
+  border: 1px solid $form-border-color;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $form-border-color-hover;
+  }
+
+  div {
+    display: inline-block;
     height: 40px;
-    border: 1px solid $form-border-color;
-    border-radius: 3px;
+
+    input {
+      height: 38px;
+      line-height: 38px;
+      width: 140px;
+      border: none;
+      font-family: $base-font;
+      font-size: $calendar-font-size;
+      padding-left: 15px;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    height: 18px;
+    padding-top: 5px;
+    padding-right: 10px;
     cursor: pointer;
-    &:hover {
-        border-color: $form-border-color-hover;
+  }
+
+  @media (max-width: 400px) {
+    width: 250px;
+
+    div input {
+      width: 105px;
+      padding-left: 5px;
     }
-    div {
-        display: inline-block;
-        height: 40px;
-        input {
-            height: 38px;
-            line-height: 38px;
-            width: 140px;
-            border: none;
-            font-family: $base-font;
-            font-size: $calendar-font-size;
-            padding-left: 15px;
-            cursor: pointer;
-        }
-    }
-        img {
-            height: 18px;
-            padding-top: 5px;
-            padding-right: 10px;
-            cursor: pointer;
-    }
-    @media (max-width: 400px){
-        width: 250px;
-        div input {
-            width: 105px;
-            padding-left: 5px;
-        }
-    }
+  }
 }
+
 div.date-period-separator {
-    width: 1px;
-    height: 32px;
-    line-height: 32px;
-    background-color: $form-border-color;
+  width: 1px;
+  height: 32px;
+  line-height: 32px;
+  background-color: $form-border-color;
 }
+
 .date-period-refresh-button {
-    button {
-        margin-left: 10px;
-        width: 40px;
-        padding: 10px;
-        img {
-            width: 20px;
-        }
+  button {
+    margin-left: 10px;
+    width: 40px;
+    padding: 10px;
+
+    img {
+      width: 20px;
     }
+  }
 }
 
 //TOP MENU
 
 .top-menu-container div {
-    border-left: 1px solid $top-menu-border-color;
-    border-bottom: 1px solid $top-menu-border-color;
-    background-color: $content-bg-color;
-}
-div.top-menu-left {
-    border: none;
-    background-color: $nav-bg-color;
-}
-.top-menu-left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 18px;
-    padding-right: 18px;
-    p {
-        color: $logo-color;
-    }
-    .hamburger {
-        width: 21px;
-        margin: 4px;
-        background-color: $nav-bg-color;
-        border: none;
-        cursor: pointer;
-        &:after, &:before {
-            background-color: $hamburger-color;
-            border-radius: 3px;
-            content: '';
-            display: block;
-            height: 3px;
-            margin: 4px 0;
-            transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out;
-        }
-        div {
-            background-color: $hamburger-color;
-            border-radius: 3px;
-            content: '';
-            display: block;
-            height: 3px;
-            margin: 4px 0;
-            transition: scale 1.5s ease-in-out;
-        }
-    }
-}
-//MUSI BYĆ W CSS OPISANE PONIŻEJ KLASY HAMBURGER!!!
-.top-menu-left {
-    .hamburger-clicked {
-        width: 21px;
-        margin: 4px;
-        background-color: $nav-bg-color;
-        border: none;
-        cursor: pointer;
-        &:after {
-            background-color: $hamburger-color;
-            border-radius: 3px;
-            content: '';
-            display: block;
-            height: 3px;
-            margin: 7px 0;
-            transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out;
-            transform: translateY(-10px) rotate(-135deg);
-        }
-        &:before {
-            background-color: $hamburger-color;
-            border-radius: 3px;
-            content: '';
-            display: block;
-            height: 3px;
-            margin: 7px 0;
-            transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out,;
-            transform: translateY(10px) rotate(135deg);
-        }
-        div {
-            background-color: $hamburger-color;
-            border-radius: 3px;
-            content: '';
-            display: block;
-            height: 3px;
-            margin: 4px 0;
-            transition: scale 1.5s ease-in-out;
-            transform: scale(0);
-        }
-    }
+  border-left: 1px solid $top-menu-border-color;
+  border-bottom: 1px solid $top-menu-border-color;
+  background-color: $content-bg-color;
 }
 
-.top-menu-money, .top-menu-bell, .top-menu-user-name, .top-menu-exit {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    img {
-        width: 20px;
+div.top-menu-left {
+  border: none;
+  background-color: $nav-bg-color;
+}
+
+.top-menu-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 18px;
+  padding-right: 18px;
+
+  p {
+    color: $logo-color;
+  }
+
+  .hamburger {
+    width: 21px;
+    margin: 4px;
+    background-color: $nav-bg-color;
+    border: none;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+      background-color: $hamburger-color;
+      border-radius: 3px;
+      content: '';
+      display: block;
+      height: 3px;
+      margin: 4px 0;
+      transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out;
     }
+
+    div {
+      background-color: $hamburger-color;
+      border-radius: 3px;
+      content: '';
+      display: block;
+      height: 3px;
+      margin: 4px 0;
+      transition: scale 1.5s ease-in-out;
+    }
+  }
 }
-.top-menu-money span, .top-menu-user-name span {
-    font-size: $menu-paragraph-font-size;
-    font-family: $base-font;
+
+//MUSI BYĆ W CSS OPISANE PONIŻEJ KLASY HAMBURGER!!!
+.top-menu-left {
+  .hamburger-clicked {
+    width: 21px;
+    margin: 4px;
+    background-color: $nav-bg-color;
+    border: none;
+    cursor: pointer;
+
+    &:after {
+      background-color: $hamburger-color;
+      border-radius: 3px;
+      content: '';
+      display: block;
+      height: 3px;
+      margin: 7px 0;
+      transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out;
+      transform: translateY(-10px) rotate(-135deg);
+    }
+
+    &:before {
+      background-color: $hamburger-color;
+      border-radius: 3px;
+      content: '';
+      display: block;
+      height: 3px;
+      margin: 7px 0;
+      transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out, ;
+      transform: translateY(10px) rotate(135deg);
+    }
+
+    div {
+      background-color: $hamburger-color;
+      border-radius: 3px;
+      content: '';
+      display: block;
+      height: 3px;
+      margin: 4px 0;
+      transition: scale 1.5s ease-in-out;
+      transform: scale(0);
+    }
+  }
 }
-.top-menu-money #arrow-down  {
-    width: 12px;
+
+.top-menu-money,
+.top-menu-bell,
+.top-menu-user-name,
+.top-menu-exit {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  img {
+    width: 20px;
+  }
+}
+
+.top-menu-money span,
+.top-menu-user-name span {
+  font-size: $menu-paragraph-font-size;
+  font-family: $base-font;
+}
+
+.top-menu-money .arrow-down {
+  width: 12px;
 }
 
 //CHART
 .scroll-wrapper-chart {
-    display: flex;
-    width: 100%;
-    overflow-x: auto;
-    transition: 0s;
-    canvas {
-        width: 100%;
-        max-width: 700px;
-    }
-}
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  transition: 0s;
 
+  canvas {
+    width: 100%;
+    max-width: 700px;
+  }
+}

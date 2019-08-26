@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "npm run test:html",
+    "test:html": "globstar nu-html-checker *.html",
     "init-project": "npm install && npm-run-all init:*",
     "init:mkdirp": "npm install mkdirp",
     "init:run-all": "npm install npm-run-all --save-dev",

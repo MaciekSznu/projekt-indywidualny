@@ -1,82 +1,90 @@
 //BUTTONS
 .base-button {
-    height: 40px;
-    max-height: 40px;
-    min-width: 40px;
-    max-width: 240px;
-    font-family: $base-font;
-    font-weight: 300;
-    color: $button-text-color;
-    border-style: none;
-    border-radius: 3px;
-    padding: 0 20px;
-    overflow: hidden;
-    cursor: pointer;
-    &:focus {
-        outline: 0;
-    }
+  height: 40px;
+  max-height: 40px;
+  min-width: 40px;
+  max-width: 240px;
+  font-family: $base-font;
+  font-weight: 300;
+  color: $button-text-color;
+  border-style: none;
+  border-radius: 3px;
+  padding: 0 20px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .standard-button {
-    @extend .base-button;
-    background-color: $standard-button-bg-color;
-    &:hover {
-        background-color: $standard-button-bg-color-hover;
-    }
+  @extend .base-button;
+  background-color: $standard-button-bg-color;
+
+  &:hover {
+    background-color: $standard-button-bg-color-hover;
+  }
 }
 
 .warning-button {
-    @extend .base-button;
-    background-color: $warning-button-bg-color;
-    &:hover {
-        background-color: $warning-button-bg-color-hover;
-    }
+  @extend .base-button;
+  background-color: $warning-button-bg-color;
+
+  &:hover {
+    background-color: $warning-button-bg-color-hover;
+  }
 }
 
 .disabled-button {
-    @extend .base-button;
-    background-color: $disabled-button-bg-color;
+  @extend .base-button;
+  background-color: $disabled-button-bg-color;
 }
 
 .tab-button {
-    @extend .base-button;
-    color: $tab-button-text-color;
-    background-color: $tab-button-bg-color;
-    div {
-        float: left;
-        margin-top: 3px;
-        margin-right: 10px;
-        height: 14px;
-        width: 14px;
-        border: 0px;
-        border-radius: 50%;
-    }
-    &:active {
-        background-color: $tab-button-bg-color-hover;
-    }
+  @extend .base-button;
+  color: $tab-button-text-color;
+  background-color: $tab-button-bg-color;
+
+  span {
+    float: left;
+    margin-top: 3px;
+    margin-right: 10px;
+    height: 14px;
+    width: 14px;
+    border: 0px;
+    border-radius: 50%;
+  }
+
+  &:active {
+    background-color: $tab-button-bg-color-hover;
+  }
 }
 
 .tab-button.clicked {
-    background-color: $tab-button-bg-color-hover;
+  background-color: $tab-button-bg-color-hover;
 }
 
 .tab-button-blue {
-    @extend .tab-button;
-    div {
+  @extend .tab-button;
+
+  span {
     background-color: $tab-circle-color-blue;
-    }
+  }
 }
 
 .tab-button-orange {
-    @extend .tab-button;
-    div {
+  @extend .tab-button;
+
+  span {
     background-color: $tab-circle-color-orange;
-    }
+  }
 }
 
 .tab-button-green {
-    @extend .tab-button;
-    div {
+  @extend .tab-button;
+
+  span {
     background-color: $tab-circle-color-green;
-    }
+  }
 }
