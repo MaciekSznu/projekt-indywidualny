@@ -460,12 +460,15 @@ template {
     margin-top: 0px;
     border-bottom: 1px solid #979797;
   }
-  .top-content-general, .top-content-payout, .top-content-details {
+  .top-content-general,
+  .top-content-payout,
+  .top-content-details {
     width: 100%;
     background-color: #ffffff;
     height: 640px;
   }
-  .top-content-personal-data, .top-content-postback {
+  .top-content-personal-data,
+  .top-content-postback {
     width: 100%;
     background-color: #ffffff;
     height: auto;
@@ -646,7 +649,10 @@ template {
     margin-top: 0px;
     border-bottom: 1px solid #979797;
   }
-  .top-content-general, .top-content-payout, .top-content-details, .top-content-personal-data {
+  .top-content-general,
+  .top-content-payout,
+  .top-content-details,
+  .top-content-personal-data {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -747,7 +753,10 @@ template {
     line-height: 90px;
     text-align: center;
   }
-  div.top-menu-money, div.top-menu-bell, div.top-menu-user-name, div.top-menu-exit {
+  div.top-menu-money,
+  div.top-menu-bell,
+  div.top-menu-user-name,
+  div.top-menu-exit {
     display: none;
   }
 }
@@ -767,6 +776,9 @@ template {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+  }
+  .left-menu {
+    display: none;
   }
   .mobile-menu {
     -ms-grid-row: 2;
@@ -844,7 +856,9 @@ template {
     margin-top: 0px;
     border-bottom: 1px solid #979797;
   }
-  .top-content-general, .top-content-payout, .top-content-details {
+  .top-content-general,
+  .top-content-payout,
+  .top-content-details {
     width: 100%;
     background-color: #ffffff;
     height: auto;
@@ -938,7 +952,10 @@ template {
     line-height: 90px;
     text-align: center;
   }
-  div.top-menu-money, div.top-menu-bell, div.top-menu-user-name, div.top-menu-exit {
+  div.top-menu-money,
+  div.top-menu-bell,
+  div.top-menu-user-name,
+  div.top-menu-exit {
     display: none;
   }
 }

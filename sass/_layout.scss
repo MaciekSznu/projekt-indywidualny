@@ -1,507 +1,594 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media(min-width: 1200px) {
 
-    body {
-        width: 1280px;
-        margin: 0 auto;
-    }
+  body {
+    width: 1280px;
+    margin: 0 auto;
+  }
 
-    /* TOP MENU GRID*/
-    .top-menu-left {
-        grid-area: top-menu-left;
-    }
-    .top-menu-space {
-        grid-area: top-menu-space;
-    }
-    .top-menu-money {
-        grid-area: top-menu-money;
-    }
-    .top-menu-bell {
-        grid-area: top-menu-bell;
-        
-    }
-    .top-menu-user-name {
-        grid-area: top-menu-user-name;
-    }
-    .top-menu-exit {
-        grid-area: top-menu-exit;
-    }
+  /* TOP MENU GRID*/
+  .top-menu-left {
+    grid-area: top-menu-left;
+  }
 
-    .top-menu-container {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        max-width: 1280px;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: 188px auto 188px 60px 174px 60px;
-        grid-template-rows: 60px;
-        grid-template-areas: 
-            "top-menu-left top-menu-space top-menu-money top-menu-bell top-menu-user-name top-menu-exit";
-    }
+  .top-menu-space {
+    grid-area: top-menu-space;
+  }
 
-    /* MAIN GRID */
-    .left-menu {
-        grid-area: left-menu;
-        position: fixed;
-        margin-top: -16px;
-    }
-    .top-content {
-        grid-area: top-content;
-        background-color: #f5f5f2;
-        padding: 16px;
-    }
-    .bottom-content {
-        grid-area: bottom-content;
-        background-color: #f5f5f2;
-        padding: 16px;
-    }
-    .container {
-        top: 60px;
-        position: relative;
-        display: grid;
-        grid-template-columns: 188px 204px 342px 342px 204px;
-        grid-template-rows: 832px 832px;
-        grid-template-areas: 
-            "left-menu top-content top-content top-content top-content"
-            "left-menu bottom-content bottom-content bottom-content bottom-content"; 
-    }
+  .top-menu-money {
+    grid-area: top-menu-money;
+  }
 
-    /* MAIN GRID PROPERTIES */
-    /* TOP */
-    .top-content-title {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 16px;
-        border-bottom: 1px solid $table-border-color;
-    }
-    .top-content-calendar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 110px;
-        text-align: center;
-        margin-top: 0px;
-        border-bottom: 1px solid $table-border-color
-    }
-    .top-content-general, .top-content-payout, .top-content-details{
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 640px;
-    }
-    .top-content-personal-data, .top-content-postback  {      
-        width: 100%;
-        background-color: $content-bg-color;
-        height: auto;
-        min-height: 100vh;
-    }
-    .top-content-personal-data-form {      
-        width: 100%;        
-    }
+  .top-menu-bell {
+    grid-area: top-menu-bell;
 
-    /* TOP SECTIONS PROPERTIES */
-    /*GENERAL*/ 
-    .top-content-general-table {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 20%;
-        vertical-align: center;
-        padding: 20px 170px 20px 170px;
-    }
-    .top-content-general-chart-title {
-        padding: 60px 170px 20px 170px;
-    }
-    .top-content-general-chart-tabs {
-        padding: 20px 170px 20px 170px;
-        text-align: center;
-    }
-    .top-content-general-chart {
-        padding: 20px 170px 20px 170px;
-        text-align: center;
-    }
+  }
 
-    /*PAYOUT*/ 
-    .top-content-payout-table {
-        width: 100%;
-        background-color: $content-bg-color;
-        vertical-align: center;
-        padding: 20px;
-    }
-    /* DETAILS*/
-    .top-content-details-table {
-        width: 100%;
-        background-color: $content-bg-color;
-        vertical-align: center;
-        padding: 20px;
-    }
-    //* POSTBACK *//
-    .top-content-postback-parameters {
-        margin-top: 20px;
-        margin-left: 16px;
-    }
-    /* BOTTOM */
-    .bottom-content{
-        margin-top: 20px;
-        background-color: $content-bg-color;
-    }
-    .bottom-content-title {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 16px;
-        border-bottom: 1px solid $table-border-color
-    }
-    .bottom-content-button-top {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 80px;
-        line-height: 80px;
-        text-align: center;
-    }
-    .bottom-content-links {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 570px;
-    }
-    .bottom-content-button-bottom {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 80px;
-        line-height: 80px;
-        text-align: center;
-    }
-    //ukrywamy menu mobile
-    .mobile-menu {
-        z-index: -10;
-    }
-    //ukrywamy hamburgera
-    .hamburger {
-        display: none;
-    }
+  .top-menu-user-name {
+    grid-area: top-menu-user-name;
+  }
+
+  .top-menu-exit {
+    grid-area: top-menu-exit;
+  }
+
+  .top-menu-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1280px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 188px auto 188px 60px 174px 60px;
+    grid-template-rows: 60px;
+    grid-template-areas:
+      "top-menu-left top-menu-space top-menu-money top-menu-bell top-menu-user-name top-menu-exit";
+  }
+
+  /* MAIN GRID */
+  .left-menu {
+    grid-area: left-menu;
+    position: fixed;
+    margin-top: -16px;
+  }
+
+  .top-content {
+    grid-area: top-content;
+    background-color: #f5f5f2;
+    padding: 16px;
+  }
+
+  .bottom-content {
+    grid-area: bottom-content;
+    background-color: #f5f5f2;
+    padding: 16px;
+  }
+
+  .container {
+    top: 60px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 188px 204px 342px 342px 204px;
+    grid-template-rows: 832px 832px;
+    grid-template-areas:
+      "left-menu top-content top-content top-content top-content"
+      "left-menu bottom-content bottom-content bottom-content bottom-content";
+  }
+
+  /* MAIN GRID PROPERTIES */
+  /* TOP */
+  .top-content-title {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 16px;
+    border-bottom: 1px solid $table-border-color;
+  }
+
+  .top-content-calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 110px;
+    text-align: center;
+    margin-top: 0px;
+    border-bottom: 1px solid $table-border-color
+  }
+
+  .top-content-general,
+  .top-content-payout,
+  .top-content-details {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 640px;
+  }
+
+  .top-content-personal-data,
+  .top-content-postback {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .top-content-personal-data-form {
+    width: 100%;
+  }
+
+  /* TOP SECTIONS PROPERTIES */
+  /*GENERAL*/
+  .top-content-general-table {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 20%;
+    vertical-align: center;
+    padding: 20px 170px 20px 170px;
+  }
+
+  .top-content-general-chart-title {
+    padding: 60px 170px 20px 170px;
+  }
+
+  .top-content-general-chart-tabs {
+    padding: 20px 170px 20px 170px;
+    text-align: center;
+  }
+
+  .top-content-general-chart {
+    padding: 20px 170px 20px 170px;
+    text-align: center;
+  }
+
+  /*PAYOUT*/
+  .top-content-payout-table {
+    width: 100%;
+    background-color: $content-bg-color;
+    vertical-align: center;
+    padding: 20px;
+  }
+
+  /* DETAILS*/
+  .top-content-details-table {
+    width: 100%;
+    background-color: $content-bg-color;
+    vertical-align: center;
+    padding: 20px;
+  }
+
+  //* POSTBACK *//
+  .top-content-postback-parameters {
+    margin-top: 20px;
+    margin-left: 16px;
+  }
+
+  /* BOTTOM */
+  .bottom-content {
+    margin-top: 20px;
+    background-color: $content-bg-color;
+  }
+
+  .bottom-content-title {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 16px;
+    border-bottom: 1px solid $table-border-color
+  }
+
+  .bottom-content-button-top {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+  }
+
+  .bottom-content-links {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 570px;
+  }
+
+  .bottom-content-button-bottom {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+  }
+
+  //ukrywamy menu mobile
+  .mobile-menu {
+    z-index: -10;
+  }
+
+  //ukrywamy hamburgera
+  .hamburger {
+    display: none;
+  }
 
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-    body {
+  body {
     width: 100%;
     margin: 0 auto;
-    }
-    /* TOP MENU GRID*/
-    .top-menu-left {
-        grid-area: top-menu-left;
-        flex-direction: row-reverse;
-    }
-    .left-menu {
-        display: none;
-    }
-    .mobile-menu {
-        grid-area: mobile-menu;
-        z-index: 5;
-    }
-    .top-menu-container {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        max-width: 1199px;
-        z-index: 5;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 60px auto;
-        grid-template-areas: 
-            "top-menu-left"
-            "mobile-menu";
-    }
-    div.top-menu-space {
-        display: none;
-    }
-    /* MAIN GRID */
-    .top-content {
-        grid-area: top-content;
-        background-color: $content-bg-color;
-        padding: 16px;
-    }
-    .bottom-content {
-        grid-area: bottom-content;
-        background-color: $content-bg-color;
-        padding: 16px;
-    }
-    .container {
-        top: 60px;
-        position: relative;
-        display: grid;
-        grid-template-columns: auto 90vw auto;
-        grid-template-rows: auto auto;
-        grid-template-areas: 
-            "top-content top-content top-content"
-            "bottom-content bottom-content bottom-content"; 
-    }
-//TOP CONTENET PROPERTIES
-    .top-content-title {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 16px;
-        border-bottom: 1px solid $table-border-color;
-    }
-    .top-content-calendar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 110px;
-        text-align: center;
-        margin-top: 0px;
-        border-bottom: 1px solid $table-border-color
-    }
-    .top-content-general, .top-content-payout, .top-content-details, .top-content-personal-data {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        background-color: $content-bg-color;
-        height: auto;
-    }
-/* TOP SECTIONS PROPERTIES */
-    /*GENERAL*/ 
-    .top-content-general-table {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        background-color: $content-bg-color;
-        height: 20%;
-        width: 100%;
-        padding: 20px;
-    }
-    .top-content-general-chart-title {
-        width: 100%;
-        padding: 30px;
-    }
-    .top-content-general-chart-tabs {
-        padding: 20px 170px 20px 170px;
-        text-align: center;
-    }
-    .top-content-general-chart {
-        padding: 20px 50px 20px 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    /*PAYOUT*/ 
-    .top-content-payout-table {
-        width: 100%;
-        background-color: $content-bg-color;
-        vertical-align: center;
-        padding: 20px;
-    }
-    /* DETAILS*/
-    .top-content-details-table {
-        width: 100%;
-        background-color: $content-bg-color;
-        vertical-align: center;
-        padding: 20px;
-    }
-    /* BOTTOM */
-    .bottom-content{
-        background-color: $content-bg-color;
-    }
-    .bottom-content-title {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 16px;
-        border-bottom: 1px solid $table-border-color
-    }
-    .bottom-content-button-top {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 90px;
-        line-height: 90px;
-        text-align: center;
-    }
-    .bottom-content-links {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 570px;
-    }
-    .bottom-content-button-bottom {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 90px;
-        line-height: 90px;
-        text-align: center;
-    }
-    //usuwamy top menu poza hamburgerem 
-     div.top-menu-money, div.top-menu-bell, div.top-menu-user-name, div.top-menu-exit {
-         display: none;
-    }
+  }
+
+  /* TOP MENU GRID*/
+  .top-menu-left {
+    grid-area: top-menu-left;
+    flex-direction: row-reverse;
+  }
+
+  .left-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    grid-area: mobile-menu;
+    z-index: 5;
+  }
+
+  .top-menu-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1199px;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px auto;
+    grid-template-areas:
+      "top-menu-left"
+      "mobile-menu";
+  }
+
+  div.top-menu-space {
+    display: none;
+  }
+
+  /* MAIN GRID */
+  .top-content {
+    grid-area: top-content;
+    background-color: $content-bg-color;
+    padding: 16px;
+  }
+
+  .bottom-content {
+    grid-area: bottom-content;
+    background-color: $content-bg-color;
+    padding: 16px;
+  }
+
+  .container {
+    top: 60px;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 90vw auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "top-content top-content top-content"
+      "bottom-content bottom-content bottom-content";
+  }
+
+  //TOP CONTENET PROPERTIES
+  .top-content-title {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 16px;
+    border-bottom: 1px solid $table-border-color;
+  }
+
+  .top-content-calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 110px;
+    text-align: center;
+    margin-top: 0px;
+    border-bottom: 1px solid $table-border-color
+  }
+
+  .top-content-general,
+  .top-content-payout,
+  .top-content-details,
+  .top-content-personal-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $content-bg-color;
+    height: auto;
+  }
+
+  /* TOP SECTIONS PROPERTIES */
+  /*GENERAL*/
+  .top-content-general-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $content-bg-color;
+    height: 20%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .top-content-general-chart-title {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .top-content-general-chart-tabs {
+    padding: 20px 170px 20px 170px;
+    text-align: center;
+  }
+
+  .top-content-general-chart {
+    padding: 20px 50px 20px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /*PAYOUT*/
+  .top-content-payout-table {
+    width: 100%;
+    background-color: $content-bg-color;
+    vertical-align: center;
+    padding: 20px;
+  }
+
+  /* DETAILS*/
+  .top-content-details-table {
+    width: 100%;
+    background-color: $content-bg-color;
+    vertical-align: center;
+    padding: 20px;
+  }
+
+  /* BOTTOM */
+  .bottom-content {
+    background-color: $content-bg-color;
+  }
+
+  .bottom-content-title {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 16px;
+    border-bottom: 1px solid $table-border-color
+  }
+
+  .bottom-content-button-top {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+  }
+
+  .bottom-content-links {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 570px;
+  }
+
+  .bottom-content-button-bottom {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+  }
+
+  //usuwamy top menu poza hamburgerem
+  div.top-menu-money,
+  div.top-menu-bell,
+  div.top-menu-user-name,
+  div.top-menu-exit {
+    display: none;
+  }
 }
 
-@media (max-width: 767px){
-    body {
+@media (max-width: 767px) {
+  body {
     width: 100%;
     margin: 0 auto;
     min-height: 100vh;
-    }
-    /* TOP MENU GRID*/
-    .top-menu-left {
-        grid-area: top-menu-left;
-        flex-direction: row-reverse;
-    }
-    .mobile-menu {
-        grid-area: mobile-menu;
-        z-index: 5;
-    }
-    .top-menu-container {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        max-width: 1199px;
-        z-index: 5;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 60px auto;
-        grid-template-areas: 
-            "top-menu-left"
-            "mobile-menu";
-    }
-    div.top-menu-space {
-        display: none;
-    }
-    /* MAIN GRID */
-    .top-content {
-        grid-area: top-content;
-        background-color: $content-bg-color;
-        padding: 16px;
-    }
-    .bottom-content {
-        grid-area: bottom-content;
-        background-color: $content-bg-color;
-        padding: 16px;
-    }
-    .container {
-        top: 60px;
-        position: relative;
-        display: grid;
-        grid-template-columns: 50vw 50vw;
-        grid-template-rows: auto auto;
-        grid-template-areas: 
-            "top-content top-content"
-            "bottom-content bottom-content"; 
-    }
-    //TOP CONTENET PROPERTIES
-    .top-content-title {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 16px;
-        border-bottom: 1px solid $table-border-color;
-    }
-    .top-content-calendar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 110px;
-        text-align: center;
-        margin-top: 0px;
-        border-bottom: 1px solid $table-border-color
-    }
-    .top-content-general, .top-content-payout, .top-content-details{
-        width: 100%;
-        background-color: $content-bg-color;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-/* TOP SECTIONS PROPERTIES */
-    /*GENERAL*/ 
-    .top-content-general-table {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        background-color: $content-bg-color;
-        height: 20%;
-        width: 100%;
-        padding: 20px;
-    }
-    .top-content-general-chart-title {
-        padding-top: 20px;
-    }
-    .top-content-general-chart-tabs {
-        padding-top: 20px;
-    }
-    .top-content-general-chart {
-        padding: 20px;
-    }
-    .top-content-general-chart img {
-        width: auto;
-        max-width: 400px;
-        overflow: scroll;
-    }
-    /*PAYOUT*/ 
-    .top-content-payout-table {
-        width: 100%;
-        background-color: $content-bg-color;
-        vertical-align: center;
-        padding: 20px;
-    }
-    /* DETAILS*/
-    .top-content-details-table {
-        width: 100%;
-        background-color: $content-bg-color;
-        vertical-align: center;
-        padding: 20px;
-    }
-    /* BOTTOM */
-    .bottom-content{
-        background-color: $content-bg-color;
-    }
-    .bottom-content-title {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 16px;
-        border-bottom: 1px solid $table-border-color
-    }
-    .bottom-content-button-top {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 90px;
-        line-height: 90px;
-        text-align: center;
-    }
-    .bottom-content-links {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 570px;
-    }
-    .bottom-content-button-bottom {
-        width: 100%;
-        background-color: $content-bg-color;
-        height: 90px;
-        line-height: 90px;
-        text-align: center;
-    }
+  }
 
-    //usuwamy top menu poza hamburgerem 
-    div.top-menu-money, div.top-menu-bell, div.top-menu-user-name, div.top-menu-exit {
-        display: none;
-   }
+  /* TOP MENU GRID*/
+  .top-menu-left {
+    grid-area: top-menu-left;
+    flex-direction: row-reverse;
+  }
+
+  .left-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    grid-area: mobile-menu;
+    z-index: 5;
+  }
+
+  .top-menu-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1199px;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px auto;
+    grid-template-areas:
+      "top-menu-left"
+      "mobile-menu";
+  }
+
+  div.top-menu-space {
+    display: none;
+  }
+
+  /* MAIN GRID */
+  .top-content {
+    grid-area: top-content;
+    background-color: $content-bg-color;
+    padding: 16px;
+  }
+
+  .bottom-content {
+    grid-area: bottom-content;
+    background-color: $content-bg-color;
+    padding: 16px;
+  }
+
+  .container {
+    top: 60px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "top-content top-content"
+      "bottom-content bottom-content";
+  }
+
+  //TOP CONTENET PROPERTIES
+  .top-content-title {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 16px;
+    border-bottom: 1px solid $table-border-color;
+  }
+
+  .top-content-calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 110px;
+    text-align: center;
+    margin-top: 0px;
+    border-bottom: 1px solid $table-border-color
+  }
+
+  .top-content-general,
+  .top-content-payout,
+  .top-content-details {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* TOP SECTIONS PROPERTIES */
+  /*GENERAL*/
+  .top-content-general-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $content-bg-color;
+    height: 20%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .top-content-general-chart-title {
+    padding-top: 20px;
+  }
+
+  .top-content-general-chart-tabs {
+    padding-top: 20px;
+  }
+
+  .top-content-general-chart {
+    padding: 20px;
+  }
+
+  .top-content-general-chart img {
+    width: auto;
+    max-width: 400px;
+    overflow: scroll;
+  }
+
+  /*PAYOUT*/
+  .top-content-payout-table {
+    width: 100%;
+    background-color: $content-bg-color;
+    vertical-align: center;
+    padding: 20px;
+  }
+
+  /* DETAILS*/
+  .top-content-details-table {
+    width: 100%;
+    background-color: $content-bg-color;
+    vertical-align: center;
+    padding: 20px;
+  }
+
+  /* BOTTOM */
+  .bottom-content {
+    background-color: $content-bg-color;
+  }
+
+  .bottom-content-title {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 16px;
+    border-bottom: 1px solid $table-border-color
+  }
+
+  .bottom-content-button-top {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+  }
+
+  .bottom-content-links {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 570px;
+  }
+
+  .bottom-content-button-bottom {
+    width: 100%;
+    background-color: $content-bg-color;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+  }
+
+  //usuwamy top menu poza hamburgerem
+  div.top-menu-money,
+  div.top-menu-bell,
+  div.top-menu-user-name,
+  div.top-menu-exit {
+    display: none;
+  }
 }
