@@ -1,9 +1,14 @@
 //Colors
+$content-bg-color: #ffffff;
 $paragraph-color: #333333;
 $header-color: #979797;
-$link-color: #56819F;
-$content-bg-color: #ffffff;
-$hovered-link-color: #FFA200;
+$link-color: #56819f;
+$hovered-link-color: #ffa200;
+$overlay-color: rgba(0, 0, 0, 0.5);
+$modal-bg-color: #ffffff;
+$scrollbar-track-color: #777777;
+$scrollbar-thumb-color: #e3e3e3;
+
 $button-text-color: #ffffff;
 $tab-button-text-color: #979797;
 $standard-button-bg-color: #777777;
@@ -16,34 +21,34 @@ $tab-button-bg-color-hover: #f5f5f2;
 $tab-circle-color-blue: #56819f;
 $tab-circle-color-orange: #f58220;
 $tab-circle-color-green: #04ae00;
+
 $table-border-color: #979797;
 $table-row-bg-color-hover: #e3e3e3;
 $table-head-bg-color-hover: #ffffff;
+
 $nav-bg-color: #333333;
 $nav-text-color: #777777;
 $nav-text-color-hover: #ffffff;
 $nav-stripe-bg-color: #f58220;
 $logo-color: #ffffff;
+$top-menu-border-color: #e3e3e3;
+$hamburger-color: #e3e3e3;
+
 $form-border-color: #979797;
 $form-border-color-hover: #333333;
-$label-checkbox-hover: #F5F5F2;
+$label-checkbox-hover: #f5f5f2;
 $marked-checkbox-box: #04ae00;
 $notification-positive-bg-color: #96cc9b;
 $notification-positive-bg-color-hover: #74b67a;
 $notification-negative-bg-color: #ec7171;
 $notification-negative-bg-color-hover: #de5252;
 $notification-text-color: #ffffff;
+$checkboxes-span-color: #ff0000;
+$range-stripe-color: #f58220;
+
 $column-name-hover-bg-color: #e3e3e3;
 $pagination-number-active-bg-color: #e3e3e3;
 $pagination-number-active-color: #777777;
-$top-menu-border-color: #e3e3e3;
-$hamburger-color: #e3e3e3;
-$checkboxes-span-color: #ff0000;
-$range-stripe-color: #f58220;
-$overlay-color: rgba(0,0,0,0.5);
-$modal-bg-color: #ffffff;
-$scrollbar-track-color: #777777;
-$scrollbar-thumb-color: #e3e3e3;
 
 //Font sizes
 $page-header-font-size: 16px;
@@ -56,6 +61,5 @@ $mobile-pagination-font-size: 12px;
 $mobile-modal-button-font-size: 12px;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 $base-font: "Open Sans", Helvetica, Arial;
-

@@ -1,144 +1,162 @@
 //TABLE
 .scroll-wrapper {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-  }
-  
-  .scroll-wrapper table {
-    width: 100%;
-    max-width: 100%;
-  }
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scroll-wrapper table {
+  width: 100%;
+  max-width: 100%;
+}
 
 .base-table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 684px;
-    margin: auto;
-    td, th {
-        height: 56px;
-        padding: 0 16px;
-        border-top: 1px solid $table-border-color;
-        border-bottom: 1px solid $table-border-color;
-        a {
-            font-size: $section-header-font-size;
-            font-family: $base-font;
-            }
-        img {
-            width: 16px;
-            height: auto;
-            line-height: 56px;
-        } 
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 684px;
+  margin: auto;
+  td,
+  th {
+    height: 56px;
+    padding: 0 16px;
+    border-top: 1px solid $table-border-color;
+    border-bottom: 1px solid $table-border-color;
+    a {
+      font-size: $section-header-font-size;
+      font-family: $base-font;
     }
-    td.table-row-title {
-        width: 45%;
+    img {
+      width: 16px;
+      height: auto;
+      line-height: 56px;
     }
-    td.table-ico {
-        width: 56px;
-    }
-    tr:hover {
-            background-color: $table-row-bg-color-hover;
-            cursor: pointer;
-        }
-    tr.table-head:hover {
-            background-color: $table-head-bg-color-hover;
-            cursor: pointer;
-        }
-
+  }
+  td.table-row-title {
+    width: 45%;
+  }
+  td.table-ico {
+    width: 56px;
+  }
+  tr:hover {
+    background-color: $table-row-bg-color-hover;
+    cursor: pointer;
+  }
+  tr.table-head:hover {
+    background-color: $table-head-bg-color-hover;
+    cursor: pointer;
+  }
 }
 
 .chart-table {
-@extend .base-table;
-    position: relative;
-    width: 50%;
-    max-width: 300px;
-    float: left;
-    margin: 0 30px; 
-    td {
-        height: 44px;
-        border-top: none;
-        padding: 0; 
-    }
-    td.table-row-title {
-        width: 80%;
-    }
-    td.table-row-data {
-        text-align: right;
-    }
+  @extend .base-table;
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+  float: left;
+  margin: 0 30px;
+  td {
+    height: 44px;
+    border-top: none;
+    padding: 0;
+  }
+  td.table-row-title {
+    width: 80%;
+  }
+  td.table-row-data {
+    text-align: right;
+  }
 }
 
 .payout-table {
-@extend .base-table;
-    max-width: 1020px;
-    margin: 0 auto;
-    padding: 18px;        
-    td, th {
-        border-top: none;
-        text-align: left;
-        padding: 10px;
-        p {
-            font-size: $table-paragraph-font-size;
-        }
+  @extend .base-table;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 18px;
+  td,
+  th {
+    border-top: none;
+    text-align: left;
+    padding: 10px;
+    p {
+      font-size: $table-paragraph-font-size;
     }
-    td.table-row-date, th.table-row-date {
-        width: 32%;
-    }
-    td.table-row-amount, th.table-row-amount {
-        width: 32%;
-    }
-    td.table-row-deal, th.table-row-deal{
-        width: 25%;
-    }
-    td.table-row-account, th.table-row-account {
-        width: 11%;
-    }
-}
-.details-table {
-@extend .base-table;
-    max-width: 1020px;
-    margin: 0 auto;
-    padding: 18px;        
-    td, th {
-        border-top: none;
-        text-align: left;
-        padding: 2px;
-        span, p {
-            font-size: $table-paragraph-font-size;
-            padding: 0 5px;
-        }
-    }
-    td.table-row-tracker-name, th.table-row-tracker-name {
-        width: 11%;
-    }
-    td.table-row-initiated-date, th.table-row-initiated-date {
-        width: 11%;
-    }
-    td.table-row-visits, th.table-row-visits{
-        width: 7%;
-    }
-    td.table-row-unique, th.table-row-unique {
-        width: 8%;
-    }
-    td.table-row-signups, th.table-row-signups {
-        width: 9%;
-    }
-    td.table-row-ftd, th.table-row-ftd {
-        width: 6%;
-    }
-    td.table-row-depositors, th.table-row-depositors {
-        width: 10%;
-    }
-    td.table-row-deposits, th.table-row-deposits{
-        width: 11%;
-    }
-    td.table-row-payout, th.table-row-payout {
-        width: 10%;
-    }
-    td.table-row-turnover, th.table-row-turnover{
-        width: 10%;
-    }
-    td.table-row-deal, th.table-row-deal {
-        width: 7%;
-    }
+  }
+  td.table-row-date,
+  th.table-row-date {
+    width: 32%;
+  }
+  td.table-row-amount,
+  th.table-row-amount {
+    width: 32%;
+  }
+  td.table-row-deal,
+  th.table-row-deal {
+    width: 25%;
+  }
+  td.table-row-account,
+  th.table-row-account {
+    width: 11%;
+  }
 }
 
+.details-table {
+  @extend .base-table;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 18px;
+  td,
+  th {
+    border-top: none;
+    text-align: left;
+    padding: 2px;
+    span,
+    p {
+      font-size: $table-paragraph-font-size;
+      padding: 0 5px;
+    }
+  }
+  td.table-row-tracker-name,
+  th.table-row-tracker-name {
+    width: 11%;
+  }
+  td.table-row-initiated-date,
+  th.table-row-initiated-date {
+    width: 11%;
+  }
+  td.table-row-visits,
+  th.table-row-visits {
+    width: 7%;
+  }
+  td.table-row-unique,
+  th.table-row-unique {
+    width: 8%;
+  }
+  td.table-row-signups,
+  th.table-row-signups {
+    width: 9%;
+  }
+  td.table-row-ftd,
+  th.table-row-ftd {
+    width: 6%;
+  }
+  td.table-row-depositors,
+  th.table-row-depositors {
+    width: 10%;
+  }
+  td.table-row-deposits,
+  th.table-row-deposits {
+    width: 11%;
+  }
+  td.table-row-payout,
+  th.table-row-payout {
+    width: 10%;
+  }
+  td.table-row-turnover,
+  th.table-row-turnover {
+    width: 10%;
+  }
+  td.table-row-deal,
+  th.table-row-deal {
+    width: 7%;
+  }
+}

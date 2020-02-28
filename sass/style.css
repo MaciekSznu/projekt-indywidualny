@@ -1300,40 +1300,88 @@ nav ul li.active img, .mobile-menu ul li.active img {
   font-size: 14px;
 }
 
-.form input, .form-password input, .form-text-input input, .form textarea, .form-password textarea, .form-text-input textarea, .form select, .form-password select, .form-text-input select {
+.form input, .form-password input, .form-text-input input,
+.form textarea,
+.form-password textarea,
+.form-text-input textarea,
+.form select,
+.form-password select,
+.form-text-input select {
   margin: 15px;
   padding: 10px;
   border: 1px solid #979797;
   border-radius: 3px;
 }
 
-.form input:hover, .form-password input:hover, .form-text-input input:hover, .form textarea:hover, .form-password textarea:hover, .form-text-input textarea:hover, .form select:hover, .form-password select:hover, .form-text-input select:hover {
+.form input:hover, .form-password input:hover, .form-text-input input:hover,
+.form textarea:hover,
+.form-password textarea:hover,
+.form-text-input textarea:hover,
+.form select:hover,
+.form-password select:hover,
+.form-text-input select:hover {
   color: #333333;
   cursor: pointer;
   border-color: #333333;
 }
 
-.form input:hover::-webkit-input-placeholder, .form-password input:hover::-webkit-input-placeholder, .form-text-input input:hover::-webkit-input-placeholder, .form textarea:hover::-webkit-input-placeholder, .form-password textarea:hover::-webkit-input-placeholder, .form-text-input textarea:hover::-webkit-input-placeholder, .form select:hover::-webkit-input-placeholder, .form-password select:hover::-webkit-input-placeholder, .form-text-input select:hover::-webkit-input-placeholder {
+.form input:hover::-webkit-input-placeholder, .form-password input:hover::-webkit-input-placeholder, .form-text-input input:hover::-webkit-input-placeholder,
+.form textarea:hover::-webkit-input-placeholder,
+.form-password textarea:hover::-webkit-input-placeholder,
+.form-text-input textarea:hover::-webkit-input-placeholder,
+.form select:hover::-webkit-input-placeholder,
+.form-password select:hover::-webkit-input-placeholder,
+.form-text-input select:hover::-webkit-input-placeholder {
   color: #333333;
 }
 
-.form input:hover:-ms-input-placeholder, .form-password input:hover:-ms-input-placeholder, .form-text-input input:hover:-ms-input-placeholder, .form textarea:hover:-ms-input-placeholder, .form-password textarea:hover:-ms-input-placeholder, .form-text-input textarea:hover:-ms-input-placeholder, .form select:hover:-ms-input-placeholder, .form-password select:hover:-ms-input-placeholder, .form-text-input select:hover:-ms-input-placeholder {
+.form input:hover:-ms-input-placeholder, .form-password input:hover:-ms-input-placeholder, .form-text-input input:hover:-ms-input-placeholder,
+.form textarea:hover:-ms-input-placeholder,
+.form-password textarea:hover:-ms-input-placeholder,
+.form-text-input textarea:hover:-ms-input-placeholder,
+.form select:hover:-ms-input-placeholder,
+.form-password select:hover:-ms-input-placeholder,
+.form-text-input select:hover:-ms-input-placeholder {
   color: #333333;
 }
 
-.form input:hover::-ms-input-placeholder, .form-password input:hover::-ms-input-placeholder, .form-text-input input:hover::-ms-input-placeholder, .form textarea:hover::-ms-input-placeholder, .form-password textarea:hover::-ms-input-placeholder, .form-text-input textarea:hover::-ms-input-placeholder, .form select:hover::-ms-input-placeholder, .form-password select:hover::-ms-input-placeholder, .form-text-input select:hover::-ms-input-placeholder {
+.form input:hover::-ms-input-placeholder, .form-password input:hover::-ms-input-placeholder, .form-text-input input:hover::-ms-input-placeholder,
+.form textarea:hover::-ms-input-placeholder,
+.form-password textarea:hover::-ms-input-placeholder,
+.form-text-input textarea:hover::-ms-input-placeholder,
+.form select:hover::-ms-input-placeholder,
+.form-password select:hover::-ms-input-placeholder,
+.form-text-input select:hover::-ms-input-placeholder {
   color: #333333;
 }
 
-.form input:hover::placeholder, .form-password input:hover::placeholder, .form-text-input input:hover::placeholder, .form textarea:hover::placeholder, .form-password textarea:hover::placeholder, .form-text-input textarea:hover::placeholder, .form select:hover::placeholder, .form-password select:hover::placeholder, .form-text-input select:hover::placeholder {
+.form input:hover::placeholder, .form-password input:hover::placeholder, .form-text-input input:hover::placeholder,
+.form textarea:hover::placeholder,
+.form-password textarea:hover::placeholder,
+.form-text-input textarea:hover::placeholder,
+.form select:hover::placeholder,
+.form-password select:hover::placeholder,
+.form-text-input select:hover::placeholder {
   color: #333333;
 }
 
-.form input input, .form-password input input, .form-text-input input input, .form textarea input, .form-password textarea input, .form-text-input textarea input, .form select input, .form-password select input, .form-text-input select input {
+.form input input, .form-password input input, .form-text-input input input,
+.form textarea input,
+.form-password textarea input,
+.form-text-input textarea input,
+.form select input,
+.form-password select input,
+.form-text-input select input {
   width: 300px;
 }
 
-.form input select, .form-password input select, .form-text-input input select, .form textarea select, .form-password textarea select, .form-text-input textarea select, .form select select, .form-password select select, .form-text-input select select {
+.form input select, .form-password input select, .form-text-input input select,
+.form textarea select,
+.form-password textarea select,
+.form-text-input textarea select,
+.form select select,
+.form-password select select,
+.form-text-input select select {
   width: 100%;
 }
 
@@ -1483,7 +1531,8 @@ nav ul li.active img, .mobile-menu ul li.active img {
   background-position: right 10px center;
 }
 
-.checkboxes, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes, .range {
+.checkboxes, .links-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .links-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .links-modal-checkboxes, .banners-modal .banners-modal-checkboxes-container .banners-modal-checkboxes,
+.range {
   width: 96%;
   max-width: 514px;
 }
@@ -1932,8 +1981,8 @@ input[type="range"]::-webkit-slider-runnable-track {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 body {
@@ -2336,7 +2385,7 @@ div.top-menu-left {
 .top-menu-left .hamburger:after, .top-menu-left .hamburger:before {
   background-color: #e3e3e3;
   border-radius: 3px;
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   margin: 4px 0;
@@ -2347,7 +2396,7 @@ div.top-menu-left {
 .top-menu-left .hamburger div {
   background-color: #e3e3e3;
   border-radius: 3px;
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   margin: 4px 0;
@@ -2366,7 +2415,7 @@ div.top-menu-left {
 .top-menu-left .hamburger-clicked:after {
   background-color: #e3e3e3;
   border-radius: 3px;
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   margin: 7px 0;
@@ -2379,7 +2428,7 @@ div.top-menu-left {
 .top-menu-left .hamburger-clicked:before {
   background-color: #e3e3e3;
   border-radius: 3px;
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   margin: 7px 0;
@@ -2392,7 +2441,7 @@ div.top-menu-left {
 .top-menu-left .hamburger-clicked div {
   background-color: #e3e3e3;
   border-radius: 3px;
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   margin: 4px 0;

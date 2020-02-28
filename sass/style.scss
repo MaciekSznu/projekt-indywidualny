@@ -1,5 +1,4 @@
 @import "variables";
-@import "mixins";
 @import "normalize";
 @import "layout";
 @import "../sass/components/leftmenu";
@@ -11,7 +10,7 @@
 
 * {
   box-sizing: border-box;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 body {
@@ -152,7 +151,7 @@ label.checkbox {
     height: 0;
     width: 0;
 
-    &:checked~.checkmark {
+    &:checked ~ .checkmark {
       background-color: $marked-checkbox-box;
 
       &:after {
@@ -264,7 +263,6 @@ label.checkbox {
   &:hover img {
     display: inline;
   }
-
 }
 
 //PAGINATION
@@ -317,7 +315,6 @@ label.checkbox {
         padding-top: 5px;
       }
     }
-
   }
 }
 
@@ -420,7 +417,7 @@ div.top-menu-left {
     &:before {
       background-color: $hamburger-color;
       border-radius: 3px;
-      content: '';
+      content: "";
       display: block;
       height: 3px;
       margin: 4px 0;
@@ -430,7 +427,7 @@ div.top-menu-left {
     div {
       background-color: $hamburger-color;
       border-radius: 3px;
-      content: '';
+      content: "";
       display: block;
       height: 3px;
       margin: 4px 0;
@@ -451,7 +448,7 @@ div.top-menu-left {
     &:after {
       background-color: $hamburger-color;
       border-radius: 3px;
-      content: '';
+      content: "";
       display: block;
       height: 3px;
       margin: 7px 0;
@@ -462,18 +459,18 @@ div.top-menu-left {
     &:before {
       background-color: $hamburger-color;
       border-radius: 3px;
-      content: '';
+      content: "";
       display: block;
       height: 3px;
       margin: 7px 0;
-      transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out, ;
+      transition: translate 1.5s ease-in-out, rotate 1.5s ease-in-out;
       transform: translateY(10px) rotate(135deg);
     }
 
     div {
       background-color: $hamburger-color;
       border-radius: 3px;
-      content: '';
+      content: "";
       display: block;
       height: 3px;
       margin: 4px 0;

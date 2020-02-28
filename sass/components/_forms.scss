@@ -1,138 +1,146 @@
 //FORM
 .form {
-    font-family: $base-font;
-    font-size: $paragraph-font-size;
-    input, textarea, select {
-        margin: 15px;
-        padding: 10px;
-        border: 1px solid $form-border-color;
-        border-radius: 3px; 
-        &:hover {
-            color: $paragraph-color;
-            cursor: pointer;
-            border-color: $form-border-color-hover;
-            &::placeholder {
-                color: $paragraph-color;
-            }
-        }
-        input {
-            width: 300px;
-        }
-        select {
-            width: 100%;
-        }    
+  font-family: $base-font;
+  font-size: $paragraph-font-size;
+  input,
+  textarea,
+  select {
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid $form-border-color;
+    border-radius: 3px;
+    &:hover {
+      color: $paragraph-color;
+      cursor: pointer;
+      border-color: $form-border-color-hover;
+      &::placeholder {
+        color: $paragraph-color;
+      }
     }
-    input.personal-data-input {
-        width: 300px;
+    input {
+      width: 300px;
     }
+    select {
+      width: 100%;
+    }
+  }
+  input.personal-data-input {
+    width: 300px;
+  }
 }
 
-//do poprawy pozycja tła obrazka
 .form-password {
-    @extend .form;
-    input {
-        background:  url("../../images/icons/password.svg");
-        background-repeat: no-repeat;
-        background-size: 20px 20px;
-        background-position: 5% 50%;
-        text-indent: 20px; 
-            &::placeholder {
-                background:  url("../../images/icons/password.svg");
-                background-repeat: no-repeat;
-                background-size: 20px 20px;   
-                text-align: left;
-                text-indent: 20px;
-            }
+  @extend .form;
+  input {
+    background: url("../../images/icons/password.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 5% 50%;
+    text-indent: 20px;
+    &::placeholder {
+      background: url("../../images/icons/password.svg");
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      text-align: left;
+      text-indent: 20px;
     }
+  }
 }
 
 .form-text-input {
-    @extend .form;
-    textarea{
-        width: 96%;
-        max-width: 490px;
-        margin: 16px;
-        height: 180px;
-        resize: none;//czyści pole rozszerzania w narożniku
-        &::placeholder {   
-            text-align: left;
-        }
+  @extend .form;
+  textarea {
+    width: 96%;
+    max-width: 490px;
+    margin: 16px;
+    height: 180px;
+    resize: none;
+    &::placeholder {
+      text-align: left;
     }
-    label {
-        margin-left: 16px;
-    }
+  }
+  label {
+    margin-left: 16px;
+  }
 }
 
 .bottom-border {
-    border-bottom: 1px solid $table-border-color;
+  border-bottom: 1px solid $table-border-color;
 }
 
 .flex-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .form-label {
-    width: 120px;
-    display: inline-flex;
-    color: $header-color;
-    font-weight: 700;
+  width: 120px;
+  display: inline-flex;
+  color: $header-color;
+  font-weight: 700;
 }
+
 .flex-form-horizontal {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 16px;
-    align-content: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 16px;
+  align-content: stretch;
 }
+
 .text-areas .form-text-input {
-    width: 100%;
+  width: 100%;
 }
 
 .form-label-on-top {
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 16px;
-    font-size: $section-header-font-size;
-    font-weight: 700;
-    color: $header-color;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: $section-header-font-size;
+  font-weight: 700;
+  color: $header-color;
 }
 
 .multiple-choice {
-    width: 31%;
-    margin-left: 16px;
-    select {
-        appearance: none;
-        width: 100%;
-        margin-left: 0;
-        padding-right: 30px;
-        background: url(../../images/icons/arrow-down-small.svg);
-        background-size: 15px auto;
-        background-repeat: no-repeat;
-        background-position: right 10px center;
-    }
+  width: 31%;
+  margin-left: 16px;
+  select {
+    appearance: none;
+    width: 100%;
+    margin-left: 0;
+    padding-right: 30px;
+    background: url(../../images/icons/arrow-down-small.svg);
+    background-size: 15px auto;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
 }
-.checkboxes, .range {
-    width: 96%;
-    max-width: 514px;
+
+.checkboxes,
+.range {
+  width: 96%;
+  max-width: 514px;
 }
+
 .checkboxes {
-    margin-left: 16px;
-    span {
-        color:$checkboxes-span-color;
-        font-weight: 700;
-    }
+  margin-left: 16px;
+  span {
+    color: $checkboxes-span-color;
+    font-weight: 700;
+  }
 }
 
 .button-submit {
-    text-align: center;
-    margin: 15px auto;
-    button {
-        min-width: 90px;
-        width: auto;
-    }
+  text-align: center;
+  margin: 15px auto;
+  button {
+    min-width: 90px;
+    width: auto;
+  }
 }
+
 .button-submit-options {
-    text-align: right;
-    margin: 16px;
+  text-align: right;
+  margin: 16px;
 }

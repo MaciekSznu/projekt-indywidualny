@@ -1,9 +1,9 @@
 .range {
   max-width: 498px;
   label {
-      margin-left: 16px;
-      font-weight: 700;
-      color: $header-color;
+    margin-left: 16px;
+    font-weight: 700;
+    color: $header-color;
   }
   .range-description {
     margin-left: 16px;
@@ -14,11 +14,11 @@
     color: $header-color;
   }
   input[type="range"] {
-  width: calc(100% - 32px);
-  color: $range-stripe-color;
-  padding: 0;
-  border: none;
-  margin-top: 8px;
+    width: calc(100% - 32px);
+    color: $range-stripe-color;
+    padding: 0;
+    border: none;
+    margin-top: 8px;
   }
   #textInput {
     border: none;
@@ -34,34 +34,34 @@ input[type="range"] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-    }
-    &:focus {
-      outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-    }
-    &::-ms-track {
-      width: 100%;
-      cursor: pointer;
-      /* Hides the slider so custom styles can be added */
-      background: transparent;
-      border-color: transparent;
-      color: transparent;
-    }
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      height: 0;
-      width: 0;
-      border-style: solid;
-      border-width: 0px 12px 20px 12px;
-      border-color: transparent transparent $range-stripe-color transparent;
-      cursor: pointer;
-      margin-top: 12px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    }
-    &::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 4px;
-      cursor: pointer;
-      background: $range-stripe-color;
-    }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  &:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  &::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: 0px 12px 20px 12px;
+    border-color: transparent transparent $range-stripe-color transparent;
+    cursor: pointer;
+    margin-top: 12px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: $range-stripe-color;
+  }
 }

@@ -2,8 +2,7 @@
   box-sizing: border-box;
 }
 
-@media(min-width: 1200px) {
-
+@media (min-width: 1200px) {
   body {
     width: 1280px;
     margin: 0 auto;
@@ -24,7 +23,6 @@
 
   .top-menu-bell {
     grid-area: top-menu-bell;
-
   }
 
   .top-menu-user-name {
@@ -44,8 +42,7 @@
     display: grid;
     grid-template-columns: 188px auto 188px 60px 174px 60px;
     grid-template-rows: 60px;
-    grid-template-areas:
-      "top-menu-left top-menu-space top-menu-money top-menu-bell top-menu-user-name top-menu-exit";
+    grid-template-areas: "top-menu-left top-menu-space top-menu-money top-menu-bell top-menu-user-name top-menu-exit";
   }
 
   /* MAIN GRID */
@@ -98,7 +95,7 @@
     height: 110px;
     text-align: center;
     margin-top: 0px;
-    border-bottom: 1px solid $table-border-color
+    border-bottom: 1px solid $table-border-color;
   }
 
   .top-content-general,
@@ -179,7 +176,7 @@
     height: 50px;
     line-height: 50px;
     padding-left: 16px;
-    border-bottom: 1px solid $table-border-color
+    border-bottom: 1px solid $table-border-color;
   }
 
   .bottom-content-button-top {
@@ -213,7 +210,6 @@
   .hamburger {
     display: none;
   }
-
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -298,7 +294,7 @@
     height: 110px;
     text-align: center;
     margin-top: 0px;
-    border-bottom: 1px solid $table-border-color
+    border-bottom: 1px solid $table-border-color;
   }
 
   .top-content-general,
@@ -370,7 +366,7 @@
     height: 50px;
     line-height: 50px;
     padding-left: 16px;
-    border-bottom: 1px solid $table-border-color
+    border-bottom: 1px solid $table-border-color;
   }
 
   .bottom-content-button-top {
@@ -487,7 +483,7 @@
     height: 110px;
     text-align: center;
     margin-top: 0px;
-    border-bottom: 1px solid $table-border-color
+    border-bottom: 1px solid $table-border-color;
   }
 
   .top-content-general,
@@ -559,7 +555,7 @@
     height: 50px;
     line-height: 50px;
     padding-left: 16px;
-    border-bottom: 1px solid $table-border-color
+    border-bottom: 1px solid $table-border-color;
   }
 
   .bottom-content-button-top {
