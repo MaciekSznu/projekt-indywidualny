@@ -1,42 +1,42 @@
 'use strict';
 
 // General click function
-function click(target, callback) {
-  document.querySelector(target).addEventListener('click', function (e) {
+const click = (target, callback) => {
+  document.querySelector(target).addEventListener('click', (e) => {
     e.preventDefault();
     return callback(e)
   });
 }
 
 // Mobile menu
-function toggleMenu(visible) {
+const toggleMenu = (visible) => {
   document.querySelector('.mobile-menu').classList.toggle('display-none', visible);
 }
 
-function toggleHamburger() {
-  var viewportWidth = document.documentElement.clientWidth;
+const toggleHamburger = () => {
+  const viewportWidth = document.documentElement.clientWidth;
   if (viewportWidth < 1200) {
     document.querySelector('.hamburger').classList.toggle('hamburger-clicked');
   }
 }
-click('.hamburger', function (e) {
+click('.hamburger', (e) => {
   toggleMenu();
   toggleHamburger();
 });
 
 // Hide content and "disactive" menu items
-function displayNoneDisActive() {
-  var contentElements = document.querySelectorAll('.content');
-  for (var j = 0; j < contentElements.length; j++) {
+const displayNoneDisActive = () => {
+  const contentElements = document.querySelectorAll('.content');
+  for (let j = 0; j < contentElements.length; j++) {
     contentElements[j].classList.add('display-none');
   }
-  var menuElements = document.querySelectorAll('[class*="menu-item"]');
-  for (var i = 0; i < menuElements.length; i++) {
+  const menuElements = document.querySelectorAll('[class*="menu-item"]');
+  for (let i = 0; i < menuElements.length; i++) {
     menuElements[i].classList.remove('active');
   }
 }
 
-function scrollTop() {
+const scrollTop = () => {
   window.scroll({
     top: 0,
     left: 0,
@@ -44,22 +44,22 @@ function scrollTop() {
 }
 
 // Left menu
-click('#leftMenu', function (e) {
+click('#leftMenu', (e) => {
   if (e.target.tagName !== 'LI' && e.target.parentNode.classList[0] !== 'menu-item-links' && e.target.parentNode.classList[0] !== 'menu-item-banners') {
     displayNoneDisActive();
-    var parentClassNameSliced = e.target.parentNode.className.slice(10);
-    var elementClassName = '.' + parentClassNameSliced;
-    var documentElements = document.querySelectorAll(elementClassName);
-    for (var i = 0; i < documentElements.length; i++) {
+    const parentClassNameSliced = e.target.parentNode.className.slice(10);
+    const elementClassName = '.' + parentClassNameSliced;
+    const documentElements = document.querySelectorAll(elementClassName);
+    for (let i = 0; i < documentElements.length; i++) {
       documentElements[i].classList.remove('display-none');
     }
     e.target.parentNode.classList.add('active');
   } else if (e.target.tagName == 'LI' && e.target.classList[0] !== 'menu-item-links' && e.target.classList[0] !== 'menu-item-banners') {
     displayNoneDisActive();
-    var parentClassNameSliced = e.target.className.slice(10);
-    var elementClassName = '.' + parentClassNameSliced;
-    var documentElements = document.querySelectorAll(elementClassName);
-    for (var i = 0; i < documentElements.length; i++) {
+    const parentClassNameSliced = e.target.className.slice(10);
+    const elementClassName = '.' + parentClassNameSliced;
+    const documentElements = document.querySelectorAll(elementClassName);
+    for (let i = 0; i < documentElements.length; i++) {
       documentElements[i].classList.remove('display-none');
     }
     e.target.classList.add('active');
@@ -80,22 +80,23 @@ click('#leftMenu', function (e) {
 });
 
 // Mobile menu
-click('#mobileMenu', function (e) {
-  if (e.target.tagName !== 'LI' && e.target.parentNode.classList[0] !== 'mobile-menu-item-links' && e.target.parentNode.classList[0] !== 'mobile-menu-item-banners') {
+click('#mobileMenu', (e) => {
+  if (e.target.tagName !== 'LI' && e.target.parentNode.classList[0] !== 'mobile-menu-item-links' && e.target.parentNode.classList[0] !== 'mobile-menu-item-banners' && e.target.parentNode.classList[0] !== "submenu") {
+    console.log(e.target.parentNode.classList);
     displayNoneDisActive();
-    var parentClassNameSliced = e.target.parentNode.className.slice(17);
-    var elementClassName = '.' + parentClassNameSliced;
-    var documentElements = document.querySelectorAll(elementClassName);
-    for (var i = 0; i < documentElements.length; i++) {
+    const parentClassNameSliced = e.target.parentNode.className.slice(17);
+    const elementClassName = '.' + parentClassNameSliced;
+    const documentElements = document.querySelectorAll(elementClassName);
+    for (let i = 0; i < documentElements.length; i++) {
       documentElements[i].classList.remove('display-none');
     }
     e.target.parentNode.classList.add('active');
-  } else if (e.target.tagName == 'LI' && e.target.classList[0] !== 'mobile-menu-item-links' && e.target.classList[0] !== 'mobile-menu-item-banners') {
+  } else if (e.target.tagName == 'LI' && e.target.classList[0] !== 'mobile-menu-item-links' && e.target.classList[0] !== 'mobile-menu-item-banners' && e.target.classList[0] !== "submenu") {
     displayNoneDisActive();
-    var parentClassNameSliced = e.target.className.slice(17);
-    var elementClassName = '.' + parentClassNameSliced;
-    var documentElements = document.querySelectorAll(elementClassName);
-    for (var i = 0; i < documentElements.length; i++) {
+    const parentClassNameSliced = e.target.className.slice(17);
+    const elementClassName = '.' + parentClassNameSliced;
+    const documentElements = document.querySelectorAll(elementClassName);
+    for (let i = 0; i < documentElements.length; i++) {
       documentElements[i].classList.remove('display-none');
     }
     e.target.classList.add('active');
@@ -110,7 +111,7 @@ click('#mobileMenu', function (e) {
 });
 
 // Modals
-function closeModal() {
+const closeModal = () => {
   document.getElementById('overlay').classList.add('display-none');
   document.querySelector('.menu-item-links').classList.remove('active');
   document.querySelector('.mobile-menu-item-links').classList.remove('active');
@@ -119,28 +120,27 @@ function closeModal() {
 }
 
 document.querySelectorAll('#overlay .js--close-modal').forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
+  btn.addEventListener('click', (e) => {
     e.preventDefault();
     closeModal();
   });
 });
 
-click('#overlay', function (e) {
+click('#overlay', (e) => {
   if (e.target.id === 'overlay') {
     closeModal();
   }
-  console.log(e.target);
 });
 
 const ESC_KEY = 27;
-document.addEventListener('keyup', function (e) {
+document.addEventListener('keyup', (e) => {
   if (e.keyCode === ESC_KEY) {
     closeModal();
   }
 });
 
-function openModal(modal) {
-  document.querySelectorAll('#overlay > *').forEach(function (modal) {
+const openModal = (modal) => {
+  document.querySelectorAll('#overlay > *').forEach((modal) => {
     modal.classList.add('display-none');
   })
   document.querySelector('#overlay').classList.remove('display-none');
@@ -148,11 +148,11 @@ function openModal(modal) {
 }
 
 // Pagination
-click('.pagination-ul', function (e) {
-  var target = e.target;
+click('.pagination-ul', (e) => {
+  const target = e.target;
   if (target.parentElement.classList == 'pagination-number') {
-    var paginationNumbers = document.querySelectorAll('.pagination-number');
-    for (var j = 0; j < paginationNumbers.length; j++) {
+    const paginationNumbers = document.querySelectorAll('.pagination-number');
+    for (let j = 0; j < paginationNumbers.length; j++) {
       paginationNumbers[j].classList.remove('selected');
     }
     target.parentElement.classList.add('selected');
@@ -160,19 +160,19 @@ click('.pagination-ul', function (e) {
 });
 
 // Chart buttons
-click('.tab-button-blue', function (e) {
+click('.tab-button-blue', (e) => {
   e.target.classList.toggle('clicked');
 });
-click('.tab-button-orange', function (e) {
+click('.tab-button-orange', (e) => {
   e.target.classList.toggle('clicked');
 });
-click('.tab-button-green', function (e) {
+click('.tab-button-green', (e) => {
   e.target.classList.toggle('clicked');
 });
 
 // CHART //
-var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
+const ctx = document.getElementById('myChart').getContext('2d');
+const chart = new Chart(ctx, {
   type: 'bar',
   options: {
     legend: {
@@ -208,9 +208,9 @@ var chart = new Chart(ctx, {
 const MAX_RANGE_VAL = 200;
 const SLIDER_THUMB_WIDTH = 24;
 
-function updateTextInput(val) {
-  document.getElementById('textInput').value = (val + " hours");
-  var rangeWidth = document.getElementById('range').offsetWidth;
-  var margLeft = (val / MAX_RANGE_VAL) * (rangeWidth - SLIDER_THUMB_WIDTH);
-  document.getElementById('textInput').style.marginLeft = margLeft + "px";
+const updateTextInput = (val) => {
+  document.getElementById('textInput').value = (`${val} hours`);
+  const rangeWidth = document.getElementById('range').offsetWidth;
+  const margLeft = (val / MAX_RANGE_VAL) * (rangeWidth - SLIDER_THUMB_WIDTH);
+  document.getElementById('textInput').style.marginLeft = `${margLeft}px`;
 }
